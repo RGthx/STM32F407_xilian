@@ -623,13 +623,15 @@ uint8_t video_seek(FIL *favi, AVI_INFO *aviinfo, uint8_t *mbuf)
 
 FRESULT read_next_char(char* ch)
 {
-    // 如果缓冲区已用完，重新加载
+    // 如果缓冲区读完了，重新加载
     if(text_stream.buffer_pos >= text_stream.buffer_len)
     {
-        // 检查是否已到文件末尾
+        // 如果到达文件末尾，重新从头开始
         if(text_stream.file_pos >= text_stream.file_size)
         {
-            return FR_DISK_ERR; // 使用标准FATFS错误码替代FR_EOF
+            // 重新定位到文件开始
+            text_stream.file_pos = 0;
+            f_lseek(&text_stream.file, 0);
         }
         
         // 读取新的数据块
@@ -640,11 +642,11 @@ FRESULT read_next_char(char* ch)
         }
         
         text_stream.buffer_pos = 0;
-        text_stream.file_pos += text_stream.buffer_len;
     }
     
     // 返回下一个字符
     *ch = text_stream.buffer[text_stream.buffer_pos++];
+    text_stream.file_pos++; // 更新文件位置
     return FR_OK;
 }
 
@@ -657,7 +659,6 @@ void load_text_file_stream(void)
 {
     FRESULT res;
     char ch;
-    
     
     // 初始化结构
     init_text_stream();
@@ -672,68 +673,58 @@ void load_text_file_stream(void)
     
     // 获取文件大小
     text_stream.file_size = f_size(&text_stream.file);
-     // printf("文件大小: %d 字节\r\n", text_stream.file_size);
     
-    // 读取前几行用于显示
+    // 初始化位置变量
     text_stream.current_line = 0;
     text_stream.line_pos = 0;
+    text_stream.buffer_pos = 0;
+    text_stream.buffer_len = 0;
+    text_stream.file_pos = 0;
     
-    while(text_stream.current_line < MAX_DISPLAY_LINES)
+    // 填充显示行缓冲区
+    uint16_t lines_loaded = 0;
+    while(lines_loaded < MAX_DISPLAY_LINES)
     {
         res = read_next_char(&ch);
-        if(res == FR_DISK_ERR)
+        if(res != FR_OK)
         {
-            // 处理最后一行（如果没有换行符）
-            if(text_stream.line_pos > 0)
-            {
-                text_stream.line_buffer[text_stream.line_pos] = '\0';
-                if(strlen(text_stream.line_buffer) > 0)
-                {
-                    text_stream.display_lines[text_stream.current_line] = mymalloc(SRAMIN, strlen(text_stream.line_buffer) + 1);
-                    if(text_stream.display_lines[text_stream.current_line])
-                    {
-                        strcpy(text_stream.display_lines[text_stream.current_line], text_stream.line_buffer);
-                        text_stream.current_line++;
-                    }
-                }
-            }
-            break;
-        }
-        else if(res != FR_OK)
-        {
-            printf("读取文件出错: %d\r\n", res);
+            printf("读取文件错误: %d\r\n", res);
             break;
         }
         
-        // 处理换行符
+        // 处理换行
         if(ch == '\n' || ch == '\r')
         {
-            // 处理空行或有内容的行
+            // 结束当前行
             text_stream.line_buffer[text_stream.line_pos] = '\0';
-            // 为每行分配内存，即使是空行
+            
+            // 为每行分配内存
             text_stream.display_lines[text_stream.current_line] = mymalloc(SRAMIN, strlen(text_stream.line_buffer) + 1);
             if(text_stream.display_lines[text_stream.current_line])
             {
                 strcpy(text_stream.display_lines[text_stream.current_line], text_stream.line_buffer);
                 text_stream.current_line++;
-                if(text_stream.current_line >= MAX_DISPLAY_LINES) break;
+                lines_loaded++;
+                if(text_stream.current_line >= MAX_DISPLAY_LINES) 
+                    text_stream.current_line = 0; // 循环使用行缓冲区
             }
             text_stream.line_pos = 0;
             
-            // 处理Windows换行符的第二个字符
+            // 处理Windows换行符
             if(ch == '\r')
             {
                 res = read_next_char(&ch);
                 if(res == FR_OK && ch != '\n')
                 {
-                    // 如果不是\n，将字符放回
+                    // 如果不是\n，则放回字符
                     text_stream.buffer_pos--;
+                    text_stream.file_pos--;
                 }
             }
         }
         else
         {
-            // 添加字符到行缓冲区（防止溢出）
+            // 添加字符到行缓冲区
             if(text_stream.line_pos < sizeof(text_stream.line_buffer) - 1)
             {
                 text_stream.line_buffer[text_stream.line_pos++] = ch;
@@ -741,61 +732,97 @@ void load_text_file_stream(void)
         }
     }
     
-    text_stream.total_lines = text_stream.current_line;
+    text_stream.total_lines = lines_loaded;
     text_stream.display_start = 0;
-    
-    // 关闭文件
-    f_close(&text_stream.file);
-    
 }
 void display_text_overlay_stream(void)
 {
-    static uint16_t last_display_start = 0xFFFF;
-    static uint16_t last_displayed_lines = 0;
+    static uint32_t last_scroll_time = 0;
     uint32_t current_time = HAL_GetTick(); 
     uint16_t i;
-    uint16_t y_pos = 10;
     char display_str[50];
+    FRESULT res;
+    char ch;
     
+    // 如果没有加载任何文本，直接返回
     if(text_stream.total_lines == 0) return;
     
-
+    // 检查是否需要滚动
     if(current_time - last_scroll_time >= SCROLL_INTERVAL)
     {
-
+        // 更新显示起始位置
         text_stream.display_start++;
+        
+        // 循环显示
         if(text_stream.display_start >= text_stream.total_lines) 
             text_stream.display_start = 0;
-        last_scroll_time = current_time; // ?ι?
+            
+        last_scroll_time = current_time;
         
-
-        uint16_t new_line_index = (text_stream.display_start + MAX_DISPLAY_LINES - 1) % text_stream.total_lines;
-        if(text_stream.display_lines[new_line_index])
+        // 加载新行到即将显示的位置
+        uint16_t new_line_index = (text_stream.display_start + MAX_DISPLAY_LINES - 1) % MAX_DISPLAY_LINES;
+        
+        // 读取新行
+        text_stream.line_pos = 0;
+        while(1)
         {
-            printf(text_stream.display_lines[new_line_index]);
+            res = read_next_char(&ch);
+            if(res != FR_OK) break;
+            
+            // 检查是否是换行符
+            if(ch == '\n' || ch == '\r')
+            {
+                text_stream.line_buffer[text_stream.line_pos] = '\0';
+                
+                // 释放旧的行内存
+                if(text_stream.display_lines[new_line_index])
+                {
+                    myfree(SRAMIN, text_stream.display_lines[new_line_index]);
+                }
+                
+                // 分配新内存并复制文本
+                text_stream.display_lines[new_line_index] = mymalloc(SRAMIN, strlen(text_stream.line_buffer) + 1);
+                if(text_stream.display_lines[new_line_index])
+                {
+                    strcpy(text_stream.display_lines[new_line_index], text_stream.line_buffer);
+                }
+                
+                // 处理Windows换行符
+                if(ch == '\r')
+                {
+                    res = read_next_char(&ch);
+                    if(res == FR_OK && ch != '\n')
+                    {
+                        text_stream.buffer_pos--;
+                        text_stream.file_pos--;
+                    }
+                }
+                break;
+            }
+            else
+            {
+                if(text_stream.line_pos < sizeof(text_stream.line_buffer) - 1)
+                {
+                    text_stream.line_buffer[text_stream.line_pos++] = ch;
+                }
+            }
         }
-        printf("\r\n");
     }
     
-
+    // 显示当前文本行
     uint16_t current_display_lines = (text_stream.total_lines < MAX_DISPLAY_LINES) ? 
                                      text_stream.total_lines : MAX_DISPLAY_LINES;
     
-
+    uint16_t y_pos = 10;
     for(i = 0; i < current_display_lines; i++)
     {
         uint16_t line_index = (text_stream.display_start + i) % text_stream.total_lines;
         if(text_stream.display_lines[line_index])
         {
-
             strncpy(display_str, text_stream.display_lines[line_index], sizeof(display_str) - 1);
             display_str[sizeof(display_str) - 1] = '\0';
             
-
             text_show_string(10, y_pos + i*12, lcddev.width-20, 12, display_str, 12, 1, RED);
         }
     }
-    
-    last_display_start = text_stream.display_start;
-    last_displayed_lines = current_display_lines;
 }
