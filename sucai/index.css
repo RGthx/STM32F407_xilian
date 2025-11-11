@@ -1,0 +1,509 @@
+
+@font-face{
+    font-family: "SourceHanSansSC-Medium-2";
+    font-weight: 1 999;
+    src: url("../font/SourceHanSansSC-Medium-2.otf");
+}
+
+@font-face{
+    font-family: "Microsoft Yahei UI";
+    font-weight: 1 999;
+    src: url("../font/Microsoft Yahei UI.ttf");
+}
+
+@font-face {
+  font-family: "Microsoft Yahei UI";
+  src: url("../font/Microsoft Yahei UI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, * {
+  font-family: "Microsoft Yahei UI", sans-serif !important;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+
+.background {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom left, #ff99e5, #ffffff);
+    overflow: hidden;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; 
+}
+
+
+.info {
+    position: relative; 
+    width: 1200px;
+    height: 675px;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 8px rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
+    z-index: 1; 
+    display: flex; 
+    overflow: hidden;
+}
+
+
+.info .left-box,
+.info .right-box {
+    height: 100%;
+    top: 0;
+    position: relative;
+    z-index: 2; 
+}
+
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+    background: linear-gradient(to right, rgba(255, 189, 238, 0.555), rgba(255, 193, 193, 0.541)); 
+}
+
+
+
+.info .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5; 
+    width: 100%;
+}
+
+.info .time .title {
+    font-family: "SourceHanSansSC-Medium-2";
+    color: white;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.info .time .time-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+    height: 300px;
+    margin-bottom: 48px;
+}
+
+.info .time .time-box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: 80%;
+}
+
+
+.info .time .time-box div p {
+    font-family: "Microsoft Yahei UI", bold;
+    font-size: 150px;
+    margin: 0;
+
+    
+    color:  rgb(255, 255, 255); 
+    -webkit-text-stroke: 3px rgba(255, 139, 139, 0.192); 
+    text-stroke: 3px rgb(255, 255, 255); 
+}
+
+
+.info .time .time-box div span {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    letter-spacing: 8px;
+    opacity: 0.8;
+}
+
+.info .time .sub-title {
+    font-family: "Microsoft Yahei UI";
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin: 0;
+
+    
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.151); 
+    text-stroke: 3px rgba(255, 255, 255, 0.212); 
+
+}
+
+.info .time .sub-title.tips {
+    margin: 16px;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    user-select: none;
+}
+.lang-switch span {
+    padding: 0 5px;
+}
+.lang-switch span:hover {
+    text-decoration: underline;
+}
+
+
+
+.music-control {
+    position: absolute;
+    bottom: 20px;      
+    right: 40px;       
+    z-index: 10;
+}
+
+.music-control img {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 137, 137, 0.25);
+    padding: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.music-control img:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 137, 137, 0.4);
+}
+
+
+@keyframes icp-fadein {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #fff;
+  z-index: 9999;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 800ms ease; 
+}
+
+#intro.hidden {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+.intro-inner {
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing: .08em;
+}
+
+.intro-line {
+  font-size: clamp(18px, 3vw, 28px);
+  white-space: nowrap;
+}
+
+
+.dots::after {
+  content: "";
+  display: inline-block;
+  width: 0; 
+  animation: dotsTyping 1.2s steps(4, end) infinite;
+}
+@keyframes dotsTyping {
+  0%   { content: "";   }
+  25%  { content: ".";  }
+  50%  { content: ".."; }
+  75%  { content: "...";}
+  100% { content: "";   }
+}
+
+
+.caret {
+  display: inline-block;
+  width: .6ch;
+  height: 1em;
+  background: #fff;
+  margin-left: .1ch;
+  transform: translateY(.12em);
+  animation: caretBlink 1s steps(1, end) infinite;
+}
+@keyframes caretBlink {
+  0%, 50%   { opacity: 1; }
+  50.01%,100% { opacity: 0; }
+}
+
+.intro-hint {
+  margin-top: 12px;
+  font-size: 0.9em;
+  opacity: .65;
+}
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  #intro { transition: none; }
+  .dots::after, .caret { animation: none; }
+}
+
+
+
+
+
+.code-overlay{
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  top: auto;
+
+  
+  width: auto;                 
+  width: -moz-fit-content;     
+  width: fit-content;          
+  max-width: none;
+  overflow-x: visible;
+
+  max-height: 100vh;
+  padding: 20px 20px;
+
+  
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+
+  color: rgba(255, 157, 157, 0.5);
+
+  font: 700 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  z-index: 1;
+  pointer-events: none;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.code-overlay::-webkit-scrollbar{ display: none; }
+
+
+#code-stream .line{
+  
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;   
+  word-break: break-word;    
+
+  
+  text-shadow:
+    0 0 8px rgba(211, 211, 211, 0.45),
+    0 0 2px rgb(255, 255, 255);
+}
+
+
+
+.code-overlay::-webkit-scrollbar{ display: none; }
+
+
+#code-stream .line{
+  white-space: pre;
+  text-shadow:
+    0 0 8px rgba(255,100,100,.45),
+    0 0 2px rgba(255,100,100,.6);
+}
+
+
+/* （建议直接删掉你文件中这段）
+@media (max-width: 900px){
+  .code-overlay{ display: none; }
+}
+*/
+
+
+@media (max-width: 900px){
+  .code-overlay{ display:block !important; }
+}
+
+
+@media (max-width: 900px) and (orientation: landscape){
+  .code-overlay{
+    left: .75rem;
+    bottom: .75rem;
+    
+    max-height: 42vh;
+    font-size: 12px;
+  }
+}
+@media (max-width: 900px) and (orientation: portrait){
+  .code-overlay{
+    left: .75rem;
+    bottom: .75rem;
+    
+    max-height: 32vh;
+    font-size: 12px;
+  }
+}
+
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;               
+  flex-wrap: wrap;         
+  margin-top: 12px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  flex-wrap: wrap;
+}
+
+.meta-row .visit-counter {
+  height: 28px; 
+  vertical-align: middle;
+  image-rendering: pixelated;
+  border-radius: 4px;
+  user-select: none;
+  opacity: 0.5;  
+}
+
+
+
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 9999px;   
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+
+  
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+
+  
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  transition:
+    transform .15s ease,
+    background .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.meta-badge:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.meta-badge:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+.meta-badge svg { display: block; }
+.meta-badge.icp { letter-spacing: .2px; }
+
+
+@media (max-width: 420px) {
+  .meta-row { gap: 8px; }
+  .meta-badge { font-size: 0.8rem; padding: 6px 10px; }
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 188, 188, 0.9); 
+    background: transparent;
+    line-height: 1.4;
+    font-family: "Microsoft Yahei UI", "SourceHanSansSC-Medium-2", sans-serif;
+    user-select: none;
+    pointer-events: none; 
+}
+
+.counter-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; 
+}
+
+.counter-label {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7); 
+  user-select: none;
+}
+
+.visit-counter {
+  filter: brightness(1.1); 
+  vertical-align: middle;
+}

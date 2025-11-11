@@ -1,0 +1,11 @@
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jdapimin.c
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jinclude.h
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jconfig.h
+..\..\output\jdapimin.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\jdapimin.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\jdapimin.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\jdapimin.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jpeglib.h
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jmorecfg.h
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jpegint.h
+..\..\output\jdapimin.o: ..\..\Middlewares\MJPEG\JPEG\jerror.h

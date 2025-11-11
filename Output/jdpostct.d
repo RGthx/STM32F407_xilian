@@ -1,0 +1,11 @@
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jdpostct.c
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jinclude.h
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jconfig.h
+..\..\output\jdpostct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\jdpostct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\jdpostct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\jdpostct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jpeglib.h
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jmorecfg.h
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jpegint.h
+..\..\output\jdpostct.o: ..\..\Middlewares\MJPEG\JPEG\jerror.h

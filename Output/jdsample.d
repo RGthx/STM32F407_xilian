@@ -1,0 +1,11 @@
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jdsample.c
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jinclude.h
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jconfig.h
+..\..\output\jdsample.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\jdsample.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\jdsample.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\jdsample.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jpeglib.h
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jmorecfg.h
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jpegint.h
+..\..\output\jdsample.o: ..\..\Middlewares\MJPEG\JPEG\jerror.h

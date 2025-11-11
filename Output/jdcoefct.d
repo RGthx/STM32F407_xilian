@@ -1,0 +1,11 @@
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jdcoefct.c
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jinclude.h
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jconfig.h
+..\..\output\jdcoefct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\jdcoefct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdlib.h
+..\..\output\jdcoefct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\stdio.h
+..\..\output\jdcoefct.o: D:\armkeil\cores\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jpeglib.h
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jmorecfg.h
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jpegint.h
+..\..\output\jdcoefct.o: ..\..\Middlewares\MJPEG\JPEG\jerror.h

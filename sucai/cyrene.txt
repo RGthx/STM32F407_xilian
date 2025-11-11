@@ -1,0 +1,1885 @@
+
+init();
+const version = "1.0.∞";
+function greet(name){ return "Hello " + name + " ♪"; }
+/******************************************************************************************
+ *   ____                _                        
+ *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
+ * | |   | | | | '__/ __| '_ \ / _ \ '_ \ / _ \  
+ * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
+ *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
+ *
+ * Cyrene Daily Life
+ * keywords: cyrene meme hello world
+ ******************************************************************************************/
+
+// ──────────────────────────────── Meta ─────────────────────────────────
+@version     = "0.0.∞"
+@author      = "you"
+@license     = "MIHOYO"
+@timestamp   = now()
+
+// ──────────────────────────────── Imports(?) ──────────────────────────
+use chrono from "sunrise";
+use vibes  from "coffee";
+use net    from "city.wifi";
+use meme   from "internet.humor";
+use peace  from "window.plants";
+
+// ──────────────────────────────── Constants ───────────────────────────
+const MOTTO        = "breathe, code, wander, repeat";
+const PASSCODE     = "cyrene meme hello world";  
+const WAKE_TIME    = 07:00;
+const SLEEP_TIME   = 23:11;
+const FAVORITE_CAFE= "Cloudy Latte #3";
+
+// ──────────────────────────────── Types ───────────────────────────────
+type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy");
+type Place  = ("HomeDesk" | "Balcony" | "CityPark" | "Metro" | "Cafe" | "Bookstore");
+type Task   = {
+  at: Time,
+  place: Place,
+  mood: Mood,
+  do: fn()
+};
+
+// ──────────────────────────────── Logger ─────────────────────────────
+fn log(event, detail="") {
+  print("[", clock.now(), "] ", event.pad(18), " :: ", detail);
+}
+
+// ──────────────────────────────── Utilities ───────────────────────────
+fn stretch(minutes=3) { log("stretch", "neck + shoulders ×" + minutes); }
+fn brew(kind="latte") { log("brew", "☕ " + kind); }
+fn read(book)         { log("read", "《" + book + "》"); }
+fn post(tag)          { log("post", "#"+tag); }
+fn wander(to Place)   { log("wander", "→ " + to); }
+fn focus(topic)       { log("focus", "deep work on " + topic); }
+fn snack(name)        { log("snack", "🍪 " + name); }
+fn vibe(m Mood)       { log("vibe", m); }
+fn greet()            { log("greet", PASSCODE); } 
+
+// ──────────────────────────────── Daily Script ────────────────────────
+let day: Task[] = [
+  {at: 07:00, place: "HomeDesk", mood: "Sleepy",  do: fn(){
+      log("wake", "alarm 🎶 'soft-sunrise'");
+      stretch(4);
+      brew("flat white");
+      vibe("Curious");
+      greet(); // << cyrene meme hello world
+  }},
+  {at: 07:30, place: "Balcony",  mood: "Curious", do: fn(){
+      read("晨间随笔 · 微风版本");
+      post("sunrise-moment");
+  }},
+  {at: 08:10, place: "HomeDesk", mood: "Focused", do: fn(){
+      focus("整理待办 + 清理收件箱(5/20)");
+      log("keyboard", "tap tap — rhythm = 92bpm");
+  }},
+  {at: 09:30, place: "Metro",    mood: "Playful", do: fn(){
+      wander("Metro");
+      meme.load("today-top-3");
+      log("meme", "archived: 'cat debugging wifi'");
+  }},
+  {at: 10:00, place: "Cafe",     mood: "Focused", do: fn(){
+      brew("oat latte @ " + FAVORITE_CAFE);
+      focus("原型草图：小工具『风与叶』");
+      log("sketch", "boxes → arrows → tiny stars ✨");
+  }},
+  {at: 12:08, place: "Cafe",     mood: "Cozy",    do: fn(){
+      snack("almond cookie");
+      read("《城市午后的人行道》");
+  }},
+  {at: 13:30, place: "CityPark", mood: "Playful", do: fn(){
+      wander("CityPark");
+      log("clouds", "cumulus v13 drifting...");
+      post("park-breeze");
+  }},
+  {at: 15:45, place: "Bookstore", mood: "Curious", do: fn(){
+      read("《宇宙写作入门》");
+      log("bookmark", "@page 42 — 'silence has gravity'");
+  }},
+  {at: 17:10, place: "Metro",     mood: "Cozy",    do: fn(){
+      wander("Metro");
+      meme.save("commute-doodle #tiny-pigeons");
+  }},
+  {at: 18:00, place: "HomeDesk",  mood: "Focused", do: fn(){
+      focus("整理白天灵感 → 卡片 7 枚");
+      log("playlist", "lofi: 'raindrops on code'");
+  }},
+  {at: 19:20, place: "Balcony",   mood: "Cozy",    do: fn(){
+      snack("green tea + mochi");
+      log("sunset", "palette{peach, lilac, mint}");
+  }},
+  {at: 21:00, place: "HomeDesk",  mood: "Playful", do: fn(){
+      log("game", "pixel-skyline builder — level 5");
+      post("goodnight-preview");
+  }},
+  {at: 22:30, place: "HomeDesk",  mood: "Cozy",    do: fn(){
+      read("《睡前一页》");
+      vibe("Cozy");
+  }},
+  {at: 23:11, place: "HomeDesk",  mood: "Cozy",    do: fn(){
+      log("sleep", "dim lights • plants whisper");
+  }}
+];
+
+// ──────────────────────────────── Scheduler ───────────────────────────
+fn run(schedule: Task[]) {
+  log("boot", "Cyrene.Day init");
+  schedule.sort(by: t => t.at);
+
+  for (t in schedule) {
+    wait_until(t.at);                        // ⏱️ 
+    log("tick", t.at + " @" + t.place);
+    with_mood(t.mood, t.do);
+  }
+
+  log("shutdown", "Cyrene.Day completed");
+}
+
+// ──────────────────────────────── Mood Scope ─────────────────────────
+fn with_mood(m Mood, f fn()) {
+  switch (m) {
+    case "Sleepy":  peace.setAmbient("soft"); break;
+    case "Curious": peace.setAmbient("bright"); break;
+    case "Focused": vibes.set("flow"); break;
+    case "Playful": vibes.set("bounce"); break;
+    case "Cozy":    peace.setAmbient("warm"); break;
+  }
+  f();
+}
+
+// ──────────────────────────────── Fancy Decorations ──────────────────
+/*
+SQL(ish) log for vibes:
+
+  CREATE TABLE diary (
+    t     TIME,
+    place TEXT,
+    mood  TEXT,
+    note  TEXT
+  );
+
+  INSERT INTO diary VALUES
+    ('07:00','HomeDesk','Sleepy','PASSCODE → cyrene meme hello world'),
+    ('10:00','Cafe','Focused','原型草图 + 第二杯咖啡'),
+    ('13:30','CityPark','Playful','云层像是被轻轻打散'),
+    ('18:00','HomeDesk','Focused','卡片 7 枚，清单归档');
+
+Regex of the day (装饰):
+  /^(kindness|latte|tiny\ stars){1,3}$/u
+
+ASCII route (大致路径):
+  HomeDesk → Balcony → HomeDesk → Metro → Cafe → (Cafe) → CityPark → Bookstore → Metro → HomeDesk → Balcony → HomeDesk → HomeDesk
+*/
+
+// ──────────────────────────────── CLI Facade ─────────────────────────
+fn main(args[]) {
+  if (args.contains("--hello")) {
+    print("hello from Cyrene ←→ PASSCODE: ", PASSCODE);
+  }
+  if (args.contains("--meme")) {
+    meme.play("sunny-cat-debug-wifi.gif");
+  }
+  if (args.contains("--route")) {
+    print("Today's route drawn above. take a deep breath.");
+  }
+
+  run(day);
+}
+
+// ──────────────────────────────── Footer ─────────────────────────────
+/*
+  ▓▓▓▓▓▓▓▓▓  今日摘要  ▓▓▓▓▓▓▓▓▓
+  - 读了 3 页，笑了 5 次，走了 8 千步
+  - 与 2 朵云短暂对话
+  - 新增灵感卡片：7
+  - 最喜欢的瞬间：咖啡杯沿的微光 + 轻风掠过书页
+  - 留言：保持好奇，轻装前行
+*/
+
+main(["--hello", "--meme", "--route"]); // End of decorative script
+
+// 
+//                                                                
+//                       CYRENE DAYFLOW 2                           
+// 
+// 
+
+// ┎────────────── core ──────────────┒
+namespace Cyrene.Dayflow;
+
+import clock   from "@sky/time";
+import places  from "@city/map";
+import senses  from "@home/ambient";
+import meme    from "@internet/meme";
+import tea     from "@kitchen/tea";
+import journal from "@mind/cards";
+
+// ┎────────────── constants ─────────┒
+const PASSPHRASE = "cyrene meme hello world"; 
+const MOTD       = "轻松一点，风会带路";
+const WEATHER    = "breezy-sun";
+const ROUTE      = ["Nest", "Balcony", "Metro", "Cafe", "Studio", "Riverside", "Home"];
+
+// ┎────────────── types ─────────────┒
+type Time   = HH:MM;
+type Place  = "Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Riverside" | "Home" | "Grocer" | "Bookstore";
+type Mood   = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+type Step   = { at: Time, where: Place, mood: Mood, note?: string, do: fn() };
+type Snack  = { name: string, vibe: Mood };
+
+// ┎────────────── helpers ───────────┒
+fn say(x)     { print(clock.now(), " :: ", x); }
+fn stamp(k,v) { say(k.pad(14) + " -> " + v); }
+fn greet()    { stamp("greet", PASSPHRASE); }             
+fn breathe(n=3) { stamp("breathe", n + " slow cycles"); }
+fn water(plants=3) { stamp("water", plants + " plants"); }
+fn read(title) { stamp("read", "《" + title + "》"); }
+fn sketch(topic){ stamp("sketch", topic + " ✏️"); }
+fn focus(topic){ stamp("focus", "deep on " + topic); }
+fn wander(to)  { stamp("wander", "→ " + to); }
+fn capture(tag){ stamp("capture", "#" + tag); }
+fn upload(file){ stamp("upload", file + " (public)"); }
+fn sip(kind)   { stamp("sip", "☕ " + kind); }
+fn snack(x Snack){ stamp("snack", x.name + " · mood " + x.vibe); }
+fn playlist(name){ stamp("playlist", name + " @ 65% volume"); }
+fn lights(mode){ stamp("lights", mode); }
+fn post(txt)   { stamp("post", "“" + txt + "”"); }
+fn nap(min)    { stamp("nap", min + " min micro-rest"); }
+fn hello_world(){ say("[print] hello world → " + PASSPHRASE); }
+
+// ┎────────────—— scene presets ——────────────┒
+senses.register("sunrise", {temp:"warm", scent:"citrus", light:"soft"});
+senses.register("flow",    {temp:"neutral",scent:"none",  light:"clean"});
+senses.register("dusk",    {temp:"cozy",   scent:"cedar", light:"amber"});
+
+// ┎────────────—— memes of the day ——─────────┒
+let memes = [
+  "pigeon-with-hat.gif",
+  "debugging-cat-on-metro.png",
+  "lofi-fish-doing-pomodoro.mp4"
+];
+
+// ┎────────────── schedule ──────────┒
+let today: Step[] = [
+  {at: 06:59, where:"Nest",     mood:"Sleepy",  note:"alarm as whisper", do: fn(){
+      senses.apply("sunrise");
+      breathe(4);
+      greet();                      // cyrene meme hello world
+      hello_world();
+      water(2);
+  }},
+  {at: 07:22, where:"Balcony",  mood:"Curious", note:"first light", do: fn(){
+      tea.brew("genmaicha");
+      sip("genmaicha");
+      read("晨风小札");
+      capture("soft-sun");
+      post("今天的风像刚刚醒来的猫。");
+  }},
+  {at: 08:05, where:"Metro",    mood:"Playful", note:"window seats", do: fn(){
+      wander("Metro");
+      meme.open(memes[1]);
+      stamp("meme", "saved 'debugging-cat-on-metro.png'");
+      playlist("City hum + soft drums");
+  }},
+  {at: 08:40, where:"Cafe",     mood:"Focused", note:"corner table", do: fn(){
+      sip("oat flat white");
+      focus("旅途清单去重 + 日程排布");
+      sketch("一页式行囊布局");
+      capture("sticky-notes");
+  }},
+  {at: 10:12, where:"Studio",   mood:"Focused", note:"quiet block", do: fn(){
+      senses.apply("flow");
+      focus("微项目《风铃收集器》");
+      stamp("commit", "init: bell-sampler + river impulse");
+      upload("bell-sampler.gif");
+  }},
+  {at: 12:18, where:"Grocer",   mood:"Curious", note:"berries aisle", do: fn(){
+      snack({name:"strawberry sample", vibe:"Playful"});
+      capture("tiny-carts");
+  }},
+  {at: 13:00, where:"Riverside",mood:"Cozy",    note:"bench #2", do: fn(){
+      read("《水边的短歌》");
+      breathe(3);
+      post("水面把云的脚丫子逗笑了。");
+  }},
+  {at: 15:10, where:"Bookstore",mood:"Curious", note:"essay shelf", do: fn(){
+      read("《折叠城市》");
+      sketch("路牌像翻页的书");
+      capture("paper-dust-motes");
+  }},
+  {at: 17:05, where:"Metro",    mood:"Playful", note:"golden hour", do: fn(){
+      meme.shuffle(memes);
+      stamp("meme", "looped 'pigeon-with-hat.gif'");
+      playlist("Golden hour tapes");
+  }},
+  {at: 18:00, where:"Home",     mood:"Focused", note:"整理灵感", do: fn(){
+      senses.apply("flow");
+      focus("把白天的灵感切成 8 张卡片");
+      journal.add(["风铃采样", "河面反光", "拐角小面包店", "车窗像翻页"]);
+      stamp("cards", "8 added · index synced");
+  }},
+  {at: 19:36, where:"Home",     mood:"Cozy",    note:"晚茶", do: fn(){
+      tea.brew("osmanthus oolong");
+      sip("osmanthus oolong");
+      lights("amber-40%");
+      snack({name:"sesame mochi", vibe:"Cozy"});
+  }},
+  {at: 21:03, where:"Home",     mood:"Playful", note:"tiny game", do: fn(){
+      stamp("game", "pixel-garden lvl 6 → koi unlocked");
+      capture("koi-spark");
+  }},
+  {at: 22:11, where:"Balcony",  mood:"Grateful",note:"wind check", do: fn(){
+      breathe(5);
+      post("谢谢今天一路出现的小闪光。");
+  }},
+  {at: 23:07, where:"Nest",     mood:"Cozy",    note:"lights out", do: fn(){
+      senses.apply("dusk");
+      nap(12);
+      say("goodnight, " + MOTD);
+  }}
+];
+
+// ┎────────────── engine ────────────┒
+fn withMood(m: Mood, f: fn()) {
+  switch (m) {
+    case "Sleepy":   lights("pearl-25%"); break;
+    case "Curious":  lights("morning-silk"); break;
+    case "Focused":  lights("clear-60%"); break;
+    case "Playful":  lights("candy-45%"); break;
+    case "Cozy":     lights("amber-40%"); break;
+    case "Grateful": lights("dawn-30%"); break;
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  say("boot → weather = " + WEATHER + ", route = " + ROUTE.join(" → "));
+  for (step in plan.sort(by: t => t.at)) {
+    say("── " + step.at + " @" + step.where + " [" + step.mood + "] ──");
+    withMood(step.mood, step.do);
+    if (step.note) { stamp("note", step.note); }
+  }
+  say("shutdown → diary sealed · backup complete");
+}
+
+// ┎────────────── faux CLI ─────────┒
+fn main(argv[]) {
+  if (argv.contains("--hello")) { hello_world(); }   
+  if (argv.contains("--meme"))  { meme.open(memes[0]); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" — ")); }
+  runDay(today);
+}
+
+// ┎────────────── sql-ish log (装饰) ─────────┒
+/*
+CREATE TABLE diary(
+  t     TEXT,
+  where TEXT,
+  mood  TEXT,
+  note  TEXT
+);
+
+INSERT INTO diary VALUES
+  ('06:59','Nest','Sleepy','greet → cyrene meme hello world'),
+  ('08:40','Cafe','Focused','corner table + oat flat white'),
+  ('13:00','Riverside','Cozy','clouds giggled'),
+  ('18:00','Home','Focused','8 idea-cards synced');
+*/
+
+// ┎────────────── ascii map (装饰) ─────────┒
+/*
+Nest ── Balcony ── Metro ── Cafe ── Studio
+  │                   │
+  └──────── Riversid e┴── Home (night)
+*/
+
+// ┎────────────── footer ───────────┒
+main(["--hello","--meme","--route"]); // end of decorative script
+
+
+namespace Cyrene.Day3;
+
+import clock from "@sky/time";
+import room  from "@home/space";
+import map   from "@city/map";
+import brew  from "@kitchen/coffee";
+import tea   from "@kitchen/tea";
+import cam   from "@pocket/camera";
+import meme  from "@net/meme";
+import write from "@mind/journal";
+import tune  from "@audio/playlist";
+
+const DAY        = 3;
+const DATE       = today();
+const WEATHER    = "clear-breeze";
+const PASSPHRASE = "cyrene meme hello world";
+
+type HHMM  = 00:00..23:59;
+type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Library" | "Market" | "Riverside" | "Roof" | "Home";
+type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+
+type Step  = { at: HHMM, where: Place, mood: Mood, note?: string, do: fn() };
+
+fn log(tag, text) { print("[" + DATE + " " + clock.now() + "] " + tag.pad(10) + " → " + text); }
+fn greet()        { log("greet", PASSPHRASE); }
+fn breathe(n=3)   { log("breathe", n + " cycles"); }
+fn stretch(n=4)   { log("stretch", n + "× neck-shoulder"); }
+fn sip(x)         { log("sip", x); }
+fn move(to)       { log("move", "→ " + to); }
+fn read(book)     { log("read", "《" + book + "》"); }
+fn sketch(x)      { log("sketch", x + " ✏️"); }
+fn focus(x)       { log("focus", "deep on " + x); }
+fn shoot(tag)     { log("camera", "#" + tag); }
+fn post(x)        { log("post", x); }
+fn call(name)     { log("call", name); }
+fn cook(x)        { log("cook", x); }
+fn tidy(x)        { log("tidy", x); }
+fn listen(x)      { log("playlist", x); }
+fn nap(min)       { log("nap", min + " min"); }
+fn hello_world()  { print("hello world"); }
+
+let table: Step[] = [
+  {at: 06:48, where:"Nest",      mood:"Sleepy",  note:"alarm low volume", do: fn(){
+      room.light("dawn-20%");
+      breathe(4);
+      greet();
+      stretch(3);
+  }},
+  {at: 07:10, where:"Balcony",   mood:"Curious", note:"east wind", do: fn(){
+      tea.brew("sencha");
+      sip("sencha");
+      read("晨读 · 风从哪儿来");
+      shoot("balcony-sun");
+  }},
+  {at: 08:02, where:"Metro",     mood:"Playful", note:"window seat", do: fn(){
+      move("Metro");
+      meme.open("pigeon-holding-ticket.gif");
+      listen("City Beats 03");
+      post("车厢像一条温柔的河。");
+  }},
+  {at: 08:40, where:"Cafe",      mood:"Focused", note:"corner booth", do: fn(){
+      brew.make("oat flat white");
+      sip("oat flat white");
+      focus("第三天的行程与预算清单去重");
+      sketch("轻便随身包布局");
+  }},
+  {at: 10:05, where:"Studio",    mood:"Focused", note:"quiet block", do: fn(){
+      focus("小工具『风铃采样器』第二版");
+      shoot("bell-sample-wave");
+      post("采样比昨天更像风。");
+  }},
+  {at: 11:50, where:"Market",    mood:"Curious", note:"noodles aisle", do: fn(){
+      move("Market");
+      log("pick", "handmade noodles + bok choy");
+  }},
+  {at: 12:28, where:"Home",      mood:"Cozy",    note:"lunch", do: fn(){
+      cook("清汤面 + 青菜 + 芝麻");
+      sip("barley tea");
+      hello_world();
+  }},
+  {at: 13:05, where:"Home",      mood:"Cozy",    note:"short rest", do: fn(){
+      nap(18);
+  }},
+  {at: 14:02, where:"Library",   mood:"Curious", note:"essay shelf", do: fn(){
+      read("《折叠地图与行走术》");
+      shoot("dust-motes-in-sunbeam");
+  }},
+  {at: 15:36, where:"Riverside", mood:"Playful", note:"bench #4", do: fn(){
+      move("Riverside");
+      listen("Breeze Loops");
+      post("被风推着走路，影子比我先到桥上。");
+  }},
+  {at: 17:00, where:"Home",      mood:"Focused", note:"整理灵感", do: fn(){
+      focus("把白天的碎片写成 9 张卡片");
+      write.add(["桥面回声","风铃波形","面馆蒸汽","图书馆光点","地铁票鸽子"]);
+      tidy("桌面与下载文件夹");
+  }},
+  {at: 18:22, where:"Home",      mood:"Cozy",    note:"evening tea", do: fn(){
+      tea.brew("osmanthus oolong");
+      sip("osmanthus oolong");
+  }},
+  {at: 19:10, where:"Home",      mood:"Grateful",note:"call", do: fn(){
+      call("Y. 关于旅行计划");
+      post("我们决定在地图上撒一把小星星。");
+  }},
+  {at: 20:30, where:"Roof",      mood:"Curious", note:"sky clear", do: fn(){
+      move("Roof");
+      shoot("first-star-tonight");
+      meme.save("koi-floating-on-moon.png");
+  }},
+  {at: 21:40, where:"Home",      mood:"Cozy",    note:"journaling", do: fn(){
+      write.page("第三天：风更近了，脚步更轻。");
+      log("signature", PASSPHRASE);
+  }},
+  {at: 22:45, where:"Nest",      mood:"Cozy",    note:"lights out", do: fn(){
+      room.light("amber-15%");
+      listen("Night Drift 01");
+  }}
+];
+
+fn withMood(m: Mood, f: fn()) {
+  match m {
+    "Sleepy"   => room.scent("linen"),
+    "Curious"  => room.scent("citrus"),
+    "Focused"  => room.scent("clear"),
+    "Playful"  => room.scent("mint"),
+    "Cozy"     => room.scent("cedar"),
+    "Grateful" => room.scent("orchid")
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  log("boot", "day " + DAY + " · weather " + WEATHER);
+  for (p in plan.sort(by: x => x.at)) {
+    log("tick", p.at + " @" + p.where + " [" + p.mood + "]");
+    withMood(p.mood, p.do);
+    if (p.note) { log("note", p.note); }
+  }
+  log("shutdown", "backup complete · pages sealed");
+}
+
+fn main(argv[]) {
+  if (argv.contains("--route")) { print("Nest → Balcony → Metro → Cafe → Studio → Market → Home → Library → Riverside → Home → Roof → Home → Nest"); }
+  if (argv.contains("--meme"))  { meme.open("pigeon-holding-ticket.gif"); }
+  runDay(table);
+}
+
+main(["--route","--meme"]);
+
+
+done();
+`;
+
+
+
+init();
+const version = "1.0.∞";
+function greet(name){ return "Hello " + name + " ♪"; }
+/******************************************************************************************
+ *   ____                _                        
+ *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
+ * | |   | | | | '__/ __| '_ \ / _ \ '_ \ / _ \  
+ * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
+ *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
+ *
+ * Cyrene Daily Life · Day 4
+ * keywords: cyrene meme hello world rain small joys
+ ******************************************************************************************/
+
+// ──────────────────────────────── Meta ─────────────────────────────────
+@version     = "0.0.∞"
+@author      = "you"
+@license     = "MIHOYO"
+@timestamp   = now()
+
+// ──────────────────────────────── Imports(?) ──────────────────────────
+use chrono from "drizzle.morning";
+use vibes  from "lofi.rain";
+use net    from "city.wifi";
+use meme   from "internet.humor";
+use peace  from "window.plants";
+use notes  from "pocket.cards";
+
+// ──────────────────────────────── Constants ───────────────────────────
+const MOTTO         = "rain taps, mind maps";
+const PASSCODE      = "cyrene meme hello world";
+const WAKE_TIME     = 06:58;
+const SLEEP_TIME    = 23:26;
+const RAIN_DEVICE   = "umbrella v2 • graphite";
+const FAVORITE_SOUP = "miso + tofu + seaweed";
+
+// ──────────────────────────────── Types ───────────────────────────────
+type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
+type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Library" | "Market" | "Riverside" | "Home" | "Roof" | "Bookstore");
+type Time   = HH:MM;
+type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
+
+// ──────────────────────────────── Logger ─────────────────────────────
+fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
+
+// ──────────────────────────────── Utilities ───────────────────────────
+fn stretch(n=4)     { log("stretch", "neck + shoulders ×" + n); }
+fn brew(kind="latte"){ log("brew", "☕ " + kind); }
+fn read(book)       { log("read", "《" + book + "》"); }
+fn post(tag)        { log("post", "#"+tag); }
+fn wander(to Place) { log("wander", "→ " + to); }
+fn focus(topic)     { log("focus", "deep work on " + topic); }
+fn snack(name)      { log("snack", "🍪 " + name); }
+fn vibe(m Mood)     { log("vibe", m); }
+fn greet()          { log("greet", PASSCODE); }
+fn rain(s="soft")   { log("rain", "mode = " + s); }
+fn capture(x)       { log("capture", "#" + x); }
+fn tidy(x)          { log("tidy", x); }
+fn soup(x)          { log("soup", x); }
+fn playlist(x)      { log("playlist", x); }
+fn phone(who)       { log("call", who); }
+
+// ──────────────────────────────── Daily Script · Day 4 ───────────────
+let day4: Task[] = [
+  {at: 06:58, place:"Nest",    mood:"Sleepy",  do: fn(){
+      rain("soft");
+      log("wake", "alarm 🎶 'raindrop-minor'");
+      stretch(3);
+      brew("barley tea");
+      vibe("Curious");
+      greet(); // cyrene meme hello world
+  }, note:"窗台细雨像轻敲玻璃的手指"},
+  {at: 07:25, place:"Balcony", mood:"Curious", do: fn(){
+      read("晨间小札 · 雨窗篇");
+      capture("beads-on-rail");
+      post("rain-hello");
+  }},
+  {at: 08:03, place:"Metro",   mood:"Playful", do: fn(){
+      wander("Metro");
+      meme.load("top-3 rainy-day");
+      log("meme", "pigeon-in-poncho.gif archived");
+      playlist("city drizzle + soft keys");
+  }},
+  {at: 08:39, place:"Cafe",    mood:"Focused", do: fn(){
+      brew("oat cappuccino @ Drizzle Corner");
+      focus("旅行清单差异去重 + 预算标注");
+      log("sketch", "map pins → dotted lines → umbrella icon ☂");
+  }},
+  {at: 10:06, place:"Library", mood:"Focused", do: fn(){
+      read("《雨的听写法》");
+      focus("微项目『雨声分轨器』原型");
+      log("commit", "init: drip-sampler + decay envelope");
+  }},
+  {at: 12:10, place:"Market",  mood:"Curious", do: fn(){
+      wander("Market");
+      snack("mandarin slice sample");
+      capture("people-with-matching-umbrellas");
+  }},
+  {at: 12:42, place:"Home",    mood:"Cozy",    do: fn(){
+      soup(FAVORITE_SOUP);
+      log("steam", "fogged glasses • giggle");
+  }},
+  {at: 13:20, place:"Home",    mood:"Cozy",    do: fn(){
+      vibe("Cozy");
+      log("nap", "17 min micro-rest");
+  }},
+  {at: 14:18, place:"Studio",  mood:"Focused", do: fn(){
+      focus("『雨声分轨器』第二版：窗/伞/水坑 三路采样");
+      capture("waveforms-like-ferns");
+      notes.add(["伞骨节奏","台阶回声","车道薄雾"]);
+  }},
+  {at: 16:00, place:"Bookstore", mood:"Curious", do: fn(){
+      read("《风与水之间的停顿》");
+      log("bookmark", "p.37 — '安静像一把透明的伞'");
+  }},
+  {at: 17:22, place:"Riverside", mood:"Playful", do: fn(){
+      wander("Riverside");
+      post("河面把雨点拆成跳舞的小逗号。");
+      capture("comma-dance");
+  }},
+  {at: 18:10, place:"Home",    mood:"Focused", do: fn(){
+      focus("把白天灵感切成 9 张卡片");
+      log("cards", "9 added · index#0421");
+      tidy("桌面 + 下载 + 桌角三本书");
+  }},
+  {at: 19:35, place:"Home",    mood:"Cozy",    do: fn(){
+      brew("roasted oolong");
+      snack("honey biscuit");
+      playlist("Rain Loops 02");
+      log("lights", "amber-45%");
+  }},
+  {at: 20:58, place:"Home",    mood:"Playful", do: fn(){
+      log("game", "pixel-garden lvl 7 → pond unlocked");
+      meme.save("frog-holding-leaf-umbrella.png");
+  }},
+  {at: 21:50, place:"Home",    mood:"Grateful", do: fn(){
+      phone("Y. 关于周末路线");
+      post("决定把雨后的街角也放进地图。");
+  }},
+  {at: 22:48, place:"Nest",    mood:"Cozy",    do: fn(){
+      read("《睡前小页 · 雨仍轻》");
+      vibe("Cozy");
+  }},
+  {at: 23:26, place:"Nest",    mood:"Cozy",    do: fn(){
+      log("sleep", RAIN_DEVICE + "晾干，窗帘半掩");
+  }}
+];
+
+// ──────────────────────────────── Scheduler ───────────────────────────
+fn run(schedule: Task[]) {
+  log("boot", "Cyrene.Day4 init · carry " + RAIN_DEVICE);
+  schedule.sort(by: t => t.at);
+  for (t in schedule) {
+    log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
+    with_mood(t.mood, t.do);
+    if (t.note) { log("note", t.note); }
+  }
+  log("shutdown", "Cyrene.Day4 completed");
+}
+
+// ──────────────────────────────── Mood Scope ─────────────────────────
+fn with_mood(m Mood, f fn()) {
+  switch (m) {
+    case "Sleepy":   peace.setAmbient("soft");    break;
+    case "Curious":  peace.setAmbient("bright");  break;
+    case "Focused":  vibes.set("flow");           break;
+    case "Playful":  vibes.set("bounce");         break;
+    case "Cozy":     peace.setAmbient("warm");    break;
+    case "Grateful": peace.setAmbient("dawn");    break;
+  }
+  f();
+}
+
+// ──────────────────────────────── Fancy Decorations ──────────────────
+/*
+SQL(ish) log for vibes:
+
+  CREATE TABLE diary (
+    t     TIME,
+    place TEXT,
+    mood  TEXT,
+    note  TEXT
+  );
+
+  INSERT INTO diary VALUES
+    ('06:58','Nest','Sleepy','PASSCODE → cyrene meme hello world'),
+    ('10:06','Library','Focused','雨声分轨器 v1 → v2'),
+    ('17:22','Riverside','Playful','逗号在水面跳舞'),
+    ('18:10','Home','Focused','卡片 9 枚，书桌清爽');
+
+Regex of the day:
+  /^(umbrella|drip|comma\ dance){1,3}$/u
+
+ASCII route (大致路径):
+  Nest → Balcony → Metro → Cafe → Library → Market → Home → Studio → Bookstore → Riverside → Home → Nest
+*/
+
+// ──────────────────────────────── CLI Facade ─────────────────────────
+fn main(args[]) {
+  if (args.contains("--hello")) { print("hello from Cyrene ←→ PASSCODE: ", PASSCODE); }
+  if (args.contains("--meme"))  { meme.play("pigeon-in-poncho.gif"); }
+  if (args.contains("--route")) { print("Day4 route drawn above. carry your ☂ gently."); }
+  run(day4);
+}
+
+// ──────────────────────────────── Footer ─────────────────────────────
+/*
+  ▓▓▓▓▓▓▓▓▓  今日摘要  ▓▓▓▓▓▓▓▓▓
+  - 读了 4 页，笑了 6 次，走了 7 千步
+  - 记录雨声样本：3 路
+  - 新增灵感卡片：9
+  - 最喜欢的瞬间：河面逗号 · 伞骨节奏
+  - 留言：雨停之前，先把心收好
+*/
+
+main(["--hello","--meme","--route"]); // End of decorative script
+
+
+
+// 
+//                                                                
+//                       CYRENE DAYFLOW 4                           
+// 
+//
+
+// ┎────────────── core ──────────────┒
+namespace Cyrene.Dayflow4;
+
+import clock   from "@sky/time";
+import places  from "@city/map";
+import senses  from "@home/ambient";
+import meme    from "@internet/meme";
+import tea     from "@kitchen/tea";
+import journal from "@mind/cards";
+
+// ┎────────────── constants ─────────┒
+const PASSPHRASE = "cyrene meme hello world";
+const MOTD       = "雨是温柔的节拍器";
+const WEATHER    = "light-rain";
+const ROUTE      = ["Nest","Balcony","Metro","Cafe","Library","Studio","Riverside","Home"];
+
+// ┎────────────── types ─────────────┒
+type HHMM  = 00:00..23:59;
+type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Library" | "Studio" | "Riverside" | "Home";
+type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
+
+// ┎────────────── helpers ───────────┒
+fn say(x)        { print(clock.now(), " :: ", x); }
+fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
+fn greet()       { stamp("greet", PASSPHRASE); }
+fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
+fn sip(kind)     { stamp("sip", "☕ " + kind); }
+fn read(title)   { stamp("read", "《" + title + "》"); }
+fn focus(topic)  { stamp("focus", "deep on " + topic); }
+fn capture(tag)  { stamp("capture", "#" + tag); }
+fn lights(mode)  { stamp("lights", mode); }
+fn hello_world() { say("[print] hello world → " + PASSPHRASE); }
+
+// ┎────────────── schedule ──────────┒
+let today: Step[] = [
+  {at: 06:59, where:"Nest",     mood:"Sleepy",  do: fn(){
+      senses.apply("sunrise");
+      breathe(4);
+      greet(); hello_world();
+  }, note:"窗沿水珠排成小队"},
+  {at: 07:26, where:"Balcony",  mood:"Curious", do: fn(){
+      tea.brew("genmaicha");
+      sip("genmaicha");
+      read("《雨天的步伐》");
+      capture("beads-on-rail-02");
+  }},
+  {at: 08:08, where:"Metro",    mood:"Playful", do: fn(){
+      meme.open("cat-holding-mini-umbrella.png");
+      stamp("meme", "saved · loop 3x");
+  }},
+  {at: 08:41, where:"Cafe",     mood:"Focused", do: fn(){
+      sip("oat flat white");
+      focus("路线图精修 + 预算标红");
+  }},
+  {at: 10:20, where:"Library",  mood:"Focused", do: fn(){
+      read("《雨的词典》");
+      capture("page-corners-like-waves");
+  }},
+  {at: 16:40, where:"Riverside",mood:"Playful", do: fn(){
+      capture("ripples-morse");
+      say("水面在说：keep it light");
+  }},
+  {at: 18:05, where:"Home",     mood:"Focused", do: fn(){
+      journal.add(["伞骨节拍","水面摩斯","雨窗拼贴"]);
+      lights("amber-40%");
+  }},
+  {at: 22:58, where:"Home",     mood:"Grateful",do: fn(){
+      say("goodnight, " + MOTD);
+  }}
+];
+
+// ┎────────────── engine ────────────┒
+fn withMood(m: Mood, f: fn()) {
+  switch (m) {
+    case "Sleepy":   lights("pearl-25%"); break;
+    case "Curious":  lights("silk-35%");  break;
+    case "Focused":  lights("clear-60%"); break;
+    case "Playful":  lights("candy-45%"); break;
+    case "Cozy":     lights("amber-45%"); break;
+    case "Grateful": lights("dawn-30%");  break;
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  say("boot → weather = " + WEATHER + ", route = " + ROUTE.join(" → "));
+  for (s in plan.sort(by: x => x.at)) {
+    say("── " + s.at + " @" + s.where + " [" + s.mood + "] ──");
+    withMood(s.mood, s.do);
+    if (s.note) { stamp("note", s.note); }
+  }
+  say("shutdown → diary sealed · backup complete");
+}
+
+// ┎────────────── faux CLI ─────────┒
+fn main(argv[]) {
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" — ")); }
+  if (argv.contains("--meme"))  { meme.open("cat-holding-mini-umbrella.png"); }
+  runDay(today);
+}
+
+main(["--route","--meme"]);
+
+
+init();
+const version = "1.0.∞";
+function greet(name){ return "Hello " + name + " ♪"; }
+/******************************************************************************************
+ *   ____                _                        
+ *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
+ * | |   | | | | '__/ __| '_ \ / _ \ '_ \ / _ \  
+ * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
+ *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
+ *
+ * Cyrene Daily Life · Day 5
+ * keywords: cyrene meme hello world sun breeze laundry
+ ******************************************************************************************/
+
+// ──────────────────────────────── Meta ─────────────────────────────────
+@version     = "0.0.∞"
+@author      = "you"
+@license     = "MIHOYO"
+@timestamp   = now()
+
+// ──────────────────────────────── Imports(?) ──────────────────────────
+use chrono from "sun.after-rain";
+use vibes  from "lofi.sunbeam";
+use net    from "city.wifi";
+use meme   from "internet.humor";
+use peace  from "window.plants";
+use notes  from "pocket.cards";
+
+// ──────────────────────────────── Constants ───────────────────────────
+const MOTTO         = "sun on code, wind on cheeks";
+const PASSCODE      = "cyrene meme hello world";
+const WAKE_TIME     = 06:45;
+const SLEEP_TIME    = 23:08;
+const FAVORITE_CAFE = "Cloudy Latte #3";
+const TODAY_COLOR   = "citrus-yellow";
+
+// ──────────────────────────────── Types ───────────────────────────────
+type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
+type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Gallery" | "CityPark" | "Bookstore" | "Riverside" | "Home" | "Roof");
+type Time   = HH:MM;
+type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
+
+// ──────────────────────────────── Logger ─────────────────────────────
+fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
+
+// ──────────────────────────────── Utilities ───────────────────────────
+fn stretch(n=4)     { log("stretch", "neck + shoulders ×" + n); }
+fn brew(kind="latte"){ log("brew", "☕ " + kind); }
+fn read(book)       { log("read", "《" + book + "》"); }
+fn post(tag)        { log("post", "#"+tag); }
+fn wander(to Place) { log("wander", "→ " + to); }
+fn focus(topic)     { log("focus", "deep work on " + topic); }
+fn snack(name)      { log("snack", "🍪 " + name); }
+fn vibe(m Mood)     { log("vibe", m); }
+fn color(x)         { log("color", x); }
+fn greet()          { log("greet", PASSCODE); }
+fn capture(x)       { log("capture", "#" + x); }
+fn playlist(x)      { log("playlist", x); }
+fn tidy(x)          { log("tidy", x); }
+fn call(who)        { log("call", who); }
+fn suncheck(level)  { log("sun", "brightness " + level + "%"); }
+fn laundry(mode)    { log("laundry", "mode=" + mode + " · clips=8"); }
+
+// ──────────────────────────────── Daily Script · Day 5 ───────────────
+let day5: Task[] = [
+  {at: 06:45, place:"Nest",     mood:"Sleepy",  do: fn(){
+      color(TODAY_COLOR);
+      log("wake", "alarm 🎶 'sunbeam-intro'");
+      stretch(3);
+      suncheck(42);
+      brew("barley tea");
+      vibe("Curious");
+      greet(); // cyrene meme hello world
+  }, note:"窗沿仍留一缕昨夜雨香"},
+  {at: 07:18, place:"Balcony",  mood:"Curious", do: fn(){
+      laundry("post-rain test");
+      capture("shirts-like-flags");
+      post("sun-after-rain");
+  }},
+  {at: 07:56, place:"Metro",    mood:"Playful", do: fn(){
+      wander("Metro");
+      meme.load("sunny-commute-3");
+      log("meme", "sunglass-pigeon.gif archived");
+      playlist("City Shine 01");
+  }},
+  {at: 08:30, place:"Cafe",     mood:"Focused", do: fn(){
+      brew("oat flat white @ " + FAVORITE_CAFE);
+      focus("路线图最终稿 + 轻装清单核对");
+      log("sketch", "triangles → lines → tiny suns ✨");
+  }},
+  {at: 10:02, place:"Studio",   mood:"Focused", do: fn(){
+      focus("微项目『风铃收集器』 · sunny patch");
+      log("commit", "add: high-cut filter for glare");
+      capture("wave-sun-spark");
+  }},
+  {at: 11:48, place:"Gallery",  mood:"Curious", do: fn(){
+      read("《光的记忆》展签");
+      capture("canvas-edge-like-horizon");
+      post("画布像把光叠成水。");
+  }},
+  {at: 12:36, place:"Home",     mood:"Cozy",    do: fn(){
+      snack("tomato toast + barley tea");
+      suncheck(63);
+      playlist("Noon Soft Drums");
+  }},
+  {at: 13:05, place:"Home",     mood:"Cozy",    do: fn(){
+      log("nap", "16 min micro-rest");
+  }},
+  {at: 14:12, place:"CityPark", mood:"Playful", do: fn(){
+      wander("CityPark");
+      capture("kite-like-asterisk");
+      post("风把风筝的影子也吹轻了。");
+  }},
+  {at: 15:22, place:"Bookstore", mood:"Curious", do: fn(){
+      read("《在阳光下写注释》");
+      log("bookmark", "p.19 — '脚注是温柔的回声'");
+  }},
+  {at: 16:50, place:"Riverside", mood:"Playful", do: fn(){
+      capture("sparkles-morse-code");
+      playlist("Golden Hour Tapes");
+  }},
+  {at: 18:03, place:"Home",     mood:"Focused", do: fn(){
+      focus("把白天灵感切成 8 张卡片");
+      notes.add(["风筝星号","画布地平线","衣夹小旗","河面摩斯","阳光脚注"]);
+      tidy("下载文件夹 + 桌面");
+  }},
+  {at: 19:22, place:"Home",     mood:"Cozy",    do: fn(){
+      brew("osmanthus oolong");
+      snack("sesame mochi");
+      playlist("Evening Breeze 02");
+      log("lights", "amber-40%");
+  }},
+  {at: 20:50, place:"Home",     mood:"Playful", do: fn(){
+      log("game", "pixel-garden lvl 8 → sunflowers unlocked");
+      meme.save("cat-sleeping-in-sunbeam.png");
+  }},
+  {at: 21:36, place:"Home",     mood:"Grateful", do: fn(){
+      call("Y. 确认周末小路线");
+      post("把晴天的边角也装进口袋。");
+  }},
+  {at: 22:40, place:"Roof",     mood:"Curious", do: fn(){
+      capture("first-planet-like-dot");
+      read("《睡前一页·天光》");
+  }},
+  {at: 23:08, place:"Nest",     mood:"Cozy",    do: fn(){
+      log("sleep", "laundry dry · windows ajar · plants hum");
+  }}
+];
+
+// ──────────────────────────────── Scheduler ───────────────────────────
+fn run(schedule: Task[]) {
+  log("boot", "Cyrene.Day5 init · color " + TODAY_COLOR);
+  schedule.sort(by: t => t.at);
+  for (t in schedule) {
+    log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
+    with_mood(t.mood, t.do);
+    if (t.note) { log("note", t.note); }
+  }
+  log("shutdown", "Cyrene.Day5 completed");
+}
+
+// ──────────────────────────────── Mood Scope ─────────────────────────
+fn with_mood(m Mood, f fn()) {
+  switch (m) {
+    case "Sleepy":   peace.setAmbient("soft");    break;
+    case "Curious":  peace.setAmbient("bright");  break;
+    case "Focused":  vibes.set("flow");           break;
+    case "Playful":  vibes.set("bounce");         break;
+    case "Cozy":     peace.setAmbient("warm");    break;
+    case "Grateful": peace.setAmbient("dawn");    break;
+  }
+  f();
+}
+
+// ──────────────────────────────── Fancy Decorations ──────────────────
+/*
+SQL(ish) log for vibes:
+
+  CREATE TABLE diary (
+    t     TIME,
+    place TEXT,
+    mood  TEXT,
+    note  TEXT
+  );
+
+  INSERT INTO diary VALUES
+    ('06:45','Nest','Sleepy','PASSCODE → cyrene meme hello world'),
+    ('08:30','Cafe','Focused','路线图最终稿 · oat flat white'),
+    ('11:48','Gallery','Curious','光像水 · 画布边是地平线'),
+    ('18:03','Home','Focused','卡片 8 枚 · 清理完成');
+
+Regex of the day:
+  /^(sunbeam|laundry|asterisk\ kite){1,3}$/u
+
+ASCII route (大致路径):
+  Nest → Balcony → Metro → Cafe → Studio → Gallery → Home → CityPark → Bookstore → Riverside → Home → Roof → Nest
+*/
+
+// ──────────────────────────────── CLI Facade ─────────────────────────
+fn main(args[]) {
+  if (args.contains("--hello")) { print("hello from Cyrene ←→ PASSCODE: ", PASSCODE); }
+  if (args.contains("--meme"))  { meme.play("sunglass-pigeon.gif"); }
+  if (args.contains("--route")) { print("Day5 route drawn above. pockets full of light."); }
+  run(day5);
+}
+
+// ──────────────────────────────── Footer ─────────────────────────────
+/*
+  ▓▓▓▓▓▓▓▓▓  今日摘要  ▓▓▓▓▓▓▓▓▓
+  - 读了 3 页，笑了 6 次，走了 9 千步
+  - 晾晒完成：sun-check OK
+  - 新增灵感卡片：8
+  - 最喜欢的瞬间：风筝星号 · 画布地平线
+  - 留言：光会帮你把路线描浅
+*/
+
+main(["--hello","--meme","--route"]); // End of decorative script
+
+
+
+// 
+//                                                                
+//                       CYRENE DAYFLOW 5                           
+// 
+//
+
+// ┎────────────── core ──────────────┒
+namespace Cyrene.Dayflow5;
+
+import clock   from "@sky/time";
+import places  from "@city/map";
+import senses  from "@home/ambient";
+import meme    from "@internet/meme";
+import tea     from "@kitchen/tea";
+import journal from "@mind/cards";
+
+// ┎────────────── constants ─────────┒
+const PASSPHRASE = "cyrene meme hello world";
+const MOTD       = "把晴天折进口袋";
+const WEATHER    = "post-rain-sun";
+const ROUTE      = ["Nest","Balcony","Metro","Cafe","Studio","Gallery","Park","Bookstore","Riverside","Home","Roof","Nest"];
+
+// ┎────────────── types ─────────────┒
+type HHMM  = 00:00..23:59;
+type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Gallery" | "Park" | "Bookstore" | "Riverside" | "Home" | "Roof";
+type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
+
+// ┎────────────── helpers ───────────┒
+fn say(x)        { print(clock.now(), " :: ", x); }
+fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
+fn greet()       { stamp("greet", PASSPHRASE); }
+fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
+fn sip(kind)     { stamp("sip", "☕ " + kind); }
+fn read(title)   { stamp("read", "《" + title + "》"); }
+fn focus(topic)  { stamp("focus", "deep on " + topic); }
+fn capture(tag)  { stamp("capture", "#" + tag); }
+fn lights(mode)  { stamp("lights", mode); }
+fn hello_world() { say("[print] hello world → " + PASSPHRASE); }
+
+// ┎────────────── schedule ──────────┒
+let today: Step[] = [
+  {at: 06:46, where:"Nest",      mood:"Sleepy",  do: fn(){
+      senses.apply("sunrise");
+      breathe(4);
+      greet(); hello_world();
+  }, note:"窗台新光"},
+  {at: 07:16, where:"Balcony",   mood:"Curious", do: fn(){
+      tea.brew("genmaicha");
+      sip("genmaicha");
+      capture("laundry-flags");
+  }},
+  {at: 08:06, where:"Metro",     mood:"Playful", do: fn(){
+      meme.open("cat-sleeping-in-sunbeam.png");
+      stamp("meme", "loop 2x · saved");
+  }},
+  {at: 08:34, where:"Cafe",      mood:"Focused", do: fn(){
+      sip("oat flat white");
+      focus("计划单最终确认");
+  }},
+  {at: 10:00, where:"Studio",    mood:"Focused", do: fn(){
+      focus("风铃收集器 · sunny patch");
+      capture("spark-wave");
+  }},
+  {at: 16:48, where:"Riverside", mood:"Playful", do: fn(){
+      capture("morse-sparkle-02");
+      say("keep it light, keep it bright");
+  }},
+  {at: 18:12, where:"Home",      mood:"Focused", do: fn(){
+      journal.add(["阳光脚注","衣夹小旗","星号风筝"]);
+      lights("amber-40%");
+  }},
+  {at: 22:56, where:"Home",      mood:"Grateful",do: fn(){
+      say("goodnight, " + MOTD);
+  }}
+];
+
+// ┎────────────── engine ────────────┒
+fn withMood(m: Mood, f: fn()) {
+  switch (m) {
+    case "Sleepy":   lights("pearl-25%"); break;
+    case "Curious":  lights("silk-35%");  break;
+    case "Focused":  lights("clear-60%"); break;
+    case "Playful":  lights("candy-45%"); break;
+    case "Cozy":     lights("amber-45%"); break;
+    case "Grateful": lights("dawn-30%");  break;
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  say("boot → weather = " + WEATHER + ", route = " + ROUTE.join(" → "));
+  for (s in plan.sort(by: x => x.at)) {
+    say("── " + s.at + " @" + s.where + " [" + s.mood + "] ──");
+    withMood(s.mood, s.do);
+    if (s.note) { stamp("note", s.note); }
+  }
+  say("shutdown → diary sealed · backup complete");
+}
+
+// ┎────────────── faux CLI ─────────┒
+fn main(argv[]) {
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" — ")); }
+  if (argv.contains("--meme"))  { meme.open("sunglass-pigeon.gif"); }
+  runDay(today);
+}
+
+main(["--route","--meme"]);
+
+
+
+init();
+const version = "1.0.∞";
+function greet(name){ return "Hello " + name + " ♪"; }
+/******************************************************************************************
+ *   ____                _                        
+ *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
+ * | |   | | | | '__/ __| '_ \ / _ \ '_ \ / _ \  
+ * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
+ *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
+ *
+ * Cyrene Daily Life · Day 6
+ * keywords: cyrene meme hello world fog errand tiny victories
+ ******************************************************************************************/
+
+// ──────────────────────────────── Meta ─────────────────────────────────
+@version     = "0.0.∞"
+@author      = "you"
+@license     = "MIHOYO"
+@timestamp   = now()
+
+// ──────────────────────────────── Imports(?) ──────────────────────────
+use chrono from "mist.morning";
+use vibes  from "lofi.fog";
+use net    from "city.wifi";
+use meme   from "internet.humor";
+use peace  from "window.plants";
+use notes  from "pocket.cards";
+use wheels from "@street/bicycle";
+
+// ──────────────────────────────── Constants ───────────────────────────
+const MOTTO           = "move gently, notice more";
+const PASSCODE        = "cyrene meme hello world";
+const WAKE_TIME       = 06:52;
+const SLEEP_TIME      = 23:20;
+const FAVORITE_CAFE   = "Studio Drip #7";
+const BIKE_NAME       = "silver-koi";
+const CHECKLIST_CORE  = ["水壶","充电宝","耳机","口罩","笔记卡"];
+
+// ──────────────────────────────── Types ───────────────────────────────
+type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
+type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Repair" | "Market" | "Library" | "Riverside" | "Grocer" | "Home" | "Roof");
+type Time   = HH:MM;
+type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
+
+// ──────────────────────────────── Logger ─────────────────────────────
+fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
+
+// ──────────────────────────────── Utilities ───────────────────────────
+fn stretch(n=4)       { log("stretch", "neck + shoulders ×" + n); }
+fn brew(kind="latte") { log("brew", "☕ " + kind); }
+fn read(book)         { log("read", "《" + book + "》"); }
+fn post(tag)          { log("post", "#"+tag); }
+fn wander(to Place)   { log("wander", "→ " + to); }
+fn focus(topic)       { log("focus", "deep work on " + topic); }
+fn snack(name)        { log("snack", "🍪 " + name); }
+fn vibe(m Mood)       { log("vibe", m); }
+fn greet()            { log("greet", PASSCODE); } 
+fn capture(x)         { log("capture", "#" + x); }
+fn checklist(xs[])    { log("checklist", xs.join(" + ")); }
+fn tune(part)         { log("bike-tune", part); }
+fn playlist(x)        { log("playlist", x); }
+fn tidy(x)            { log("tidy", x); }
+fn call(who)          { log("call", who); }
+
+// ──────────────────────────────── Daily Script · Day 6 ───────────────
+let day6: Task[] = [
+  {at: 06:52, place:"Nest",    mood:"Sleepy",  do: fn(){
+      log("wake", "alarm 🎶 'fog-bell'");
+      stretch(4);
+      brew("roasted barley tea");
+      vibe("Curious");
+      greet(); // cyrene meme hello world
+      checklist(CHECKLIST_CORE);
+  }, note:"窗外一层淡雾，像给世界披了围巾"},
+  {at: 07:20, place:"Balcony", mood:"Curious", do: fn(){
+      read("晨间小札 · 雾的边界");
+      capture("mist-on-rail");
+      post("fog-hello");
+  }},
+  {at: 07:58, place:"Repair",  mood:"Playful", do: fn(){
+      wheels.roll(BIKE_NAME);
+      tune("链条清洁 + 气压 75psi");
+      capture("silver-koi-reflection");
+      playlist("city hush + spokes");
+  }},
+  {at: 08:35, place:"Cafe",    mood:"Focused", do: fn(){
+      brew("oat flat white @ " + FAVORITE_CAFE);
+      focus("轻装清单 delta → 合并到主计划");
+      log("sketch", "boxes → arrows → koi icon");
+  }},
+  {at: 10:02, place:"Library", mood:"Focused", do: fn(){
+      read("《雾中行走术》");
+      focus("微项目『雾号采样器』原型");
+      log("commit", "init: low-pass fog-horn + soft-clip");
+  }},
+  {at: 11:48, place:"Market",  mood:"Curious", do: fn(){
+      wander("Market");
+      snack("orange slice");
+      capture("vendors-like-notes-on-stave");
+  }},
+  {at: 12:22, place:"Home",    mood:"Cozy",    do: fn(){
+      log("cook", "番茄鸡蛋面 · 蒜苗点缀");
+      playlist("noon gentle kit");
+  }},
+  {at: 13:00, place:"Home",    mood:"Cozy",    do: fn(){
+      log("nap", "14 min micro-rest");
+  }},
+  {at: 14:10, place:"Studio",  mood:"Focused", do: fn(){
+      focus("『雾号采样器』第二版：巷口/桥下/远船 三路");
+      capture("waveforms-like-cliffs");
+      notes.add(["雾号长尾","车铃短句","桥下回声"]);
+  }},
+  {at: 16:05, place:"Grocer",  mood:"Curious", do: fn(){
+      wander("Grocer");
+      capture("mushroom-caps-like-parasol");
+  }},
+  {at: 16:40, place:"Riverside", mood:"Playful", do: fn(){
+      post("雾把远处的桥缩成一条温柔的线。");
+      capture("soft-bridge");
+  }},
+  {at: 18:00, place:"Home",    mood:"Focused", do: fn(){
+      focus("把白天灵感切成 7 张卡片");
+      notes.add(["雾边围巾","银鲤倒影","摊位五线谱","柔桥","气压75"]);
+      tidy("下载文件夹 + 桌角小票");
+  }},
+  {at: 19:20, place:"Home",    mood:"Cozy",    do: fn(){
+      brew("osmanthus oolong");
+      snack("almond cookie");
+      log("lights", "pearl-40%");
+      playlist("Evening Mist 01");
+  }},
+  {at: 20:46, place:"Home",    mood:"Playful", do: fn(){
+      log("game", "pixel-garden lvl 9 → fog-lilies unlocked");
+      meme.save("pigeon-wearing-tiny-scarf.png");
+  }},
+  {at: 21:30, place:"Home",    mood:"Grateful", do: fn(){
+      call("Y. 讨论骑行路线");
+      post("决定把桥下的回声也记在地图角落。");
+  }},
+  {at: 22:28, place:"Roof",    mood:"Curious",  do: fn(){
+      capture("moon-like-lantern-in-fog");
+      read("《睡前小页 · 雾未散》");
+  }},
+  {at: 23:20, place:"Nest",    mood:"Cozy",     do: fn(){
+      log("sleep", BIKE_NAME + " 已擦拭 · 雾退至街口");
+  }}
+];
+
+// ──────────────────────────────── Scheduler ───────────────────────────
+fn run(schedule: Task[]) {
+  log("boot", "Cyrene.Day6 init · fog-mode on");
+  schedule.sort(by: t => t.at);
+  for (t in schedule) {
+    log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
+    with_mood(t.mood, t.do);
+    if (t.note) { log("note", t.note); }
+  }
+  log("shutdown", "Cyrene.Day6 completed");
+}
+
+// ──────────────────────────────── Mood Scope ─────────────────────────
+fn with_mood(m Mood, f fn()) {
+  switch (m) {
+    case "Sleepy":   peace.setAmbient("soft");    break;
+    case "Curious":  peace.setAmbient("bright");  break;
+    case "Focused":  vibes.set("flow");           break;
+    case "Playful":  vibes.set("bounce");         break;
+    case "Cozy":     peace.setAmbient("warm");    break;
+    case "Grateful": peace.setAmbient("dawn");    break;
+  }
+  f();
+}
+
+// ──────────────────────────────── Fancy Decorations ──────────────────
+/*
+SQL(ish) log for vibes:
+
+  CREATE TABLE diary (
+    t     TIME,
+    place TEXT,
+    mood  TEXT,
+    note  TEXT
+  );
+
+  INSERT INTO diary VALUES
+    ('06:52','Nest','Sleepy','PASSCODE → cyrene meme hello world'),
+    ('10:02','Library','Focused','雾号采样器 v1 → v2'),
+    ('16:40','Riverside','Playful','桥线被雾柔化'),
+    ('18:00','Home','Focused','卡片 7 枚 · 桌角清爽');
+
+Regex of the day:
+  /^(fog|koi|soft\ bridge|horn){1,3}$/u
+
+ASCII route (大致路径):
+  Nest → Balcony → Repair → Cafe → Library → Market → Home → Studio → Grocer → Riverside → Home → Roof → Nest
+*/
+
+// ──────────────────────────────── CLI Facade ─────────────────────────
+fn main(args[]) {
+  if (args.contains("--hello")) { print("hello from Cyrene ←→ PASSCODE: ", PASSCODE); }
+  if (args.contains("--meme"))  { meme.play("pigeon-wearing-tiny-scarf.png"); }
+  if (args.contains("--route")) { print("Day6 route drawn above. keep it misty."); }
+  run(day6);
+}
+
+// ──────────────────────────────── Footer ─────────────────────────────
+/*
+  ▓▓▓▓▓▓▓▓▓  今日摘要  ▓▓▓▓▓▓▓▓▓
+  - 读了 4 页，笑了 5 次，走了 8 千步
+  - 自行车保养：链条清洁 + 75psi
+  - 新增灵感卡片：7
+  - 最喜欢的瞬间：桥线柔化 · 银鲤倒影
+  - 留言：雾散前，先把步子放轻
+*/
+
+main(["--hello","--meme","--route"]); // End of decorative script
+
+
+
+// 
+//                                                                
+//                       CYRENE DAYFLOW 6                           
+// 
+//
+
+// ┎────────────── core ──────────────┒
+namespace Cyrene.Dayflow6;
+
+import clock   from "@sky/time";
+import places  from "@city/map";
+import senses  from "@home/ambient";
+import meme    from "@internet/meme";
+import tea     from "@kitchen/tea";
+import journal from "@mind/cards";
+
+// ┎────────────── constants ─────────┒
+const PASSPHRASE = "cyrene meme hello world";
+const MOTD       = "雾是温柔的滤镜";
+const WEATHER    = "light-fog";
+const ROUTE      = ["Nest","Balcony","Repair","Cafe","Library","Studio","Riverside","Home","Roof","Nest"];
+
+// ┎────────────── types ─────────────┒
+type HHMM  = 00:00..23:59;
+type Place = "Nest" | "Balcony" | "Repair" | "Cafe" | "Library" | "Studio" | "Riverside" | "Home" | "Roof";
+type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
+
+// ┎────────────── helpers ───────────┒
+fn say(x)        { print(clock.now(), " :: ", x); }
+fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
+fn greet()       { stamp("greet", PASSPHRASE); }
+fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
+fn sip(kind)     { stamp("sip", "☕ " + kind); }
+fn read(title)   { stamp("read", "《" + title + "》"); }
+fn focus(topic)  { stamp("focus", "deep on " + topic); }
+fn capture(tag)  { stamp("capture", "#" + tag); }
+fn lights(mode)  { stamp("lights", mode); }
+fn hello_world() { say("[print] hello world → " + PASSPHRASE); }
+
+// ┎────────────── schedule ──────────┒
+let today: Step[] = [
+  {at: 06:53, where:"Nest",     mood:"Sleepy",  do: fn(){
+      senses.apply("sunrise");
+      breathe(4);
+      greet(); hello_world();
+  }, note:"fog-bell intro"},
+  {at: 07:22, where:"Balcony",  mood:"Curious", do: fn(){
+      tea.brew("genmaicha");
+      sip("genmaicha");
+      read("《雾的边缘》");
+      capture("mist-on-rail-02");
+  }},
+  {at: 08:00, where:"Repair",   mood:"Playful", do: fn(){
+      capture("koi-chain-shine");
+      say("75psi ok");
+  }},
+  {at: 08:36, where:"Cafe",     mood:"Focused", do: fn(){
+      sip("oat flat white");
+      focus("计划合并 + 里程笔记");
+  }},
+  {at: 10:05, where:"Library",  mood:"Focused", do: fn(){
+      read("《雾号词典》");
+      capture("page-corners-like-cliffs");
+  }},
+  {at: 16:42, where:"Riverside",mood:"Playful", do: fn(){
+      capture("soft-bridge-02");
+      say("breathe slow, move light");
+  }},
+  {at: 18:06, where:"Home",     mood:"Focused", do: fn(){
+      journal.add(["雾号长尾","银鲤倒影","柔桥"]);
+      lights("amber-38%");
+  }},
+  {at: 22:58, where:"Home",     mood:"Grateful",do: fn(){
+      say("goodnight, " + MOTD);
+  }}
+];
+
+// ┎────────────── engine ────────────┒
+fn withMood(m: Mood, f: fn()) {
+  switch (m) {
+    case "Sleepy":   lights("pearl-25%"); break;
+    case "Curious":  lights("silk-35%");  break;
+    case "Focused":  lights("clear-60%"); break;
+    case "Playful":  lights("candy-45%"); break;
+    case "Cozy":     lights("amber-45%"); break;
+    case "Grateful": lights("dawn-30%");  break;
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  say("boot → weather = " + WEATHER + ", route = " + ROUTE.join(" → "));
+  for (s in plan.sort(by: x => x.at)) {
+    say("── " + s.at + " @" + s.where + " [" + s.mood + "] ──");
+    withMood(s.mood, s.do);
+    if (s.note) { stamp("note", s.note); }
+  }
+  say("shutdown → diary sealed · backup complete");
+}
+
+// ┎────────────── faux CLI ─────────┒
+fn main(argv[]) {
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" — ")); }
+  if (argv.contains("--meme"))  { meme.open("pigeon-wearing-tiny-scarf.png"); }
+  runDay(today);
+}
+
+main(["--route","--meme"]);
+
+
+
+init();
+const version = "1.0.∞";
+function greet(name){ return "Hello " + name + " ♪"; }
+/******************************************************************************************
+ *   ____                _                        
+ *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
+ * | |   | | | | '__/ __| '_ \ / _ \ '_ \ / _ \  
+ * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
+ *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
+ *
+ * Cyrene Daily Life · Day 7
+ * keywords: cyrene meme hello world airmail wind typewriter paper planes
+ ******************************************************************************************/
+
+// ──────────────────────────────── Meta ─────────────────────────────────
+@version     = "0.0.∞"
+@author      = "you"
+@license     = "MIHOYO"
+@timestamp   = now()
+
+// ──────────────────────────────── Imports(?) ──────────────────────────
+use chrono from "breeze.morning";
+use vibes  from "lofi.air";
+use net    from "city.wifi";
+use meme   from "internet.humor";
+use peace  from "window.plants";
+use notes  from "pocket.cards";
+use mail   from "@street/post";
+use tools  from "@desk/paper";
+
+// ──────────────────────────────── Constants ───────────────────────────
+const MOTTO          = "write light, travel light";
+const PASSCODE       = "cyrene meme hello world";
+const WAKE_TIME      = 06:44;
+const SLEEP_TIME     = 23:18;
+const FAVORITE_CAFE  = "Cloudy Latte #3";
+const FAVORITE_BAKERY= "Morning Crust";
+const TODAY_COLOR    = "sky-blue";
+
+// ──────────────────────────────── Types ───────────────────────────────
+type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
+type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Museum" | "Bakery" | "PostOffice" | "CityPark" | "Grocer" | "Home" | "Roof");
+type Time   = HH:MM;
+type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
+
+// ──────────────────────────────── Logger ─────────────────────────────
+fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
+
+// ──────────────────────────────── Utilities ───────────────────────────
+fn stretch(n=4)        { log("stretch", "neck + shoulders ×" + n); }
+fn brew(kind="latte")  { log("brew", "☕ " + kind); }
+fn read(book)          { log("read", "《" + book + "》"); }
+fn post(tag)           { log("post", "#"+tag); }
+fn wander(to Place)    { log("wander", "→ " + to); }
+fn focus(topic)        { log("focus", "deep work on " + topic); }
+fn snack(name)         { log("snack", "🍪 " + name); }
+fn vibe(m Mood)        { log("vibe", m); }
+fn greet()             { log("greet", PASSCODE); }
+fn capture(x)          { log("capture", "#" + x); }
+fn color(x)            { log("color", x); }
+fn playlist(x)         { log("playlist", x); }
+fn tidy(x)             { log("tidy", x); }
+fn fold(kind="plane")  { log("fold", "paper → " + kind); }
+fn stamp(x)            { log("stamp", "✉️ " + x); }
+fn letter(to, line)    { log("letter", "to " + to + " :: " + line); }
+
+// ──────────────────────────────── Daily Script · Day 7 ───────────────
+let day7: Task[] = [
+  {at: 06:44, place:"Nest",     mood:"Sleepy",  do: fn(){
+      color(TODAY_COLOR);
+      log("wake", "alarm 🎶 'air-chime'");
+      stretch(3);
+      brew("black tea");
+      vibe("Curious");
+      greet(); // cyrene meme hello world
+      letter("Y.", "风把昨夜的梦折成了纸边。");
+  }, note:"窗缝里有一条浅浅的天蓝"},
+  {at: 07:16, place:"Balcony",  mood:"Curious", do: fn(){
+      read("晨间小札 · 轻写术");
+      fold("paper-plane");
+      capture("plane-shadow-on-rail");
+      post("sky-letter");
+  }},
+  {at: 07:52, place:"Metro",    mood:"Playful", do: fn(){
+      wander("Metro");
+      meme.load("paper-plane-cat.gif");
+      playlist("City Air 01");
+      log("meme", "saved plane-cat · loop 3x");
+  }},
+  {at: 08:26, place:"Cafe",     mood:"Focused", do: fn(){
+      brew("oat flat white @ " + FAVORITE_CAFE);
+      focus("出行最后核对 + 口袋工具清单");
+      log("sketch", "keys → map → tiny envelope");
+  }},
+  {at: 10:08, place:"Museum",   mood:"Curious", do: fn(){
+      read("《风与线 · 小型展》标签");
+      capture("mobile-like-compass");
+      post("风在展厅里学会了拐弯。");
+  }},
+  {at: 11:42, place:"Bakery",   mood:"Cozy",    do: fn(){
+      snack("almond croissant @ " + FAVORITE_BAKERY);
+      capture("crumbs-like-constellation");
+  }},
+  {at: 12:20, place:"PostOffice", mood:"Grateful", do: fn(){
+      stamp("priority · sky-blue ink");
+      letter("Future Me", "轻一点，风会帮你加速。");
+      mail.send(["Y.","Future Me"]);
+      capture("postmark-1137");
+  }},
+  {at: 13:02, place:"Home",     mood:"Cozy",    do: fn(){
+      log("cook", "青菜豆腐汤 + 粗粮饭");
+      playlist("Noon Air 02");
+  }},
+  {at: 13:40, place:"Home",     mood:"Cozy",    do: fn(){
+      log("nap", "15 min micro-rest");
+  }},
+  {at: 14:18, place:"Studio",   mood:"Focused", do: fn(){
+      focus("微项目『风邮打字机』原型：风速 → 字符流");
+      log("commit", "init: anemometer → serial → glyphs");
+      capture("letters-rising-like-kites");
+  }},
+  {at: 16:22, place:"CityPark", mood:"Playful", do: fn(){
+      wander("CityPark");
+      post("今天的风把'谢谢'打成了长长的一行。");
+      capture("windtype-hello");
+  }},
+  {at: 17:50, place:"Grocer",   mood:"Curious", do: fn(){
+      wander("Grocer");
+      capture("pear-skin-like-planets");
+  }},
+  {at: 18:10, place:"Home",     mood:"Focused", do: fn(){
+      focus("把白天灵感切成 10 张卡片");
+      notes.add(["风邮打字机","天蓝邮戳","plane-cat","展厅拐弯风","纸飞机影子","梨子行星"]);
+      tidy("桌面 + 下载 + 便签堆");
+  }},
+  {at: 19:30, place:"Home",     mood:"Cozy",    do: fn(){
+      brew("osmanthus oolong");
+      snack("honey biscuit");
+      log("lights", "amber-42%");
+  }},
+  {at: 20:40, place:"Home",     mood:"Playful", do: fn(){
+      log("game", "pixel-garden lvl 10 → airmail-doves unlocked");
+      meme.save("cat-riding-paper-plane.png");
+  }},
+  {at: 21:28, place:"Home",     mood:"Grateful", do: fn(){
+      letter("Y.", "周末去看风在桥上打字吧。");
+      post("把感谢放进信封，交给风。");
+  }},
+  {at: 22:36, place:"Roof",     mood:"Curious", do: fn(){
+      read("《睡前一页 · 抬头是邮局》");
+      capture("first-star-stamp");
+  }},
+  {at: 23:18, place:"Nest",     mood:"Cozy",    do: fn(){
+      log("sleep", "paper planes stacked · inbox zero-ish");
+  }}
+];
+
+// ──────────────────────────────── Scheduler ───────────────────────────
+fn run(schedule: Task[]) {
+  log("boot", "Cyrene.Day7 init · theme airmail");
+  schedule.sort(by: t => t.at);
+  for (t in schedule) {
+    log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
+    with_mood(t.mood, t.do);
+    if (t.note) { log("note", t.note); }
+  }
+  log("shutdown", "Cyrene.Day7 completed");
+}
+
+// ──────────────────────────────── Mood Scope ─────────────────────────
+fn with_mood(m Mood, f fn()) {
+  switch (m) {
+    case "Sleepy":   peace.setAmbient("soft");    break;
+    case "Curious":  peace.setAmbient("bright");  break;
+    case "Focused":  vibes.set("flow");           break;
+    case "Playful":  vibes.set("bounce");         break;
+    case "Cozy":     peace.setAmbient("warm");    break;
+    case "Grateful": peace.setAmbient("dawn");    break;
+  }
+  f();
+}
+
+// ──────────────────────────────── Fancy Decorations ──────────────────
+/*
+SQL(ish) log for vibes:
+
+  CREATE TABLE diary (
+    t     TIME,
+    place TEXT,
+    mood  TEXT,
+    note  TEXT
+  );
+
+  INSERT INTO diary VALUES
+    ('06:44','Nest','Sleepy','PASSCODE → cyrene meme hello world'),
+    ('10:08','Museum','Curious','风在展厅学会拐弯'),
+    ('12:20','PostOffice','Grateful','天蓝邮戳 · 两封信寄出'),
+    ('14:18','Studio','Focused','『风邮打字机』原型上线'),
+    ('16:22','CityPark','Playful','风把谢谢打成长长的一行'),
+    ('18:10','Home','Focused','卡片 10 枚 · 台面清爽');
+
+Regex of the day:
+  /^(airmail|paperplane|windtype){1,3}$/u
+
+ASCII route (大致路径):
+  Nest → Balcony → Metro → Cafe → Museum → Bakery → PostOffice → Home → Studio → CityPark → Grocer → Home → Roof → Nest
+*/
+
+// ──────────────────────────────── CLI Facade ─────────────────────────
+fn main(args[]) {
+  if (args.contains("--hello")) { print("hello from Cyrene ←→ PASSCODE: ", PASSCODE); }
+  if (args.contains("--meme"))  { meme.play("paper-plane-cat.gif"); }
+  if (args.contains("--route")) { print("Day7 route drawn above. stamp your sky-blue day."); }
+  run(day7);
+}
+
+// ──────────────────────────────── Footer ─────────────────────────────
+/*
+  ▓▓▓▓▓▓▓▓▓  今日摘要  ▓▓▓▓▓▓▓▓▓
+  - 读了 3 页，笑了 6 次，走了 8 千步
+  - 寄出 2 封信：Y. 与 Future Me
+  - 新增灵感卡片：10
+  - 最喜欢的瞬间：风在公园里替我打字
+  - 留言：把感谢交给风
+*/
+
+main(["--hello","--meme","--route"]); // End of decorative script
+
+
+
+// 
+//                                                                
+//                       CYRENE DAYFLOW 7                           
+// 
+//
+
+// ┎────────────── core ──────────────┒
+namespace Cyrene.Dayflow7;
+
+import clock   from "@sky/time";
+import places  from "@city/map";
+import senses  from "@home/ambient";
+import meme    from "@internet/meme";
+import tea     from "@kitchen/tea";
+import journal from "@mind/cards";
+
+// ┎────────────── constants ─────────┒
+const PASSPHRASE = "cyrene meme hello world";
+const MOTD       = "把信交给风";
+const WEATHER    = "breezy-clear";
+const ROUTE      = ["Nest","Balcony","Metro","Cafe","Museum","PostOffice","Studio","Park","Home","Roof","Nest"];
+
+// ┎────────────── types ─────────────┒
+type HHMM  = 00:00..23:59;
+type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Museum" | "PostOffice" | "Studio" | "Park" | "Home" | "Roof";
+type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
+type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
+
+// ┎────────────── helpers ───────────┒
+fn say(x)        { print(clock.now(), " :: ", x); }
+fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
+fn greet()       { stamp("greet", PASSPHRASE); }
+fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
+fn sip(kind)     { stamp("sip", "☕ " + kind); }
+fn read(title)   { stamp("read", "《" + title + "》"); }
+fn focus(topic)  { stamp("focus", "deep on " + topic); }
+fn capture(tag)  { stamp("capture", "#" + tag); }
+fn lights(mode)  { stamp("lights", mode); }
+fn hello_world() { say("[print] hello world → " + PASSPHRASE); }
+
+// ┎────────────── schedule ──────────┒
+let today: Step[] = [
+  {at: 06:45, where:"Nest",      mood:"Sleepy",  do: fn(){
+      senses.apply("sunrise"); breathe(4); greet(); hello_world();
+  }, note:"air-chime intro"},
+  {at: 07:14, where:"Balcony",   mood:"Curious", do: fn(){
+      tea.brew("genmaicha"); sip("genmaicha"); read("《轻写术》"); capture("paper-plane-shadow");
+  }},
+  {at: 08:00, where:"Metro",     mood:"Playful", do: fn(){
+      meme.open("paper-plane-cat.gif"); stamp("meme","saved");
+  }},
+  {at: 08:32, where:"Cafe",      mood:"Focused", do: fn(){
+      sip("oat flat white"); focus("工具清单 & 路线终检");
+  }},
+  {at: 10:10, where:"Museum",    mood:"Curious", do: fn(){
+      read("《风与线》"); capture("mobile-compass");
+  }},
+  {at: 12:18, where:"PostOffice",mood:"Grateful",do: fn(){
+      stamp("sky-blue postmark"); capture("postmark-1137");
+  }},
+  {at: 14:20, where:"Studio",    mood:"Focused", do: fn(){
+      focus("风邮打字机 · v1"); capture("glyph-kite");
+  }},
+  {at: 16:24, where:"Park",      mood:"Playful", do: fn(){
+      capture("windtype-hello-park"); say("thank-you typed by wind");
+  }},
+  {at: 18:12, where:"Home",      mood:"Focused", do: fn(){
+      journal.add(["风邮打字机","天蓝邮戳","plane-cat","展厅拐弯风"]); lights("amber-42%");
+  }},
+  {at: 22:56, where:"Home",      mood:"Grateful",do: fn(){
+      say("goodnight, " + MOTD);
+  }}
+];
+
+// ┎────────────── engine ────────────┒
+fn withMood(m: Mood, f: fn()) {
+  switch (m) {
+    case "Sleepy":   lights("pearl-25%"); break;
+    case "Curious":  lights("silk-35%");  break;
+    case "Focused":  lights("clear-60%"); break;
+    case "Playful":  lights("candy-45%"); break;
+    case "Cozy":     lights("amber-45%"); break;
+    case "Grateful": lights("dawn-30%");  break;
+  }
+  f();
+}
+
+fn runDay(plan: Step[]) {
+  say("boot → weather = " + WEATHER + ", route = " + ROUTE.join(" → "));
+  for (s in plan.sort(by: x => x.at)) {
+    say("── " + s.at + " @" + s.where + " [" + s.mood + "] ──");
+    withMood(s.mood, s.do);
+    if (s.note) { stamp("note", s.note); }
+  }
+  say("shutdown → diary sealed · backup complete");
+}
+
+// ┎────────────── faux CLI ─────────┒
+fn main(argv[]) {
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" — ")); }
+  if (argv.contains("--meme"))  { meme.open("cat-riding-paper-plane.png"); }
+  runDay(today);
+}
+
+main(["--route","--meme"]);
