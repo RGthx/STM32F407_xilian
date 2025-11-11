@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\atk_f407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\atk_f407.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 12 07:01:46 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 12 07:07:34 2025
 <BR><P>
 <H3>Maximum Stack Usage =       1648 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -784,14 +784,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 <LI><a href="#[2e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play_mjpeg
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_text_file_stream
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mf_scan_files
-<LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_sys_cmd_exe
-<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_scan
-<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_exe
+<LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_text_overlay_stream
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;output_message
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mjpeg_malloc
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_emit_message
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fill_input_buffer
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mf_scan_files
+<LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_sys_cmd_exe
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_scan
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usmart_exe
 </UL>
 
 <P><STRONG><a name="[133]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, noretval__2sprintf.o(.text))
@@ -967,13 +968,13 @@ Global Symbols
 
 <P><STRONG><a name="[232]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[231]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_read
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;store_xdir
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_xdir
 <LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_dht
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_input_pass
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_block_row
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_std_huff_table
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;store_xdir
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_xdir
 </UL>
 
 <P><STRONG><a name="[145]"></a>__rt_memcpy</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED)
@@ -1006,9 +1007,6 @@ Global Symbols
 <P><STRONG><a name="[14c]"></a>__aeabi_memclr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
 <LI><a href="#[2e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play_mjpeg
-<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
-<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_clear
-<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_xdir
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_inverse_dct
 <LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_d_coef_controller
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;master_selection
@@ -1018,6 +1016,9 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;access_virt_barray
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass_2_quant
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;decompress_onepass
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
+<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_clear
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_xdir
 <LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass_1_quant
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;quantize_ord_dither
@@ -1038,10 +1039,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_stm32_clock_init
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_text_stream
-<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_fs
-<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_clear
 <LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_CreateDecompress
 <LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_make_d_derived_tbl
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_fs
+<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_clear
 </UL>
 
 <P><STRONG><a name="[318]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
@@ -2260,8 +2261,9 @@ Global Symbols
 <LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_clear
 </UL>
 
-<P><STRONG><a name="[20d]"></a>display_text_overlay_stream</STRONG> (Thumb, 338 bytes, Stack size 96 bytes, videoplayer.o(i.display_text_overlay_stream))
-<BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = display_text_overlay_stream &rArr; read_next_char &rArr; f_lseek &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; norflash_write &rArr; norflash_write_nocheck &rArr; norflash_wait_busy &rArr; norflash_read_sr &rArr; spi1_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[20d]"></a>display_text_overlay_stream</STRONG> (Thumb, 344 bytes, Stack size 96 bytes, videoplayer.o(i.display_text_overlay_stream))
+<BR><BR>[Stack]<UL><LI>Max Depth = 544 + Unknown Stack Size
+<LI>Call Chain = display_text_overlay_stream &rArr; read_next_char &rArr; f_lseek &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; norflash_write &rArr; norflash_write_nocheck &rArr; norflash_wait_busy &rArr; norflash_read_sr &rArr; spi1_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_show_string
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymalloc
@@ -2271,6 +2273,7 @@ Global Symbols
 <LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play_mjpeg
 </UL>
@@ -3599,7 +3602,6 @@ Global Symbols
 <LI>Call Chain = mjpegdec_decode &rArr; jpeg_CreateDecompress &rArr; jinit_memory_mgr &rArr; __0sscanf &rArr; __vfscanf_char &rArr; __vfscanf &rArr; _scanf_string
 </UL>
 <BR>[Calls]<UL><LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_window
-<LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_ram_prepare
 <LI><a href="#[2a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_std_error
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_start_decompress
 <LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_read_scanlines
@@ -3609,6 +3611,7 @@ Global Symbols
 <LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_abort_decompress
 <LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_CreateDecompress
 <LI><a href="#[2a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_filerw_src_init
+<LI><a href="#[281]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_ram_prepare
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setjmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play_mjpeg
@@ -4157,8 +4160,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[296]"></a>__aeabi_ui2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu))
-<BR><BR>[Called By]<UL><LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ssd_backlight_set
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass
+<LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ssd_backlight_set
 </UL>
 
 <P><STRONG><a name="[321]"></a>_dfltu</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu), UNUSED)
@@ -4166,8 +4169,8 @@ Global Symbols
 <P><STRONG><a name="[297]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_dmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ssd_backlight_set
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass
+<LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ssd_backlight_set
 </UL>
 
 <P><STRONG><a name="[2e8]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul), UNUSED)

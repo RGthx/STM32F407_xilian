@@ -759,7 +759,7 @@ void display_text_overlay_stream(void)
             
         last_scroll_time = current_time;
         
-        // 加载新行到即将显示的位置
+        // 计算新行在显示缓冲区中的位置
         uint16_t new_line_index = (text_stream.display_start + MAX_DISPLAY_LINES - 1) % MAX_DISPLAY_LINES;
         
         // 读取新行
@@ -780,12 +780,15 @@ void display_text_overlay_stream(void)
                     myfree(SRAMIN, text_stream.display_lines[new_line_index]);
                 }
                 
-                // 分配新内存并复制文本
+                // 分配新内存并存储文本
                 text_stream.display_lines[new_line_index] = mymalloc(SRAMIN, strlen(text_stream.line_buffer) + 1);
                 if(text_stream.display_lines[new_line_index])
                 {
                     strcpy(text_stream.display_lines[new_line_index], text_stream.line_buffer);
                 }
+                
+                // 通过串口实时输出新读取的文本行
+                printf("%s\r\n", text_stream.line_buffer);
                 
                 // 处理Windows换行符
                 if(ch == '\r')
