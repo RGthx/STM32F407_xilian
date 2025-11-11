@@ -236,21 +236,20 @@ void video_play(void)
     
     uint16_t totavinum;     /* 视频文件总数 */
     uint16_t curindex;      /* 视频文件当前索引 */
-    uint32_t *voffsettbl;   /* 视频文件off block索引表 */
+    uint32_t *voffsettbl;   /* 视频文件off block偏移表 */
 
-    uint8_t key;            /* 键值 */
     uint32_t temp;
     
     while (f_opendir(&vdir, "0:/VIDEO"))    /* 打开视频文件夹 */
     {
-        text_show_string(60, 190, 240, 16, "VIDEO文件夹错误!", 16, 0, RED);
+        text_show_string(60, 190, 240, 16, "VIDEO文件夹不存在!", 16, 0, RED);
         delay_ms(200);
         lcd_fill(60, 190, 240, 206, WHITE); /* 清除显示 */
         delay_ms(200);
     }
 
-    totavinum = video_get_tnum("0:/VIDEO"); /* 得到总有效文件数 */
-    while (totavinum == NULL)               /* 视频文件总数为0 */
+    totavinum = video_get_tnum("0:/VIDEO"); /* 得到所有有效文件数 */
+    while (totavinum == NULL)               /* 视频文件个数为0 */
     {
         text_show_string(60, 190, 240, 16, "没有视频文件!", 16, 0, RED);
         delay_ms(200);
@@ -258,10 +257,10 @@ void video_play(void)
         delay_ms(200);
     }
 
-    vfileinfo = (FILINFO *)mymalloc(SRAMIN, sizeof(FILINFO));   /* 为长文件缓存区分配内存 */
-    pname = mymalloc(SRAMIN, 2 * FF_MAX_LFN + 1);               /* 为带路径的文件名分配内存 */
+    vfileinfo = (FILINFO *)mymalloc(SRAMIN, sizeof(FILINFO));   /* 为文件信息结构体分配内存 */
+    pname = mymalloc(SRAMIN, 2 * FF_MAX_LFN + 1);               /* 为带路径文件名分配内存 */
     
-    voffsettbl = mymalloc(SRAMIN, 4 * totavinum);               /* 申请4*totavinum个字节的内存,用于存放视频文件索引 */
+    voffsettbl = mymalloc(SRAMIN, 4 * totavinum);               /* 分配4*totavinum个字节的内存,用于存放视频文件偏移表 */
     
     while (vfileinfo == NULL || pname == NULL || voffsettbl == NULL)    /* 内存分配出错 */
     {
@@ -271,7 +270,7 @@ void video_play(void)
         delay_ms(200);
     }
 
-    /* 记录索引 */
+    /* 记录偏移 */
     res = f_opendir(&vdir, "0:/VIDEO");         /* 打开目录 */
     if (res == FR_OK)
     {
@@ -286,55 +285,43 @@ void video_play(void)
             }
 
             res = exfuns_file_type(vfileinfo->fname);
-            if ((res & 0xF0) == 0x60)           /* 取高四位,看看是不是音乐文件 */
+            if ((res & 0xF0) == 0x60)           /* 取高四位,判断是不是视频文件 */
             {
-                voffsettbl[curindex] = temp;    /* 记录索引 */
+                voffsettbl[curindex] = temp;    /* 记录偏移 */
                 curindex++;
             }
         }
     }
 
-    curindex = 0;           /* 从0开始显示 */
-    res = f_opendir(&vdir, (const TCHAR *)"0:/VIDEO");  /* 打开目录 */
-    while (res == FR_OK)    /* 打开成功 */
+    // 修改为无限循环播放列表，去除所有按键控制
+    while (1)  // 添加外层循环以实现循环播放
     {
-        dir_sdi(&vdir, voffsettbl[curindex]);   /* 改变当前目录索引 */
-        res = f_readdir(&vdir, vfileinfo);      /* 读取目录下的一个文件 */
+        curindex = 0;           /* 从0开始显示 */
+        res = f_opendir(&vdir, (const TCHAR *)"0:/VIDEO");  /* 打开目录 */
+        while (res == FR_OK)    /* 打开成功 */
+        {
+            dir_sdi(&vdir, voffsettbl[curindex]);   /* 改变当前目录项的值 */
+            res = f_readdir(&vdir, vfileinfo);      /* 读取目录下的一个文件 */
 
-        if (res != FR_OK || vfileinfo->fname[0] == 0)
-        {
-            break;          /* 错误了/到末尾了,退出 */
-        }
+            if (res != FR_OK || vfileinfo->fname[0] == 0)
+            {
+                break;          /* 错误了/到末尾了,退出 */
+            }
 
-        strcpy((char *)pname, "0:/VIDEO/");                     /* 复制路径(目录) */
-        strcat((char *)pname, (const char *)vfileinfo->fname);  /* 将文件名接在后面 */
-        
-        lcd_clear(WHITE);   /* 先清屏 */
-        // video_bmsg_show((uint8_t *)vfileinfo->fname, curindex + 1, totavinum);  /* 显示名字,索引等信息 */
-        
-        key = video_play_mjpeg(pname);  /* 播放这个音频文件 */
-        if (key == KEY2_PRES)           /* 上一个视频 */
-        {
-            if (curindex)
-            {
-                curindex--;
-            }
-            else
-            {
-                curindex = totavinum - 1;
-            }
-        }
-        else if (key == KEY0_PRES)  /* 下一个视频 */
-        {
+            strcpy((char *)pname, "0:/VIDEO/");                     /* 复制路径(目录) */
+            strcat((char *)pname, (const char *)vfileinfo->fname);  /* 把文件名添加到后面 */
+            
+            lcd_clear(WHITE);   /* 清屏 */
+            // video_bmsg_show((uint8_t *)vfileinfo->fname, curindex + 1, totavinum);  /* 显示播放,文件信息 */
+            
+            video_play_mjpeg(pname);  /* 播放指定视频文件，不再接收返回值 */
+            
+            // 去掉所有按键控制逻辑，直接播放下一个视频
             curindex++;
             if (curindex >= totavinum)
             {
-                curindex = 0;     /* 到末尾的时候,自动从头开始 */
+                curindex = 0;     /* 到末尾时,自动从头开始 */
             }
-        }
-        else
-        {
-            break;     /* 产生了错误 */
         }
     }
 
@@ -342,7 +329,6 @@ void video_play(void)
     myfree(SRAMIN, pname);          /* 释放内存 */
     myfree(SRAMIN, voffsettbl);     /* 释放内存 */
 }
-
 /**
  * @brief       播放一个mjpeg文件
  * @param       pname : 文件名
@@ -351,15 +337,14 @@ void video_play(void)
  *   @arg       KEY1_PRES , 上一曲.
  *   @arg       其他 , 错误
  */
-uint8_t video_play_mjpeg(uint8_t *pname)
+void video_play_mjpeg(uint8_t *pname)  // 修改返回类型为 void
 {
-    uint8_t *framebuf;  /* 视频解码buf */
+    uint8_t *framebuf;  /* 视频数据buf */
     uint8_t *pbuf;      /* buf指针 */
     
     uint8_t  res = 0;
     uint16_t offset = 0;
     uint32_t nr;
-    uint8_t key;
     uint8_t i2ssavebuf;
     
     FIL *favi;
@@ -390,14 +375,14 @@ uint8_t video_play_mjpeg(uint8_t *pname)
         if (res == 0)
         {
             pbuf = framebuf;
-            res = f_read(favi, pbuf, AVI_VIDEO_BUF_SIZE, &nr);  /* 开始读取 */
+            res = f_read(favi, pbuf, AVI_VIDEO_BUF_SIZE, &nr);  /* 初始化读取 */
             if (res)
             {
                 printf("fread error:%d\r\n", res);
                 break;
             }
 
-            /* 开始avi解析 */
+            /* 初始化avi解析 */
             res = avi_init(pbuf, AVI_VIDEO_BUF_SIZE);           /* avi解析 */
             if (res)
             {
@@ -406,17 +391,17 @@ uint8_t video_play_mjpeg(uint8_t *pname)
             }
 
              // video_info_show(&g_avix);
-            btim_tim7_int_init(g_avix.SecPerFrame / 100 - 1, 8400 - 1);   /* 10Khz计数频率,加1是100us */
+            btim_tim7_int_init(g_avix.SecPerFrame / 100 - 1, 8400 - 1);   /* 10Khz计数频率,每1个100us */
             offset = avi_srarch_id(pbuf, AVI_VIDEO_BUF_SIZE, "movi");     /* 寻找movi ID */
             avi_get_streaminfo(pbuf + offset + 4);  /* 获取流信息 */
-            f_lseek(favi, offset + 12);             /* 跳过标志ID,读地址偏移到流数据开始处 */
+            f_lseek(favi, offset + 12);             /* 跳过标记ID,地址偏移到真正的数据开始处 */
             
             res = mjpegdec_init((lcddev.width - g_avix.Width) / 2, (lcddev.height - g_avix.Height) / 2);
             init_text_stream();
             load_text_file_stream();
-            if (g_avix.SampleRate)    /* 有音频信息,才初始化 */
+            if (g_avix.SampleRate)    /* 有音频信息,初始化 */
             {
-                i2s_init(I2S_STANDARD_PHILIPS, I2S_MODE_MASTER_TX, I2S_CPOL_LOW, I2S_DATAFORMAT_16B_EXTENDED);          /* 飞利浦标准,主机发送,时钟低电平有效,16位帧长度 */
+                i2s_init(I2S_STANDARD_PHILIPS, I2S_MODE_MASTER_TX, I2S_CPOL_LOW, I2S_DATAFORMAT_16B_EXTENDED);          /* 使用飞利浦标准,主机发送,时钟低电平有效,16位帧结构 */
                 i2s_samplerate_set(g_avix.SampleRate);      /* 设置采样率 */
                 i2s_tx_dma_init(i2sbuf[1], i2sbuf[2], g_avix.AudioBufSize / 2);     /* 配置DMA */
                 i2s_tx_callback = audio_i2s_dma_callback;   /* 回调函数指向I2S_DMA_Callback */
@@ -428,52 +413,52 @@ uint8_t video_play_mjpeg(uint8_t *pname)
             while (1)   /* 播放循环 */
             {
                 // 在 video_play_mjpeg 函数中找到视频解码部分，修改为：
-if (g_avix.StreamID == AVI_VIDS_FLAG)       /* 视频帧 */
-{
-    pbuf = framebuf;
-    f_read(favi, pbuf, g_avix.StreamSize + 8, &nr);   /* 读取一帧+下一个块ID信息 */
-    res = mjpegdec_decode(pbuf, g_avix.StreamSize);
-    display_text_overlay_stream();
-    if (res)
-    {
-        // printf("decode error!\r\n");
-    }
+                if (g_avix.StreamID == AVI_VIDS_FLAG)       /* 视频帧 */
+                {
+                    pbuf = framebuf;
+                    f_read(favi, pbuf, g_avix.StreamSize + 8, &nr);   /* 读取一帧+下一个ID信息 */
+                    res = mjpegdec_decode(pbuf, g_avix.StreamSize);
+                    display_text_overlay_stream();
+                    if (res)
+                    {
+                        // printf("decode error!\r\n");
+                    }
 
-    // 强制刷新视频区域外的屏幕区域
-    // 计算视频显示区域的位置和尺寸
-    uint16_t video_x = (lcddev.width - g_avix.Width) / 2;
-    uint16_t video_y = (lcddev.height - g_avix.Height) / 2;
-    uint16_t video_width = g_avix.Width;
-    uint16_t video_height = g_avix.Height;
+                    // 强制刷新视频区域以外的屏幕区域
+                    // 计算视频显示区域的位置和尺寸
+                    uint16_t video_x = (lcddev.width - g_avix.Width) / 2;
+                    uint16_t video_y = (lcddev.height - g_avix.Height) / 2;
+                    uint16_t video_width = g_avix.Width;
+                    uint16_t video_height = g_avix.Height;
 
-    // 刷新视频区域上方区域
-    if (video_y > 0) {
-        lcd_fill(0, 0, lcddev.width - 1, video_y - 1, WHITE);
-    }
+                    // 刷新视频区域上方背景
+                    if (video_y > 0) {
+                        lcd_fill(0, 0, lcddev.width - 1, video_y - 1, WHITE);
+                    }
 
-    // 刷新视频区域下方区域
-    uint16_t bottom_y = video_y + video_height;
-    if (bottom_y < lcddev.height) {
-        lcd_fill(0, bottom_y, lcddev.width - 1, lcddev.height - 1, WHITE);
-    }
+                    // 刷新视频区域下方背景
+                    uint16_t bottom_y = video_y + video_height;
+                    if (bottom_y < lcddev.height) {
+                        lcd_fill(0, bottom_y, lcddev.width - 1, lcddev.height - 1, WHITE);
+                    }
 
-    // 刷新视频区域左侧区域(与视频区域同高度)
-    if (video_x > 0) {
-        lcd_fill(0, video_y, video_x - 1, video_y + video_height - 1, WHITE);
-    }
+                    // 刷新视频区域左侧背景(与视频相同高度)
+                    if (video_x > 0) {
+                        lcd_fill(0, video_y, video_x - 1, video_y + video_height - 1, WHITE);
+                    }
 
-    // 刷新视频区域右侧区域(与视频区域同高度)
-    uint16_t right_x = video_x + video_width;
-    if (right_x < lcddev.width) {
-        lcd_fill(right_x, video_y, lcddev.width - 1, video_y + video_height - 1, WHITE);
-    }
+                    // 刷新视频区域右侧背景(与视频相同高度)
+                    uint16_t right_x = video_x + video_width;
+                    if (right_x < lcddev.width) {
+                        lcd_fill(right_x, video_y, lcddev.width - 1, video_y + video_height - 1, WHITE);
+                    }
 
-    while (frameup == 0);   /* 等待时间到(由TIM7中断将此值设置为1) */
+                    while (frameup == 0);   /* 等待时间到(由TIM7中断将此值设置为1) */
 
-    frameup = 0;            /* 标志清零 */
-    frame++;
-}
-                else    /* 音频流 */
+                    frameup = 0;            /* 标志清零 */
+                    frame++;
+                }
+                else    /* 音频帧 */
                 {
                     // video_time_show(favi, &g_avix);   /* 显示当前播放时间 */
                     i2ssavebuf++;
@@ -501,33 +486,43 @@ if (g_avix.StreamID == AVI_VIDS_FLAG)       /* 视频帧 */
                     pbuf = i2sbuf[i2ssavebuf];
                 } 
  
+                // 移除所有按键扫描和控制逻辑
+                /*
                 key = key_scan(0);
-                if (key == KEY0_PRES || key == KEY2_PRES) /* KEY0/KEY2按下,播放下一个/上一个视频 */
+                if (key == KEY0_PRES || key == KEY2_PRES) // KEY0/KEY2按下,播放上一个/下一个视频
                 {
                     res = key;
                     break;
                 }
                 else if (key == KEY1_PRES || key == WKUP_PRES)
                 {
-                    i2s_play_stop();    /* 关闭音频 */
+                    i2s_play_stop();    // 关闭音频
                     video_seek(favi, &g_avix, framebuf);
                     pbuf = framebuf;
-                    i2s_play_start();   /* 开启DMA播放 */
+                    i2s_play_start();   // 启动DMA播放
+                }
+                */
+
+                // 检查是否到达文件末尾
+                if (favi->fptr >= favi->obj.objsize) {
+                    // 文件播放完成，退出循环
+                    break;
                 }
 
-                if (avi_get_streaminfo(pbuf + g_avix.StreamSize))     /* 读取下一帧 流标志 */
+                if (avi_get_streaminfo(pbuf + g_avix.StreamSize))     /* 获取下一帧 标记 */
                 {
                         // printf("g_frame error \r\n");
-                        res = KEY0_PRES;
+                        // 不再因为错误而退出，而是正常播放完成
                         break;
                 }
             }
 
             i2s_play_stop();                                    /* 关闭音频 */
             TIM7->CR1 &= ~(1 << 0);                             /* 关闭定时器6 */
-            lcd_set_window(0, 0, lcddev.width, lcddev.height);  /* 恢复窗口 */
+            lcd_set_window(0, 0, lcddev.width, lcddev.height);  /* 恢复全屏 */
             mjpegdec_free();                                    /* 释放内存 */
             f_close(favi);                                      /* 关闭文件 */
+            break; // 成功播放完成后退出循环
         }
     }
 
@@ -537,8 +532,6 @@ if (g_avix.StreamID == AVI_VIDS_FLAG)       /* 视频帧 */
     myfree(SRAMIN, i2sbuf[3]);
     myfree(SRAMIN, framebuf);
     myfree(SRAMIN, favi);
-
-    return res;
 }
 
 /**

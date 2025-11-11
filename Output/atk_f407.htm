@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\atk_f407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\atk_f407.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 12 05:26:50 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 12 06:47:10 2025
 <BR><P>
 <H3>Maximum Stack Usage =       1648 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -500,7 +500,7 @@ Global Symbols
 <P><STRONG><a name="[310]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[12a]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 984 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 944 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; video_play &rArr; video_play_mjpeg &rArr; load_text_file_stream &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_read &rArr; load_xdir &rArr; dir_next &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; norflash_write &rArr; norflash_write_nocheck &rArr; norflash_wait_busy &rArr; norflash_read_sr &rArr; spi1_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -3543,7 +3543,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[12b]"></a>main</STRONG> (Thumb, 204 bytes, Stack size 16 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 984 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 944 + Unknown Stack Size
 <LI>Call Chain = main &rArr; video_play &rArr; video_play_mjpeg &rArr; load_text_file_stream &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_read &rArr; load_xdir &rArr; dir_next &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; norflash_write &rArr; norflash_write_nocheck &rArr; norflash_wait_busy &rArr; norflash_read_sr &rArr; spi1_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play
@@ -3669,8 +3669,7 @@ Global Symbols
 <P><STRONG><a name="[233]"></a>myfree</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, malloc.o(i.myfree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = myfree
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play
-<LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mjpegdec_free
+<BR>[Called By]<UL><LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mjpegdec_free
 <LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play_mjpeg
 <LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_get_tnum
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_text_stream
@@ -4082,15 +4081,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;video_play
 </UL>
 
-<P><STRONG><a name="[2a1]"></a>video_play</STRONG> (Thumb, 444 bytes, Stack size 136 bytes, videoplayer.o(i.video_play))
-<BR><BR>[Stack]<UL><LI>Max Depth = 968 + Unknown Stack Size
+<P><STRONG><a name="[2a1]"></a>video_play</STRONG> (Thumb, 402 bytes, Stack size 96 bytes, videoplayer.o(i.video_play))
+<BR><BR>[Stack]<UL><LI>Max Depth = 928 + Unknown Stack Size
 <LI>Call Chain = video_play &rArr; video_play_mjpeg &rArr; load_text_file_stream &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_read &rArr; load_xdir &rArr; dir_next &rArr; create_chain &rArr; fill_last_frag &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; norflash_write &rArr; norflash_write_nocheck &rArr; norflash_wait_busy &rArr; norflash_read_sr &rArr; spi1_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_fill
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_show_string
 <LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mymalloc
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myfree
 <LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_readdir
 <LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_opendir

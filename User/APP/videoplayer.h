@@ -66,7 +66,7 @@ void video_time_show(FIL *favi,AVI_INFO *aviinfo);                  /* ÏÔÊ¾µ±Ç°²
 void video_info_show(AVI_INFO *aviinfo);                            /* ÏÔÊ¾µ±Ç°ÊÓÆµÎÄ¼şµÄÏà¹ØĞÅÏ¢ */
 void video_bmsg_show(uint8_t* name, uint16_t index, uint16_t total);/* ÊÓÆµ»ù±¾ĞÅÏ¢ÏÔÊ¾ */
 void video_play(void);                                              /* ²¥·ÅÊÓÆµ */
-uint8_t video_play_mjpeg(uint8_t *pname);                           /* ²¥·ÅÒ»¸ömjpegÎÄ¼ş */
+void video_play_mjpeg(uint8_t *pname);                           /* ²¥·ÅÒ»¸ömjpegÎÄ¼ş */
 uint8_t video_seek(FIL *favi,AVI_INFO *aviinfo,uint8_t *mbuf);      /* AVIÎÄ¼ş²éÕÒ */
 
 
