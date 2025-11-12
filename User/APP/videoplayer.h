@@ -52,9 +52,9 @@
 #define MAX_TEXT_LINES 200
 #define DISPLAY_LINES 20
 
-extern char* text_lines[MAX_TEXT_LINES];
-extern uint16_t total_lines;
-extern uint16_t display_start_line;
+
+
+
 
 void load_text_file(void);
 void display_text_overlay(void);
@@ -82,22 +82,23 @@ void init_text_stream(void);
 void load_text_file_stream(void);
 void display_text_overlay_stream(void);
 FRESULT read_next_char(char* ch);
+#define MAX_LINE_LENGTH     128   // 每行最大字符数（根据你的 LCD 宽度调整）
+#define MAX_DISPLAY_LINES   20
+
 typedef struct {
     FIL file;
-    char buffer[TEXT_BUFFER_SIZE];
-    UINT buffer_pos;
-    UINT buffer_len;
-    UINT file_pos;
-    UINT file_size;
-    char line_buffer[200];
-    uint16_t line_pos;
-    uint16_t current_line;
-    uint16_t total_lines;
-    char* display_lines[MAX_DISPLAY_LINES];
-    uint16_t display_start;
+    uint32_t file_size;
+    uint32_t file_pos;
+
+    // 环形缓冲：用于保存当前要显示的 MAX_DISPLAY_LINES 行
+    char display_buffer[MAX_DISPLAY_LINES][MAX_LINE_LENGTH];
+    uint16_t buffer_start;      // 当前顶部显示的是第几行（逻辑行号）
+    uint16_t total_lines;       // 整个文件总行数（可选，用于调试）
 } text_stream_t;
 
-static text_stream_t text_stream;
+
+extern text_stream_t text_stream;
+
 
 #endif
 
