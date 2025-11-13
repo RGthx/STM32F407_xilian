@@ -1,3 +1,23 @@
+# Keil MDK编译输出目录
+*/Output/
+*/Listing/
+*/Objects/
+
+# Keil MDK临时生成文件
+*.uvoptx
+*.uvgui.*
+*.uvlinks.txt
+*.bak
+*.tmp
+
+# 调试和编译生成文件
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+
+
 # 默认忽略的文件
 /shelf/
 /workspace.xml
@@ -6,3 +26,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
