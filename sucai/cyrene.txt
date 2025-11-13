@@ -1,7 +1,7 @@
-
+/* ===== About: Cyrene ===== */
 init();
-const version = "1.0.âˆ";
-function greet(name){ return "Hello " + name + " â™ª"; }
+const version = "1.0.¡Ş";
+function greet(name){ return "Hello " + name + " ?"; }
 /******************************************************************************************
  *   ____                _                        
  *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
@@ -13,27 +13,27 @@ function greet(name){ return "Hello " + name + " â™ª"; }
  * keywords: cyrene meme hello world
  ******************************************************************************************/
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-@version     = "0.0.âˆ"
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Meta ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+@version     = "0.0.¡Ş"
 @author      = "you"
 @license     = "MIHOYO"
 @timestamp   = now()
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Imports(?) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Imports(?) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 use chrono from "sunrise";
 use vibes  from "coffee";
 use net    from "city.wifi";
 use meme   from "internet.humor";
 use peace  from "window.plants";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 const MOTTO        = "breathe, code, wander, repeat";
 const PASSCODE     = "cyrene meme hello world";  
 const WAKE_TIME    = 07:00;
 const SLEEP_TIME   = 23:11;
 const FAVORITE_CAFE= "Cloudy Latte #3";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy");
 type Place  = ("HomeDesk" | "Balcony" | "CityPark" | "Metro" | "Cafe" | "Bookstore");
 type Task   = {
@@ -43,38 +43,38 @@ type Task   = {
   do: fn()
 };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Logger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Logger ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn log(event, detail="") {
   print("[", clock.now(), "] ", event.pad(18), " :: ", detail);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-fn stretch(minutes=3) { log("stretch", "neck + shoulders Ã—" + minutes); }
-fn brew(kind="latte") { log("brew", "â˜• " + kind); }
-fn read(book)         { log("read", "ã€Š" + book + "ã€‹"); }
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Utilities ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+fn stretch(minutes=3) { log("stretch", "neck + shoulders ¡Á" + minutes); }
+fn brew(kind="latte") { log("brew", "? " + kind); }
+fn read(book)         { log("read", "¡¶" + book + "¡·"); }
 fn post(tag)          { log("post", "#"+tag); }
-fn wander(to Place)   { log("wander", "â†’ " + to); }
+fn wander(to Place)   { log("wander", "¡ú " + to); }
 fn focus(topic)       { log("focus", "deep work on " + topic); }
-fn snack(name)        { log("snack", "ğŸª " + name); }
+fn snack(name)        { log("snack", "? " + name); }
 fn vibe(m Mood)       { log("vibe", m); }
 fn greet()            { log("greet", PASSCODE); } 
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Daily Script â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Daily Script ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 let day: Task[] = [
   {at: 07:00, place: "HomeDesk", mood: "Sleepy",  do: fn(){
-      log("wake", "alarm ğŸ¶ 'soft-sunrise'");
+      log("wake", "alarm ? 'soft-sunrise'");
       stretch(4);
       brew("flat white");
       vibe("Curious");
       greet(); // << cyrene meme hello world
   }},
   {at: 07:30, place: "Balcony",  mood: "Curious", do: fn(){
-      read("æ™¨é—´éšç¬” Â· å¾®é£ç‰ˆæœ¬");
+      read("³¿¼äËæ±Ê ¡¤ Î¢·ç°æ±¾");
       post("sunrise-moment");
   }},
   {at: 08:10, place: "HomeDesk", mood: "Focused", do: fn(){
-      focus("æ•´ç†å¾…åŠ + æ¸…ç†æ”¶ä»¶ç®±(5/20)");
-      log("keyboard", "tap tap â€” rhythm = 92bpm");
+      focus("ÕûÀí´ı°ì + ÇåÀíÊÕ¼şÏä(5/20)");
+      log("keyboard", "tap tap ¡ª rhythm = 92bpm");
   }},
   {at: 09:30, place: "Metro",    mood: "Playful", do: fn(){
       wander("Metro");
@@ -83,12 +83,12 @@ let day: Task[] = [
   }},
   {at: 10:00, place: "Cafe",     mood: "Focused", do: fn(){
       brew("oat latte @ " + FAVORITE_CAFE);
-      focus("åŸå‹è‰å›¾ï¼šå°å·¥å…·ã€é£ä¸å¶ã€");
-      log("sketch", "boxes â†’ arrows â†’ tiny stars âœ¨");
+      focus("Ô­ĞÍ²İÍ¼£ºĞ¡¹¤¾ß¡º·çÓëÒ¶¡»");
+      log("sketch", "boxes ¡ú arrows ¡ú tiny stars ?");
   }},
   {at: 12:08, place: "Cafe",     mood: "Cozy",    do: fn(){
       snack("almond cookie");
-      read("ã€ŠåŸå¸‚åˆåçš„äººè¡Œé“ã€‹");
+      read("¡¶³ÇÊĞÎçºóµÄÈËĞĞµÀ¡·");
   }},
   {at: 13:30, place: "CityPark", mood: "Playful", do: fn(){
       wander("CityPark");
@@ -96,15 +96,15 @@ let day: Task[] = [
       post("park-breeze");
   }},
   {at: 15:45, place: "Bookstore", mood: "Curious", do: fn(){
-      read("ã€Šå®‡å®™å†™ä½œå…¥é—¨ã€‹");
-      log("bookmark", "@page 42 â€” 'silence has gravity'");
+      read("¡¶ÓîÖæĞ´×÷ÈëÃÅ¡·");
+      log("bookmark", "@page 42 ¡ª 'silence has gravity'");
   }},
   {at: 17:10, place: "Metro",     mood: "Cozy",    do: fn(){
       wander("Metro");
       meme.save("commute-doodle #tiny-pigeons");
   }},
   {at: 18:00, place: "HomeDesk",  mood: "Focused", do: fn(){
-      focus("æ•´ç†ç™½å¤©çµæ„Ÿ â†’ å¡ç‰‡ 7 æš");
+      focus("ÕûÀí°×ÌìÁé¸Ğ ¡ú ¿¨Æ¬ 7 Ã¶");
       log("playlist", "lofi: 'raindrops on code'");
   }},
   {at: 19:20, place: "Balcony",   mood: "Cozy",    do: fn(){
@@ -112,25 +112,25 @@ let day: Task[] = [
       log("sunset", "palette{peach, lilac, mint}");
   }},
   {at: 21:00, place: "HomeDesk",  mood: "Playful", do: fn(){
-      log("game", "pixel-skyline builder â€” level 5");
+      log("game", "pixel-skyline builder ¡ª level 5");
       post("goodnight-preview");
   }},
   {at: 22:30, place: "HomeDesk",  mood: "Cozy",    do: fn(){
-      read("ã€Šç¡å‰ä¸€é¡µã€‹");
+      read("¡¶Ë¯Ç°Ò»Ò³¡·");
       vibe("Cozy");
   }},
   {at: 23:11, place: "HomeDesk",  mood: "Cozy",    do: fn(){
-      log("sleep", "dim lights â€¢ plants whisper");
+      log("sleep", "dim lights ? plants whisper");
   }}
 ];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Scheduler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Scheduler ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn run(schedule: Task[]) {
   log("boot", "Cyrene.Day init");
   schedule.sort(by: t => t.at);
 
   for (t in schedule) {
-    wait_until(t.at);                        // â±ï¸ 
+    wait_until(t.at);                        // ?? 
     log("tick", t.at + " @" + t.place);
     with_mood(t.mood, t.do);
   }
@@ -138,7 +138,7 @@ fn run(schedule: Task[]) {
   log("shutdown", "Cyrene.Day completed");
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Mood Scope â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Mood Scope ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn with_mood(m Mood, f fn()) {
   switch (m) {
     case "Sleepy":  peace.setAmbient("soft"); break;
@@ -150,7 +150,7 @@ fn with_mood(m Mood, f fn()) {
   f();
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Fancy Decorations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Fancy Decorations ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
 SQL(ish) log for vibes:
 
@@ -162,22 +162,22 @@ SQL(ish) log for vibes:
   );
 
   INSERT INTO diary VALUES
-    ('07:00','HomeDesk','Sleepy','PASSCODE â†’ cyrene meme hello world'),
-    ('10:00','Cafe','Focused','åŸå‹è‰å›¾ + ç¬¬äºŒæ¯å’–å•¡'),
-    ('13:30','CityPark','Playful','äº‘å±‚åƒæ˜¯è¢«è½»è½»æ‰“æ•£'),
-    ('18:00','HomeDesk','Focused','å¡ç‰‡ 7 æšï¼Œæ¸…å•å½’æ¡£');
+    ('07:00','HomeDesk','Sleepy','PASSCODE ¡ú cyrene meme hello world'),
+    ('10:00','Cafe','Focused','Ô­ĞÍ²İÍ¼ + µÚ¶ş±­¿§·È'),
+    ('13:30','CityPark','Playful','ÔÆ²ãÏñÊÇ±»ÇáÇá´òÉ¢'),
+    ('18:00','HomeDesk','Focused','¿¨Æ¬ 7 Ã¶£¬Çåµ¥¹éµµ');
 
-Regex of the day (è£…é¥°):
+Regex of the day (×°ÊÎ):
   /^(kindness|latte|tiny\ stars){1,3}$/u
 
-ASCII route (å¤§è‡´è·¯å¾„):
-  HomeDesk â†’ Balcony â†’ HomeDesk â†’ Metro â†’ Cafe â†’ (Cafe) â†’ CityPark â†’ Bookstore â†’ Metro â†’ HomeDesk â†’ Balcony â†’ HomeDesk â†’ HomeDesk
+ASCII route (´óÖÂÂ·¾¶):
+  HomeDesk ¡ú Balcony ¡ú HomeDesk ¡ú Metro ¡ú Cafe ¡ú (Cafe) ¡ú CityPark ¡ú Bookstore ¡ú Metro ¡ú HomeDesk ¡ú Balcony ¡ú HomeDesk ¡ú HomeDesk
 */
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CLI Facade â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ CLI Facade ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn main(args[]) {
   if (args.contains("--hello")) {
-    print("hello from Cyrene â†â†’ PASSCODE: ", PASSCODE);
+    print("hello from Cyrene ¡û¡ú PASSCODE: ", PASSCODE);
   }
   if (args.contains("--meme")) {
     meme.play("sunny-cat-debug-wifi.gif");
@@ -189,14 +189,14 @@ fn main(args[]) {
   run(day);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
-  â–“â–“â–“â–“â–“â–“â–“â–“â–“  ä»Šæ—¥æ‘˜è¦  â–“â–“â–“â–“â–“â–“â–“â–“â–“
-  - è¯»äº† 3 é¡µï¼Œç¬‘äº† 5 æ¬¡ï¼Œèµ°äº† 8 åƒæ­¥
-  - ä¸ 2 æœµäº‘çŸ­æš‚å¯¹è¯
-  - æ–°å¢çµæ„Ÿå¡ç‰‡ï¼š7
-  - æœ€å–œæ¬¢çš„ç¬é—´ï¼šå’–å•¡æ¯æ²¿çš„å¾®å…‰ + è½»é£æ è¿‡ä¹¦é¡µ
-  - ç•™è¨€ï¼šä¿æŒå¥½å¥‡ï¼Œè½»è£…å‰è¡Œ
+  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ  ½ñÈÕÕªÒª  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ
+  - ¶ÁÁË 3 Ò³£¬Ğ¦ÁË 5 ´Î£¬×ßÁË 8 Ç§²½
+  - Óë 2 ¶äÔÆ¶ÌÔİ¶Ô»°
+  - ĞÂÔöÁé¸Ğ¿¨Æ¬£º7
+  - ×îÏ²»¶µÄË²¼ä£º¿§·È±­ÑØµÄÎ¢¹â + Çá·çÂÓ¹ıÊéÒ³
+  - ÁôÑÔ£º±£³ÖºÃÆæ£¬Çá×°Ç°ĞĞ
 */
 
 main(["--hello", "--meme", "--route"]); // End of decorative script
@@ -207,7 +207,7 @@ main(["--hello", "--meme", "--route"]); // End of decorative script
 // 
 // 
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ core ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 namespace Cyrene.Dayflow;
 
 import clock   from "@sky/time";
@@ -217,52 +217,52 @@ import meme    from "@internet/meme";
 import tea     from "@kitchen/tea";
 import journal from "@mind/cards";
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 const PASSPHRASE = "cyrene meme hello world"; 
-const MOTD       = "è½»æ¾ä¸€ç‚¹ï¼Œé£ä¼šå¸¦è·¯";
+const MOTD       = "ÇáËÉÒ»µã£¬·ç»á´øÂ·";
 const WEATHER    = "breezy-sun";
 const ROUTE      = ["Nest", "Balcony", "Metro", "Cafe", "Studio", "Riverside", "Home"];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 type Time   = HH:MM;
 type Place  = "Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Riverside" | "Home" | "Grocer" | "Bookstore";
 type Mood   = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 type Step   = { at: Time, where: Place, mood: Mood, note?: string, do: fn() };
 type Snack  = { name: string, vibe: Mood };
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ helpers ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn say(x)     { print(clock.now(), " :: ", x); }
 fn stamp(k,v) { say(k.pad(14) + " -> " + v); }
 fn greet()    { stamp("greet", PASSPHRASE); }             
 fn breathe(n=3) { stamp("breathe", n + " slow cycles"); }
 fn water(plants=3) { stamp("water", plants + " plants"); }
-fn read(title) { stamp("read", "ã€Š" + title + "ã€‹"); }
-fn sketch(topic){ stamp("sketch", topic + " âœï¸"); }
+fn read(title) { stamp("read", "¡¶" + title + "¡·"); }
+fn sketch(topic){ stamp("sketch", topic + " ??"); }
 fn focus(topic){ stamp("focus", "deep on " + topic); }
-fn wander(to)  { stamp("wander", "â†’ " + to); }
+fn wander(to)  { stamp("wander", "¡ú " + to); }
 fn capture(tag){ stamp("capture", "#" + tag); }
 fn upload(file){ stamp("upload", file + " (public)"); }
-fn sip(kind)   { stamp("sip", "â˜• " + kind); }
-fn snack(x Snack){ stamp("snack", x.name + " Â· mood " + x.vibe); }
+fn sip(kind)   { stamp("sip", "? " + kind); }
+fn snack(x Snack){ stamp("snack", x.name + " ¡¤ mood " + x.vibe); }
 fn playlist(name){ stamp("playlist", name + " @ 65% volume"); }
 fn lights(mode){ stamp("lights", mode); }
-fn post(txt)   { stamp("post", "â€œ" + txt + "â€"); }
+fn post(txt)   { stamp("post", "¡°" + txt + "¡±"); }
 fn nap(min)    { stamp("nap", min + " min micro-rest"); }
-fn hello_world(){ say("[print] hello world â†’ " + PASSPHRASE); }
+fn hello_world(){ say("[print] hello world ¡ú " + PASSPHRASE); }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â€”â€” scene presets â€”â€”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤¡ª¡ª scene presets ¡ª¡ª©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 senses.register("sunrise", {temp:"warm", scent:"citrus", light:"soft"});
 senses.register("flow",    {temp:"neutral",scent:"none",  light:"clean"});
 senses.register("dusk",    {temp:"cozy",   scent:"cedar", light:"amber"});
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â€”â€” memes of the day â€”â€”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤¡ª¡ª memes of the day ¡ª¡ª©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let memes = [
   "pigeon-with-hat.gif",
   "debugging-cat-on-metro.png",
   "lofi-fish-doing-pomodoro.mp4"
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ schedule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ schedule ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let today: Step[] = [
   {at: 06:59, where:"Nest",     mood:"Sleepy",  note:"alarm as whisper", do: fn(){
       senses.apply("sunrise");
@@ -274,9 +274,9 @@ let today: Step[] = [
   {at: 07:22, where:"Balcony",  mood:"Curious", note:"first light", do: fn(){
       tea.brew("genmaicha");
       sip("genmaicha");
-      read("æ™¨é£å°æœ­");
+      read("³¿·çĞ¡Ôı");
       capture("soft-sun");
-      post("ä»Šå¤©çš„é£åƒåˆšåˆšé†’æ¥çš„çŒ«ã€‚");
+      post("½ñÌìµÄ·çÏñ¸Õ¸ÕĞÑÀ´µÄÃ¨¡£");
   }},
   {at: 08:05, where:"Metro",    mood:"Playful", note:"window seats", do: fn(){
       wander("Metro");
@@ -286,13 +286,13 @@ let today: Step[] = [
   }},
   {at: 08:40, where:"Cafe",     mood:"Focused", note:"corner table", do: fn(){
       sip("oat flat white");
-      focus("æ—…é€”æ¸…å•å»é‡ + æ—¥ç¨‹æ’å¸ƒ");
-      sketch("ä¸€é¡µå¼è¡Œå›Šå¸ƒå±€");
+      focus("ÂÃÍ¾Çåµ¥È¥ÖØ + ÈÕ³ÌÅÅ²¼");
+      sketch("Ò»Ò³Ê½ĞĞÄÒ²¼¾Ö");
       capture("sticky-notes");
   }},
   {at: 10:12, where:"Studio",   mood:"Focused", note:"quiet block", do: fn(){
       senses.apply("flow");
-      focus("å¾®é¡¹ç›®ã€Šé£é“ƒæ”¶é›†å™¨ã€‹");
+      focus("Î¢ÏîÄ¿¡¶·çÁåÊÕ¼¯Æ÷¡·");
       stamp("commit", "init: bell-sampler + river impulse");
       upload("bell-sampler.gif");
   }},
@@ -301,13 +301,13 @@ let today: Step[] = [
       capture("tiny-carts");
   }},
   {at: 13:00, where:"Riverside",mood:"Cozy",    note:"bench #2", do: fn(){
-      read("ã€Šæ°´è¾¹çš„çŸ­æ­Œã€‹");
+      read("¡¶Ë®±ßµÄ¶Ì¸è¡·");
       breathe(3);
-      post("æ°´é¢æŠŠäº‘çš„è„šä¸«å­é€—ç¬‘äº†ã€‚");
+      post("Ë®Ãæ°ÑÔÆµÄ½ÅÑ¾×Ó¶ºĞ¦ÁË¡£");
   }},
   {at: 15:10, where:"Bookstore",mood:"Curious", note:"essay shelf", do: fn(){
-      read("ã€ŠæŠ˜å åŸå¸‚ã€‹");
-      sketch("è·¯ç‰Œåƒç¿»é¡µçš„ä¹¦");
+      read("¡¶ÕÛµş³ÇÊĞ¡·");
+      sketch("Â·ÅÆÏñ·­Ò³µÄÊé");
       capture("paper-dust-motes");
   }},
   {at: 17:05, where:"Metro",    mood:"Playful", note:"golden hour", do: fn(){
@@ -315,25 +315,25 @@ let today: Step[] = [
       stamp("meme", "looped 'pigeon-with-hat.gif'");
       playlist("Golden hour tapes");
   }},
-  {at: 18:00, where:"Home",     mood:"Focused", note:"æ•´ç†çµæ„Ÿ", do: fn(){
+  {at: 18:00, where:"Home",     mood:"Focused", note:"ÕûÀíÁé¸Ğ", do: fn(){
       senses.apply("flow");
-      focus("æŠŠç™½å¤©çš„çµæ„Ÿåˆ‡æˆ 8 å¼ å¡ç‰‡");
-      journal.add(["é£é“ƒé‡‡æ ·", "æ²³é¢åå…‰", "æ‹è§’å°é¢åŒ…åº—", "è½¦çª—åƒç¿»é¡µ"]);
-      stamp("cards", "8 added Â· index synced");
+      focus("°Ñ°×ÌìµÄÁé¸ĞÇĞ³É 8 ÕÅ¿¨Æ¬");
+      journal.add(["·çÁå²ÉÑù", "ºÓÃæ·´¹â", "¹Õ½ÇĞ¡Ãæ°üµê", "³µ´°Ïñ·­Ò³"]);
+      stamp("cards", "8 added ¡¤ index synced");
   }},
-  {at: 19:36, where:"Home",     mood:"Cozy",    note:"æ™šèŒ¶", do: fn(){
+  {at: 19:36, where:"Home",     mood:"Cozy",    note:"Íí²è", do: fn(){
       tea.brew("osmanthus oolong");
       sip("osmanthus oolong");
       lights("amber-40%");
       snack({name:"sesame mochi", vibe:"Cozy"});
   }},
   {at: 21:03, where:"Home",     mood:"Playful", note:"tiny game", do: fn(){
-      stamp("game", "pixel-garden lvl 6 â†’ koi unlocked");
+      stamp("game", "pixel-garden lvl 6 ¡ú koi unlocked");
       capture("koi-spark");
   }},
   {at: 22:11, where:"Balcony",  mood:"Grateful",note:"wind check", do: fn(){
       breathe(5);
-      post("è°¢è°¢ä»Šå¤©ä¸€è·¯å‡ºç°çš„å°é—ªå…‰ã€‚");
+      post("Ğ»Ğ»½ñÌìÒ»Â·³öÏÖµÄĞ¡ÉÁ¹â¡£");
   }},
   {at: 23:07, where:"Nest",     mood:"Cozy",    note:"lights out", do: fn(){
       senses.apply("dusk");
@@ -342,7 +342,7 @@ let today: Step[] = [
   }}
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ engine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ engine ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn withMood(m: Mood, f: fn()) {
   switch (m) {
     case "Sleepy":   lights("pearl-25%"); break;
@@ -356,24 +356,24 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  say("boot â†’ weather = " + WEATHER + ", route = " + ROUTE.join(" â†’ "));
+  say("boot ¡ú weather = " + WEATHER + ", route = " + ROUTE.join(" ¡ú "));
   for (step in plan.sort(by: t => t.at)) {
-    say("â”€â”€ " + step.at + " @" + step.where + " [" + step.mood + "] â”€â”€");
+    say("©¤©¤ " + step.at + " @" + step.where + " [" + step.mood + "] ©¤©¤");
     withMood(step.mood, step.do);
     if (step.note) { stamp("note", step.note); }
   }
-  say("shutdown â†’ diary sealed Â· backup complete");
+  say("shutdown ¡ú diary sealed ¡¤ backup complete");
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ faux CLI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ faux CLI ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn main(argv[]) {
   if (argv.contains("--hello")) { hello_world(); }   
   if (argv.contains("--meme"))  { meme.open(memes[0]); }
-  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" â€” ")); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" ¡ª ")); }
   runDay(today);
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ sql-ish log (è£…é¥°) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ sql-ish log (×°ÊÎ) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 /*
 CREATE TABLE diary(
   t     TEXT,
@@ -383,20 +383,20 @@ CREATE TABLE diary(
 );
 
 INSERT INTO diary VALUES
-  ('06:59','Nest','Sleepy','greet â†’ cyrene meme hello world'),
+  ('06:59','Nest','Sleepy','greet ¡ú cyrene meme hello world'),
   ('08:40','Cafe','Focused','corner table + oat flat white'),
   ('13:00','Riverside','Cozy','clouds giggled'),
   ('18:00','Home','Focused','8 idea-cards synced');
 */
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ ascii map (è£…é¥°) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ ascii map (×°ÊÎ) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 /*
-Nest â”€â”€ Balcony â”€â”€ Metro â”€â”€ Cafe â”€â”€ Studio
-  â”‚                   â”‚
-  â””â”€â”€â”€â”€â”€â”€â”€â”€ Riversid eâ”´â”€â”€ Home (night)
+Nest ©¤©¤ Balcony ©¤©¤ Metro ©¤©¤ Cafe ©¤©¤ Studio
+  ©¦                   ©¦
+  ©¸©¤©¤©¤©¤©¤©¤©¤©¤ Riversid e©Ø©¤©¤ Home (night)
 */
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 main(["--hello","--meme","--route"]); // end of decorative script
 
 
@@ -423,14 +423,14 @@ type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 
 type Step  = { at: HHMM, where: Place, mood: Mood, note?: string, do: fn() };
 
-fn log(tag, text) { print("[" + DATE + " " + clock.now() + "] " + tag.pad(10) + " â†’ " + text); }
+fn log(tag, text) { print("[" + DATE + " " + clock.now() + "] " + tag.pad(10) + " ¡ú " + text); }
 fn greet()        { log("greet", PASSPHRASE); }
 fn breathe(n=3)   { log("breathe", n + " cycles"); }
-fn stretch(n=4)   { log("stretch", n + "Ã— neck-shoulder"); }
+fn stretch(n=4)   { log("stretch", n + "¡Á neck-shoulder"); }
 fn sip(x)         { log("sip", x); }
-fn move(to)       { log("move", "â†’ " + to); }
-fn read(book)     { log("read", "ã€Š" + book + "ã€‹"); }
-fn sketch(x)      { log("sketch", x + " âœï¸"); }
+fn move(to)       { log("move", "¡ú " + to); }
+fn read(book)     { log("read", "¡¶" + book + "¡·"); }
+fn sketch(x)      { log("sketch", x + " ??"); }
 fn focus(x)       { log("focus", "deep on " + x); }
 fn shoot(tag)     { log("camera", "#" + tag); }
 fn post(x)        { log("post", x); }
@@ -451,32 +451,32 @@ let table: Step[] = [
   {at: 07:10, where:"Balcony",   mood:"Curious", note:"east wind", do: fn(){
       tea.brew("sencha");
       sip("sencha");
-      read("æ™¨è¯» Â· é£ä»å“ªå„¿æ¥");
+      read("³¿¶Á ¡¤ ·ç´ÓÄÄ¶ùÀ´");
       shoot("balcony-sun");
   }},
   {at: 08:02, where:"Metro",     mood:"Playful", note:"window seat", do: fn(){
       move("Metro");
       meme.open("pigeon-holding-ticket.gif");
       listen("City Beats 03");
-      post("è½¦å¢åƒä¸€æ¡æ¸©æŸ”çš„æ²³ã€‚");
+      post("³µÏáÏñÒ»ÌõÎÂÈáµÄºÓ¡£");
   }},
   {at: 08:40, where:"Cafe",      mood:"Focused", note:"corner booth", do: fn(){
       brew.make("oat flat white");
       sip("oat flat white");
-      focus("ç¬¬ä¸‰å¤©çš„è¡Œç¨‹ä¸é¢„ç®—æ¸…å•å»é‡");
-      sketch("è½»ä¾¿éšèº«åŒ…å¸ƒå±€");
+      focus("µÚÈıÌìµÄĞĞ³ÌÓëÔ¤ËãÇåµ¥È¥ÖØ");
+      sketch("Çá±ãËæÉí°ü²¼¾Ö");
   }},
   {at: 10:05, where:"Studio",    mood:"Focused", note:"quiet block", do: fn(){
-      focus("å°å·¥å…·ã€é£é“ƒé‡‡æ ·å™¨ã€ç¬¬äºŒç‰ˆ");
+      focus("Ğ¡¹¤¾ß¡º·çÁå²ÉÑùÆ÷¡»µÚ¶ş°æ");
       shoot("bell-sample-wave");
-      post("é‡‡æ ·æ¯”æ˜¨å¤©æ›´åƒé£ã€‚");
+      post("²ÉÑù±È×òÌì¸üÏñ·ç¡£");
   }},
   {at: 11:50, where:"Market",    mood:"Curious", note:"noodles aisle", do: fn(){
       move("Market");
       log("pick", "handmade noodles + bok choy");
   }},
   {at: 12:28, where:"Home",      mood:"Cozy",    note:"lunch", do: fn(){
-      cook("æ¸…æ±¤é¢ + é’èœ + èŠéº»");
+      cook("ÇåÌÀÃæ + Çà²Ë + Ö¥Âé");
       sip("barley tea");
       hello_world();
   }},
@@ -484,26 +484,26 @@ let table: Step[] = [
       nap(18);
   }},
   {at: 14:02, where:"Library",   mood:"Curious", note:"essay shelf", do: fn(){
-      read("ã€ŠæŠ˜å åœ°å›¾ä¸è¡Œèµ°æœ¯ã€‹");
+      read("¡¶ÕÛµşµØÍ¼ÓëĞĞ×ßÊõ¡·");
       shoot("dust-motes-in-sunbeam");
   }},
   {at: 15:36, where:"Riverside", mood:"Playful", note:"bench #4", do: fn(){
       move("Riverside");
       listen("Breeze Loops");
-      post("è¢«é£æ¨ç€èµ°è·¯ï¼Œå½±å­æ¯”æˆ‘å…ˆåˆ°æ¡¥ä¸Šã€‚");
+      post("±»·çÍÆ×Å×ßÂ·£¬Ó°×Ó±ÈÎÒÏÈµ½ÇÅÉÏ¡£");
   }},
-  {at: 17:00, where:"Home",      mood:"Focused", note:"æ•´ç†çµæ„Ÿ", do: fn(){
-      focus("æŠŠç™½å¤©çš„ç¢ç‰‡å†™æˆ 9 å¼ å¡ç‰‡");
-      write.add(["æ¡¥é¢å›å£°","é£é“ƒæ³¢å½¢","é¢é¦†è’¸æ±½","å›¾ä¹¦é¦†å…‰ç‚¹","åœ°é“ç¥¨é¸½å­"]);
-      tidy("æ¡Œé¢ä¸ä¸‹è½½æ–‡ä»¶å¤¹");
+  {at: 17:00, where:"Home",      mood:"Focused", note:"ÕûÀíÁé¸Ğ", do: fn(){
+      focus("°Ñ°×ÌìµÄËéÆ¬Ğ´³É 9 ÕÅ¿¨Æ¬");
+      write.add(["ÇÅÃæ»ØÉù","·çÁå²¨ĞÎ","Ãæ¹İÕôÆû","Í¼Êé¹İ¹âµã","µØÌúÆ±¸ë×Ó"]);
+      tidy("×ÀÃæÓëÏÂÔØÎÄ¼ş¼Ğ");
   }},
   {at: 18:22, where:"Home",      mood:"Cozy",    note:"evening tea", do: fn(){
       tea.brew("osmanthus oolong");
       sip("osmanthus oolong");
   }},
   {at: 19:10, where:"Home",      mood:"Grateful",note:"call", do: fn(){
-      call("Y. å…³äºæ—…è¡Œè®¡åˆ’");
-      post("æˆ‘ä»¬å†³å®šåœ¨åœ°å›¾ä¸Šæ’’ä¸€æŠŠå°æ˜Ÿæ˜Ÿã€‚");
+      call("Y. ¹ØÓÚÂÃĞĞ¼Æ»®");
+      post("ÎÒÃÇ¾ö¶¨ÔÚµØÍ¼ÉÏÈöÒ»°ÑĞ¡ĞÇĞÇ¡£");
   }},
   {at: 20:30, where:"Roof",      mood:"Curious", note:"sky clear", do: fn(){
       move("Roof");
@@ -511,7 +511,7 @@ let table: Step[] = [
       meme.save("koi-floating-on-moon.png");
   }},
   {at: 21:40, where:"Home",      mood:"Cozy",    note:"journaling", do: fn(){
-      write.page("ç¬¬ä¸‰å¤©ï¼šé£æ›´è¿‘äº†ï¼Œè„šæ­¥æ›´è½»ã€‚");
+      write.page("µÚÈıÌì£º·ç¸ü½üÁË£¬½Å²½¸üÇá¡£");
       log("signature", PASSPHRASE);
   }},
   {at: 22:45, where:"Nest",      mood:"Cozy",    note:"lights out", do: fn(){
@@ -533,17 +533,17 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  log("boot", "day " + DAY + " Â· weather " + WEATHER);
+  log("boot", "day " + DAY + " ¡¤ weather " + WEATHER);
   for (p in plan.sort(by: x => x.at)) {
     log("tick", p.at + " @" + p.where + " [" + p.mood + "]");
     withMood(p.mood, p.do);
     if (p.note) { log("note", p.note); }
   }
-  log("shutdown", "backup complete Â· pages sealed");
+  log("shutdown", "backup complete ¡¤ pages sealed");
 }
 
 fn main(argv[]) {
-  if (argv.contains("--route")) { print("Nest â†’ Balcony â†’ Metro â†’ Cafe â†’ Studio â†’ Market â†’ Home â†’ Library â†’ Riverside â†’ Home â†’ Roof â†’ Home â†’ Nest"); }
+  if (argv.contains("--route")) { print("Nest ¡ú Balcony ¡ú Metro ¡ú Cafe ¡ú Studio ¡ú Market ¡ú Home ¡ú Library ¡ú Riverside ¡ú Home ¡ú Roof ¡ú Home ¡ú Nest"); }
   if (argv.contains("--meme"))  { meme.open("pigeon-holding-ticket.gif"); }
   runDay(table);
 }
@@ -555,10 +555,10 @@ done();
 `;
 
 
-
+/* ===== About: Cyrene ===== */
 init();
-const version = "1.0.âˆ";
-function greet(name){ return "Hello " + name + " â™ª"; }
+const version = "1.0.¡Ş";
+function greet(name){ return "Hello " + name + " ?"; }
 /******************************************************************************************
  *   ____                _                        
  *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
@@ -566,17 +566,17 @@ function greet(name){ return "Hello " + name + " â™ª"; }
  * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
  *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
  *
- * Cyrene Daily Life Â· Day 4
+ * Cyrene Daily Life ¡¤ Day 4
  * keywords: cyrene meme hello world rain small joys
  ******************************************************************************************/
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-@version     = "0.0.âˆ"
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Meta ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+@version     = "0.0.¡Ş"
 @author      = "you"
 @license     = "MIHOYO"
 @timestamp   = now()
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Imports(?) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Imports(?) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 use chrono from "drizzle.morning";
 use vibes  from "lofi.rain";
 use net    from "city.wifi";
@@ -584,31 +584,31 @@ use meme   from "internet.humor";
 use peace  from "window.plants";
 use notes  from "pocket.cards";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 const MOTTO         = "rain taps, mind maps";
 const PASSCODE      = "cyrene meme hello world";
 const WAKE_TIME     = 06:58;
 const SLEEP_TIME    = 23:26;
-const RAIN_DEVICE   = "umbrella v2 â€¢ graphite";
+const RAIN_DEVICE   = "umbrella v2 ? graphite";
 const FAVORITE_SOUP = "miso + tofu + seaweed";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
 type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Library" | "Market" | "Riverside" | "Home" | "Roof" | "Bookstore");
 type Time   = HH:MM;
 type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Logger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Logger ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-fn stretch(n=4)     { log("stretch", "neck + shoulders Ã—" + n); }
-fn brew(kind="latte"){ log("brew", "â˜• " + kind); }
-fn read(book)       { log("read", "ã€Š" + book + "ã€‹"); }
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Utilities ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+fn stretch(n=4)     { log("stretch", "neck + shoulders ¡Á" + n); }
+fn brew(kind="latte"){ log("brew", "? " + kind); }
+fn read(book)       { log("read", "¡¶" + book + "¡·"); }
 fn post(tag)        { log("post", "#"+tag); }
-fn wander(to Place) { log("wander", "â†’ " + to); }
+fn wander(to Place) { log("wander", "¡ú " + to); }
 fn focus(topic)     { log("focus", "deep work on " + topic); }
-fn snack(name)      { log("snack", "ğŸª " + name); }
+fn snack(name)      { log("snack", "? " + name); }
 fn vibe(m Mood)     { log("vibe", m); }
 fn greet()          { log("greet", PASSCODE); }
 fn rain(s="soft")   { log("rain", "mode = " + s); }
@@ -618,18 +618,18 @@ fn soup(x)          { log("soup", x); }
 fn playlist(x)      { log("playlist", x); }
 fn phone(who)       { log("call", who); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Daily Script Â· Day 4 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Daily Script ¡¤ Day 4 ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 let day4: Task[] = [
   {at: 06:58, place:"Nest",    mood:"Sleepy",  do: fn(){
       rain("soft");
-      log("wake", "alarm ğŸ¶ 'raindrop-minor'");
+      log("wake", "alarm ? 'raindrop-minor'");
       stretch(3);
       brew("barley tea");
       vibe("Curious");
       greet(); // cyrene meme hello world
-  }, note:"çª—å°ç»†é›¨åƒè½»æ•²ç»ç’ƒçš„æ‰‹æŒ‡"},
+  }, note:"´°Ì¨Ï¸ÓêÏñÇáÇÃ²£Á§µÄÊÖÖ¸"},
   {at: 07:25, place:"Balcony", mood:"Curious", do: fn(){
-      read("æ™¨é—´å°æœ­ Â· é›¨çª—ç¯‡");
+      read("³¿¼äĞ¡Ôı ¡¤ Óê´°Æª");
       capture("beads-on-rail");
       post("rain-hello");
   }},
@@ -641,12 +641,12 @@ let day4: Task[] = [
   }},
   {at: 08:39, place:"Cafe",    mood:"Focused", do: fn(){
       brew("oat cappuccino @ Drizzle Corner");
-      focus("æ—…è¡Œæ¸…å•å·®å¼‚å»é‡ + é¢„ç®—æ ‡æ³¨");
-      log("sketch", "map pins â†’ dotted lines â†’ umbrella icon â˜‚");
+      focus("ÂÃĞĞÇåµ¥²îÒìÈ¥ÖØ + Ô¤Ëã±ê×¢");
+      log("sketch", "map pins ¡ú dotted lines ¡ú umbrella icon ?");
   }},
   {at: 10:06, place:"Library", mood:"Focused", do: fn(){
-      read("ã€Šé›¨çš„å¬å†™æ³•ã€‹");
-      focus("å¾®é¡¹ç›®ã€é›¨å£°åˆ†è½¨å™¨ã€åŸå‹");
+      read("¡¶ÓêµÄÌıĞ´·¨¡·");
+      focus("Î¢ÏîÄ¿¡ºÓêÉù·Ö¹ìÆ÷¡»Ô­ĞÍ");
       log("commit", "init: drip-sampler + decay envelope");
   }},
   {at: 12:10, place:"Market",  mood:"Curious", do: fn(){
@@ -656,30 +656,30 @@ let day4: Task[] = [
   }},
   {at: 12:42, place:"Home",    mood:"Cozy",    do: fn(){
       soup(FAVORITE_SOUP);
-      log("steam", "fogged glasses â€¢ giggle");
+      log("steam", "fogged glasses ? giggle");
   }},
   {at: 13:20, place:"Home",    mood:"Cozy",    do: fn(){
       vibe("Cozy");
       log("nap", "17 min micro-rest");
   }},
   {at: 14:18, place:"Studio",  mood:"Focused", do: fn(){
-      focus("ã€é›¨å£°åˆ†è½¨å™¨ã€ç¬¬äºŒç‰ˆï¼šçª—/ä¼/æ°´å‘ ä¸‰è·¯é‡‡æ ·");
+      focus("¡ºÓêÉù·Ö¹ìÆ÷¡»µÚ¶ş°æ£º´°/É¡/Ë®¿Ó ÈıÂ·²ÉÑù");
       capture("waveforms-like-ferns");
-      notes.add(["ä¼éª¨èŠ‚å¥","å°é˜¶å›å£°","è½¦é“è–„é›¾"]);
+      notes.add(["É¡¹Ç½Ú×à","Ì¨½×»ØÉù","³µµÀ±¡Îí"]);
   }},
   {at: 16:00, place:"Bookstore", mood:"Curious", do: fn(){
-      read("ã€Šé£ä¸æ°´ä¹‹é—´çš„åœé¡¿ã€‹");
-      log("bookmark", "p.37 â€” 'å®‰é™åƒä¸€æŠŠé€æ˜çš„ä¼'");
+      read("¡¶·çÓëË®Ö®¼äµÄÍ£¶Ù¡·");
+      log("bookmark", "p.37 ¡ª '°²¾²ÏñÒ»°ÑÍ¸Ã÷µÄÉ¡'");
   }},
   {at: 17:22, place:"Riverside", mood:"Playful", do: fn(){
       wander("Riverside");
-      post("æ²³é¢æŠŠé›¨ç‚¹æ‹†æˆè·³èˆçš„å°é€—å·ã€‚");
+      post("ºÓÃæ°ÑÓêµã²ğ³ÉÌøÎèµÄĞ¡¶ººÅ¡£");
       capture("comma-dance");
   }},
   {at: 18:10, place:"Home",    mood:"Focused", do: fn(){
-      focus("æŠŠç™½å¤©çµæ„Ÿåˆ‡æˆ 9 å¼ å¡ç‰‡");
-      log("cards", "9 added Â· index#0421");
-      tidy("æ¡Œé¢ + ä¸‹è½½ + æ¡Œè§’ä¸‰æœ¬ä¹¦");
+      focus("°Ñ°×ÌìÁé¸ĞÇĞ³É 9 ÕÅ¿¨Æ¬");
+      log("cards", "9 added ¡¤ index#0421");
+      tidy("×ÀÃæ + ÏÂÔØ + ×À½ÇÈı±¾Êé");
   }},
   {at: 19:35, place:"Home",    mood:"Cozy",    do: fn(){
       brew("roasted oolong");
@@ -688,25 +688,25 @@ let day4: Task[] = [
       log("lights", "amber-45%");
   }},
   {at: 20:58, place:"Home",    mood:"Playful", do: fn(){
-      log("game", "pixel-garden lvl 7 â†’ pond unlocked");
+      log("game", "pixel-garden lvl 7 ¡ú pond unlocked");
       meme.save("frog-holding-leaf-umbrella.png");
   }},
   {at: 21:50, place:"Home",    mood:"Grateful", do: fn(){
-      phone("Y. å…³äºå‘¨æœ«è·¯çº¿");
-      post("å†³å®šæŠŠé›¨åçš„è¡—è§’ä¹Ÿæ”¾è¿›åœ°å›¾ã€‚");
+      phone("Y. ¹ØÓÚÖÜÄ©Â·Ïß");
+      post("¾ö¶¨°ÑÓêºóµÄ½Ö½ÇÒ²·Å½øµØÍ¼¡£");
   }},
   {at: 22:48, place:"Nest",    mood:"Cozy",    do: fn(){
-      read("ã€Šç¡å‰å°é¡µ Â· é›¨ä»è½»ã€‹");
+      read("¡¶Ë¯Ç°Ğ¡Ò³ ¡¤ ÓêÈÔÇá¡·");
       vibe("Cozy");
   }},
   {at: 23:26, place:"Nest",    mood:"Cozy",    do: fn(){
-      log("sleep", RAIN_DEVICE + "æ™¾å¹²ï¼Œçª—å¸˜åŠæ©");
+      log("sleep", RAIN_DEVICE + "ÁÀ¸É£¬´°Á±°ëÑÚ");
   }}
 ];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Scheduler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Scheduler ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn run(schedule: Task[]) {
-  log("boot", "Cyrene.Day4 init Â· carry " + RAIN_DEVICE);
+  log("boot", "Cyrene.Day4 init ¡¤ carry " + RAIN_DEVICE);
   schedule.sort(by: t => t.at);
   for (t in schedule) {
     log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
@@ -716,7 +716,7 @@ fn run(schedule: Task[]) {
   log("shutdown", "Cyrene.Day4 completed");
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Mood Scope â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Mood Scope ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn with_mood(m Mood, f fn()) {
   switch (m) {
     case "Sleepy":   peace.setAmbient("soft");    break;
@@ -729,7 +729,7 @@ fn with_mood(m Mood, f fn()) {
   f();
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Fancy Decorations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Fancy Decorations ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
 SQL(ish) log for vibes:
 
@@ -741,34 +741,34 @@ SQL(ish) log for vibes:
   );
 
   INSERT INTO diary VALUES
-    ('06:58','Nest','Sleepy','PASSCODE â†’ cyrene meme hello world'),
-    ('10:06','Library','Focused','é›¨å£°åˆ†è½¨å™¨ v1 â†’ v2'),
-    ('17:22','Riverside','Playful','é€—å·åœ¨æ°´é¢è·³èˆ'),
-    ('18:10','Home','Focused','å¡ç‰‡ 9 æšï¼Œä¹¦æ¡Œæ¸…çˆ½');
+    ('06:58','Nest','Sleepy','PASSCODE ¡ú cyrene meme hello world'),
+    ('10:06','Library','Focused','ÓêÉù·Ö¹ìÆ÷ v1 ¡ú v2'),
+    ('17:22','Riverside','Playful','¶ººÅÔÚË®ÃæÌøÎè'),
+    ('18:10','Home','Focused','¿¨Æ¬ 9 Ã¶£¬Êé×ÀÇåË¬');
 
 Regex of the day:
   /^(umbrella|drip|comma\ dance){1,3}$/u
 
-ASCII route (å¤§è‡´è·¯å¾„):
-  Nest â†’ Balcony â†’ Metro â†’ Cafe â†’ Library â†’ Market â†’ Home â†’ Studio â†’ Bookstore â†’ Riverside â†’ Home â†’ Nest
+ASCII route (´óÖÂÂ·¾¶):
+  Nest ¡ú Balcony ¡ú Metro ¡ú Cafe ¡ú Library ¡ú Market ¡ú Home ¡ú Studio ¡ú Bookstore ¡ú Riverside ¡ú Home ¡ú Nest
 */
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CLI Facade â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ CLI Facade ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn main(args[]) {
-  if (args.contains("--hello")) { print("hello from Cyrene â†â†’ PASSCODE: ", PASSCODE); }
+  if (args.contains("--hello")) { print("hello from Cyrene ¡û¡ú PASSCODE: ", PASSCODE); }
   if (args.contains("--meme"))  { meme.play("pigeon-in-poncho.gif"); }
-  if (args.contains("--route")) { print("Day4 route drawn above. carry your â˜‚ gently."); }
+  if (args.contains("--route")) { print("Day4 route drawn above. carry your ? gently."); }
   run(day4);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
-  â–“â–“â–“â–“â–“â–“â–“â–“â–“  ä»Šæ—¥æ‘˜è¦  â–“â–“â–“â–“â–“â–“â–“â–“â–“
-  - è¯»äº† 4 é¡µï¼Œç¬‘äº† 6 æ¬¡ï¼Œèµ°äº† 7 åƒæ­¥
-  - è®°å½•é›¨å£°æ ·æœ¬ï¼š3 è·¯
-  - æ–°å¢çµæ„Ÿå¡ç‰‡ï¼š9
-  - æœ€å–œæ¬¢çš„ç¬é—´ï¼šæ²³é¢é€—å· Â· ä¼éª¨èŠ‚å¥
-  - ç•™è¨€ï¼šé›¨åœä¹‹å‰ï¼Œå…ˆæŠŠå¿ƒæ”¶å¥½
+  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ  ½ñÈÕÕªÒª  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ
+  - ¶ÁÁË 4 Ò³£¬Ğ¦ÁË 6 ´Î£¬×ßÁË 7 Ç§²½
+  - ¼ÇÂ¼ÓêÉùÑù±¾£º3 Â·
+  - ĞÂÔöÁé¸Ğ¿¨Æ¬£º9
+  - ×îÏ²»¶µÄË²¼ä£ººÓÃæ¶ººÅ ¡¤ É¡¹Ç½Ú×à
+  - ÁôÑÔ£ºÓêÍ£Ö®Ç°£¬ÏÈ°ÑĞÄÊÕºÃ
 */
 
 main(["--hello","--meme","--route"]); // End of decorative script
@@ -781,7 +781,7 @@ main(["--hello","--meme","--route"]); // End of decorative script
 // 
 //
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ core ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 namespace Cyrene.Dayflow4;
 
 import clock   from "@sky/time";
@@ -791,61 +791,61 @@ import meme    from "@internet/meme";
 import tea     from "@kitchen/tea";
 import journal from "@mind/cards";
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 const PASSPHRASE = "cyrene meme hello world";
-const MOTD       = "é›¨æ˜¯æ¸©æŸ”çš„èŠ‚æ‹å™¨";
+const MOTD       = "ÓêÊÇÎÂÈáµÄ½ÚÅÄÆ÷";
 const WEATHER    = "light-rain";
 const ROUTE      = ["Nest","Balcony","Metro","Cafe","Library","Studio","Riverside","Home"];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 type HHMM  = 00:00..23:59;
 type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Library" | "Studio" | "Riverside" | "Home";
 type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ helpers ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn say(x)        { print(clock.now(), " :: ", x); }
 fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
 fn greet()       { stamp("greet", PASSPHRASE); }
 fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
-fn sip(kind)     { stamp("sip", "â˜• " + kind); }
-fn read(title)   { stamp("read", "ã€Š" + title + "ã€‹"); }
+fn sip(kind)     { stamp("sip", "? " + kind); }
+fn read(title)   { stamp("read", "¡¶" + title + "¡·"); }
 fn focus(topic)  { stamp("focus", "deep on " + topic); }
 fn capture(tag)  { stamp("capture", "#" + tag); }
 fn lights(mode)  { stamp("lights", mode); }
-fn hello_world() { say("[print] hello world â†’ " + PASSPHRASE); }
+fn hello_world() { say("[print] hello world ¡ú " + PASSPHRASE); }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ schedule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ schedule ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let today: Step[] = [
   {at: 06:59, where:"Nest",     mood:"Sleepy",  do: fn(){
       senses.apply("sunrise");
       breathe(4);
       greet(); hello_world();
-  }, note:"çª—æ²¿æ°´ç æ’æˆå°é˜Ÿ"},
+  }, note:"´°ÑØË®ÖéÅÅ³ÉĞ¡¶Ó"},
   {at: 07:26, where:"Balcony",  mood:"Curious", do: fn(){
       tea.brew("genmaicha");
       sip("genmaicha");
-      read("ã€Šé›¨å¤©çš„æ­¥ä¼ã€‹");
+      read("¡¶ÓêÌìµÄ²½·¥¡·");
       capture("beads-on-rail-02");
   }},
   {at: 08:08, where:"Metro",    mood:"Playful", do: fn(){
       meme.open("cat-holding-mini-umbrella.png");
-      stamp("meme", "saved Â· loop 3x");
+      stamp("meme", "saved ¡¤ loop 3x");
   }},
   {at: 08:41, where:"Cafe",     mood:"Focused", do: fn(){
       sip("oat flat white");
-      focus("è·¯çº¿å›¾ç²¾ä¿® + é¢„ç®—æ ‡çº¢");
+      focus("Â·ÏßÍ¼¾«ĞŞ + Ô¤Ëã±êºì");
   }},
   {at: 10:20, where:"Library",  mood:"Focused", do: fn(){
-      read("ã€Šé›¨çš„è¯å…¸ã€‹");
+      read("¡¶ÓêµÄ´Êµä¡·");
       capture("page-corners-like-waves");
   }},
   {at: 16:40, where:"Riverside",mood:"Playful", do: fn(){
       capture("ripples-morse");
-      say("æ°´é¢åœ¨è¯´ï¼škeep it light");
+      say("Ë®ÃæÔÚËµ£ºkeep it light");
   }},
   {at: 18:05, where:"Home",     mood:"Focused", do: fn(){
-      journal.add(["ä¼éª¨èŠ‚æ‹","æ°´é¢æ‘©æ–¯","é›¨çª—æ‹¼è´´"]);
+      journal.add(["É¡¹Ç½ÚÅÄ","Ë®ÃæÄ¦Ë¹","Óê´°Æ´Ìù"]);
       lights("amber-40%");
   }},
   {at: 22:58, where:"Home",     mood:"Grateful",do: fn(){
@@ -853,7 +853,7 @@ let today: Step[] = [
   }}
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ engine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ engine ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn withMood(m: Mood, f: fn()) {
   switch (m) {
     case "Sleepy":   lights("pearl-25%"); break;
@@ -867,28 +867,28 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  say("boot â†’ weather = " + WEATHER + ", route = " + ROUTE.join(" â†’ "));
+  say("boot ¡ú weather = " + WEATHER + ", route = " + ROUTE.join(" ¡ú "));
   for (s in plan.sort(by: x => x.at)) {
-    say("â”€â”€ " + s.at + " @" + s.where + " [" + s.mood + "] â”€â”€");
+    say("©¤©¤ " + s.at + " @" + s.where + " [" + s.mood + "] ©¤©¤");
     withMood(s.mood, s.do);
     if (s.note) { stamp("note", s.note); }
   }
-  say("shutdown â†’ diary sealed Â· backup complete");
+  say("shutdown ¡ú diary sealed ¡¤ backup complete");
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ faux CLI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ faux CLI ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn main(argv[]) {
-  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" â€” ")); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" ¡ª ")); }
   if (argv.contains("--meme"))  { meme.open("cat-holding-mini-umbrella.png"); }
   runDay(today);
 }
 
 main(["--route","--meme"]);
 
-
+/* ===== About: Cyrene ===== */
 init();
-const version = "1.0.âˆ";
-function greet(name){ return "Hello " + name + " â™ª"; }
+const version = "1.0.¡Ş";
+function greet(name){ return "Hello " + name + " ?"; }
 /******************************************************************************************
  *   ____                _                        
  *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
@@ -896,17 +896,17 @@ function greet(name){ return "Hello " + name + " â™ª"; }
  * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
  *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
  *
- * Cyrene Daily Life Â· Day 5
+ * Cyrene Daily Life ¡¤ Day 5
  * keywords: cyrene meme hello world sun breeze laundry
  ******************************************************************************************/
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-@version     = "0.0.âˆ"
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Meta ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+@version     = "0.0.¡Ş"
 @author      = "you"
 @license     = "MIHOYO"
 @timestamp   = now()
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Imports(?) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Imports(?) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 use chrono from "sun.after-rain";
 use vibes  from "lofi.sunbeam";
 use net    from "city.wifi";
@@ -914,7 +914,7 @@ use meme   from "internet.humor";
 use peace  from "window.plants";
 use notes  from "pocket.cards";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 const MOTTO         = "sun on code, wind on cheeks";
 const PASSCODE      = "cyrene meme hello world";
 const WAKE_TIME     = 06:45;
@@ -922,23 +922,23 @@ const SLEEP_TIME    = 23:08;
 const FAVORITE_CAFE = "Cloudy Latte #3";
 const TODAY_COLOR   = "citrus-yellow";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
 type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Gallery" | "CityPark" | "Bookstore" | "Riverside" | "Home" | "Roof");
 type Time   = HH:MM;
 type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Logger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Logger ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-fn stretch(n=4)     { log("stretch", "neck + shoulders Ã—" + n); }
-fn brew(kind="latte"){ log("brew", "â˜• " + kind); }
-fn read(book)       { log("read", "ã€Š" + book + "ã€‹"); }
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Utilities ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+fn stretch(n=4)     { log("stretch", "neck + shoulders ¡Á" + n); }
+fn brew(kind="latte"){ log("brew", "? " + kind); }
+fn read(book)       { log("read", "¡¶" + book + "¡·"); }
 fn post(tag)        { log("post", "#"+tag); }
-fn wander(to Place) { log("wander", "â†’ " + to); }
+fn wander(to Place) { log("wander", "¡ú " + to); }
 fn focus(topic)     { log("focus", "deep work on " + topic); }
-fn snack(name)      { log("snack", "ğŸª " + name); }
+fn snack(name)      { log("snack", "? " + name); }
 fn vibe(m Mood)     { log("vibe", m); }
 fn color(x)         { log("color", x); }
 fn greet()          { log("greet", PASSCODE); }
@@ -947,19 +947,19 @@ fn playlist(x)      { log("playlist", x); }
 fn tidy(x)          { log("tidy", x); }
 fn call(who)        { log("call", who); }
 fn suncheck(level)  { log("sun", "brightness " + level + "%"); }
-fn laundry(mode)    { log("laundry", "mode=" + mode + " Â· clips=8"); }
+fn laundry(mode)    { log("laundry", "mode=" + mode + " ¡¤ clips=8"); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Daily Script Â· Day 5 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Daily Script ¡¤ Day 5 ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 let day5: Task[] = [
   {at: 06:45, place:"Nest",     mood:"Sleepy",  do: fn(){
       color(TODAY_COLOR);
-      log("wake", "alarm ğŸ¶ 'sunbeam-intro'");
+      log("wake", "alarm ? 'sunbeam-intro'");
       stretch(3);
       suncheck(42);
       brew("barley tea");
       vibe("Curious");
       greet(); // cyrene meme hello world
-  }, note:"çª—æ²¿ä»ç•™ä¸€ç¼•æ˜¨å¤œé›¨é¦™"},
+  }, note:"´°ÑØÈÔÁôÒ»ÂÆ×òÒ¹ÓêÏã"},
   {at: 07:18, place:"Balcony",  mood:"Curious", do: fn(){
       laundry("post-rain test");
       capture("shirts-like-flags");
@@ -973,18 +973,18 @@ let day5: Task[] = [
   }},
   {at: 08:30, place:"Cafe",     mood:"Focused", do: fn(){
       brew("oat flat white @ " + FAVORITE_CAFE);
-      focus("è·¯çº¿å›¾æœ€ç»ˆç¨¿ + è½»è£…æ¸…å•æ ¸å¯¹");
-      log("sketch", "triangles â†’ lines â†’ tiny suns âœ¨");
+      focus("Â·ÏßÍ¼×îÖÕ¸å + Çá×°Çåµ¥ºË¶Ô");
+      log("sketch", "triangles ¡ú lines ¡ú tiny suns ?");
   }},
   {at: 10:02, place:"Studio",   mood:"Focused", do: fn(){
-      focus("å¾®é¡¹ç›®ã€é£é“ƒæ”¶é›†å™¨ã€ Â· sunny patch");
+      focus("Î¢ÏîÄ¿¡º·çÁåÊÕ¼¯Æ÷¡» ¡¤ sunny patch");
       log("commit", "add: high-cut filter for glare");
       capture("wave-sun-spark");
   }},
   {at: 11:48, place:"Gallery",  mood:"Curious", do: fn(){
-      read("ã€Šå…‰çš„è®°å¿†ã€‹å±•ç­¾");
+      read("¡¶¹âµÄ¼ÇÒä¡·Õ¹Ç©");
       capture("canvas-edge-like-horizon");
-      post("ç”»å¸ƒåƒæŠŠå…‰å æˆæ°´ã€‚");
+      post("»­²¼Ïñ°Ñ¹âµş³ÉË®¡£");
   }},
   {at: 12:36, place:"Home",     mood:"Cozy",    do: fn(){
       snack("tomato toast + barley tea");
@@ -997,20 +997,20 @@ let day5: Task[] = [
   {at: 14:12, place:"CityPark", mood:"Playful", do: fn(){
       wander("CityPark");
       capture("kite-like-asterisk");
-      post("é£æŠŠé£ç­çš„å½±å­ä¹Ÿå¹è½»äº†ã€‚");
+      post("·ç°Ñ·çóİµÄÓ°×ÓÒ²´µÇáÁË¡£");
   }},
   {at: 15:22, place:"Bookstore", mood:"Curious", do: fn(){
-      read("ã€Šåœ¨é˜³å…‰ä¸‹å†™æ³¨é‡Šã€‹");
-      log("bookmark", "p.19 â€” 'è„šæ³¨æ˜¯æ¸©æŸ”çš„å›å£°'");
+      read("¡¶ÔÚÑô¹âÏÂĞ´×¢ÊÍ¡·");
+      log("bookmark", "p.19 ¡ª '½Å×¢ÊÇÎÂÈáµÄ»ØÉù'");
   }},
   {at: 16:50, place:"Riverside", mood:"Playful", do: fn(){
       capture("sparkles-morse-code");
       playlist("Golden Hour Tapes");
   }},
   {at: 18:03, place:"Home",     mood:"Focused", do: fn(){
-      focus("æŠŠç™½å¤©çµæ„Ÿåˆ‡æˆ 8 å¼ å¡ç‰‡");
-      notes.add(["é£ç­æ˜Ÿå·","ç”»å¸ƒåœ°å¹³çº¿","è¡£å¤¹å°æ——","æ²³é¢æ‘©æ–¯","é˜³å…‰è„šæ³¨"]);
-      tidy("ä¸‹è½½æ–‡ä»¶å¤¹ + æ¡Œé¢");
+      focus("°Ñ°×ÌìÁé¸ĞÇĞ³É 8 ÕÅ¿¨Æ¬");
+      notes.add(["·çóİĞÇºÅ","»­²¼µØÆ½Ïß","ÒÂ¼ĞĞ¡Æì","ºÓÃæÄ¦Ë¹","Ñô¹â½Å×¢"]);
+      tidy("ÏÂÔØÎÄ¼ş¼Ğ + ×ÀÃæ");
   }},
   {at: 19:22, place:"Home",     mood:"Cozy",    do: fn(){
       brew("osmanthus oolong");
@@ -1019,25 +1019,25 @@ let day5: Task[] = [
       log("lights", "amber-40%");
   }},
   {at: 20:50, place:"Home",     mood:"Playful", do: fn(){
-      log("game", "pixel-garden lvl 8 â†’ sunflowers unlocked");
+      log("game", "pixel-garden lvl 8 ¡ú sunflowers unlocked");
       meme.save("cat-sleeping-in-sunbeam.png");
   }},
   {at: 21:36, place:"Home",     mood:"Grateful", do: fn(){
-      call("Y. ç¡®è®¤å‘¨æœ«å°è·¯çº¿");
-      post("æŠŠæ™´å¤©çš„è¾¹è§’ä¹Ÿè£…è¿›å£è¢‹ã€‚");
+      call("Y. È·ÈÏÖÜÄ©Ğ¡Â·Ïß");
+      post("°ÑÇçÌìµÄ±ß½ÇÒ²×°½ø¿Ú´ü¡£");
   }},
   {at: 22:40, place:"Roof",     mood:"Curious", do: fn(){
       capture("first-planet-like-dot");
-      read("ã€Šç¡å‰ä¸€é¡µÂ·å¤©å…‰ã€‹");
+      read("¡¶Ë¯Ç°Ò»Ò³¡¤Ìì¹â¡·");
   }},
   {at: 23:08, place:"Nest",     mood:"Cozy",    do: fn(){
-      log("sleep", "laundry dry Â· windows ajar Â· plants hum");
+      log("sleep", "laundry dry ¡¤ windows ajar ¡¤ plants hum");
   }}
 ];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Scheduler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Scheduler ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn run(schedule: Task[]) {
-  log("boot", "Cyrene.Day5 init Â· color " + TODAY_COLOR);
+  log("boot", "Cyrene.Day5 init ¡¤ color " + TODAY_COLOR);
   schedule.sort(by: t => t.at);
   for (t in schedule) {
     log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
@@ -1047,7 +1047,7 @@ fn run(schedule: Task[]) {
   log("shutdown", "Cyrene.Day5 completed");
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Mood Scope â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Mood Scope ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn with_mood(m Mood, f fn()) {
   switch (m) {
     case "Sleepy":   peace.setAmbient("soft");    break;
@@ -1060,7 +1060,7 @@ fn with_mood(m Mood, f fn()) {
   f();
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Fancy Decorations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Fancy Decorations ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
 SQL(ish) log for vibes:
 
@@ -1072,34 +1072,34 @@ SQL(ish) log for vibes:
   );
 
   INSERT INTO diary VALUES
-    ('06:45','Nest','Sleepy','PASSCODE â†’ cyrene meme hello world'),
-    ('08:30','Cafe','Focused','è·¯çº¿å›¾æœ€ç»ˆç¨¿ Â· oat flat white'),
-    ('11:48','Gallery','Curious','å…‰åƒæ°´ Â· ç”»å¸ƒè¾¹æ˜¯åœ°å¹³çº¿'),
-    ('18:03','Home','Focused','å¡ç‰‡ 8 æš Â· æ¸…ç†å®Œæˆ');
+    ('06:45','Nest','Sleepy','PASSCODE ¡ú cyrene meme hello world'),
+    ('08:30','Cafe','Focused','Â·ÏßÍ¼×îÖÕ¸å ¡¤ oat flat white'),
+    ('11:48','Gallery','Curious','¹âÏñË® ¡¤ »­²¼±ßÊÇµØÆ½Ïß'),
+    ('18:03','Home','Focused','¿¨Æ¬ 8 Ã¶ ¡¤ ÇåÀíÍê³É');
 
 Regex of the day:
   /^(sunbeam|laundry|asterisk\ kite){1,3}$/u
 
-ASCII route (å¤§è‡´è·¯å¾„):
-  Nest â†’ Balcony â†’ Metro â†’ Cafe â†’ Studio â†’ Gallery â†’ Home â†’ CityPark â†’ Bookstore â†’ Riverside â†’ Home â†’ Roof â†’ Nest
+ASCII route (´óÖÂÂ·¾¶):
+  Nest ¡ú Balcony ¡ú Metro ¡ú Cafe ¡ú Studio ¡ú Gallery ¡ú Home ¡ú CityPark ¡ú Bookstore ¡ú Riverside ¡ú Home ¡ú Roof ¡ú Nest
 */
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CLI Facade â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ CLI Facade ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn main(args[]) {
-  if (args.contains("--hello")) { print("hello from Cyrene â†â†’ PASSCODE: ", PASSCODE); }
+  if (args.contains("--hello")) { print("hello from Cyrene ¡û¡ú PASSCODE: ", PASSCODE); }
   if (args.contains("--meme"))  { meme.play("sunglass-pigeon.gif"); }
   if (args.contains("--route")) { print("Day5 route drawn above. pockets full of light."); }
   run(day5);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
-  â–“â–“â–“â–“â–“â–“â–“â–“â–“  ä»Šæ—¥æ‘˜è¦  â–“â–“â–“â–“â–“â–“â–“â–“â–“
-  - è¯»äº† 3 é¡µï¼Œç¬‘äº† 6 æ¬¡ï¼Œèµ°äº† 9 åƒæ­¥
-  - æ™¾æ™’å®Œæˆï¼šsun-check OK
-  - æ–°å¢çµæ„Ÿå¡ç‰‡ï¼š8
-  - æœ€å–œæ¬¢çš„ç¬é—´ï¼šé£ç­æ˜Ÿå· Â· ç”»å¸ƒåœ°å¹³çº¿
-  - ç•™è¨€ï¼šå…‰ä¼šå¸®ä½ æŠŠè·¯çº¿ææµ…
+  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ  ½ñÈÕÕªÒª  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ
+  - ¶ÁÁË 3 Ò³£¬Ğ¦ÁË 6 ´Î£¬×ßÁË 9 Ç§²½
+  - ÁÀÉ¹Íê³É£ºsun-check OK
+  - ĞÂÔöÁé¸Ğ¿¨Æ¬£º8
+  - ×îÏ²»¶µÄË²¼ä£º·çóİĞÇºÅ ¡¤ »­²¼µØÆ½Ïß
+  - ÁôÑÔ£º¹â»á°ïÄã°ÑÂ·ÏßÃèÇ³
 */
 
 main(["--hello","--meme","--route"]); // End of decorative script
@@ -1112,7 +1112,7 @@ main(["--hello","--meme","--route"]); // End of decorative script
 // 
 //
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ core ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 namespace Cyrene.Dayflow5;
 
 import clock   from "@sky/time";
@@ -1122,37 +1122,37 @@ import meme    from "@internet/meme";
 import tea     from "@kitchen/tea";
 import journal from "@mind/cards";
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 const PASSPHRASE = "cyrene meme hello world";
-const MOTD       = "æŠŠæ™´å¤©æŠ˜è¿›å£è¢‹";
+const MOTD       = "°ÑÇçÌìÕÛ½ø¿Ú´ü";
 const WEATHER    = "post-rain-sun";
 const ROUTE      = ["Nest","Balcony","Metro","Cafe","Studio","Gallery","Park","Bookstore","Riverside","Home","Roof","Nest"];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 type HHMM  = 00:00..23:59;
 type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Gallery" | "Park" | "Bookstore" | "Riverside" | "Home" | "Roof";
 type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ helpers ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn say(x)        { print(clock.now(), " :: ", x); }
 fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
 fn greet()       { stamp("greet", PASSPHRASE); }
 fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
-fn sip(kind)     { stamp("sip", "â˜• " + kind); }
-fn read(title)   { stamp("read", "ã€Š" + title + "ã€‹"); }
+fn sip(kind)     { stamp("sip", "? " + kind); }
+fn read(title)   { stamp("read", "¡¶" + title + "¡·"); }
 fn focus(topic)  { stamp("focus", "deep on " + topic); }
 fn capture(tag)  { stamp("capture", "#" + tag); }
 fn lights(mode)  { stamp("lights", mode); }
-fn hello_world() { say("[print] hello world â†’ " + PASSPHRASE); }
+fn hello_world() { say("[print] hello world ¡ú " + PASSPHRASE); }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ schedule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ schedule ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let today: Step[] = [
   {at: 06:46, where:"Nest",      mood:"Sleepy",  do: fn(){
       senses.apply("sunrise");
       breathe(4);
       greet(); hello_world();
-  }, note:"çª—å°æ–°å…‰"},
+  }, note:"´°Ì¨ĞÂ¹â"},
   {at: 07:16, where:"Balcony",   mood:"Curious", do: fn(){
       tea.brew("genmaicha");
       sip("genmaicha");
@@ -1160,14 +1160,14 @@ let today: Step[] = [
   }},
   {at: 08:06, where:"Metro",     mood:"Playful", do: fn(){
       meme.open("cat-sleeping-in-sunbeam.png");
-      stamp("meme", "loop 2x Â· saved");
+      stamp("meme", "loop 2x ¡¤ saved");
   }},
   {at: 08:34, where:"Cafe",      mood:"Focused", do: fn(){
       sip("oat flat white");
-      focus("è®¡åˆ’å•æœ€ç»ˆç¡®è®¤");
+      focus("¼Æ»®µ¥×îÖÕÈ·ÈÏ");
   }},
   {at: 10:00, where:"Studio",    mood:"Focused", do: fn(){
-      focus("é£é“ƒæ”¶é›†å™¨ Â· sunny patch");
+      focus("·çÁåÊÕ¼¯Æ÷ ¡¤ sunny patch");
       capture("spark-wave");
   }},
   {at: 16:48, where:"Riverside", mood:"Playful", do: fn(){
@@ -1175,7 +1175,7 @@ let today: Step[] = [
       say("keep it light, keep it bright");
   }},
   {at: 18:12, where:"Home",      mood:"Focused", do: fn(){
-      journal.add(["é˜³å…‰è„šæ³¨","è¡£å¤¹å°æ——","æ˜Ÿå·é£ç­"]);
+      journal.add(["Ñô¹â½Å×¢","ÒÂ¼ĞĞ¡Æì","ĞÇºÅ·çóİ"]);
       lights("amber-40%");
   }},
   {at: 22:56, where:"Home",      mood:"Grateful",do: fn(){
@@ -1183,7 +1183,7 @@ let today: Step[] = [
   }}
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ engine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ engine ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn withMood(m: Mood, f: fn()) {
   switch (m) {
     case "Sleepy":   lights("pearl-25%"); break;
@@ -1197,18 +1197,18 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  say("boot â†’ weather = " + WEATHER + ", route = " + ROUTE.join(" â†’ "));
+  say("boot ¡ú weather = " + WEATHER + ", route = " + ROUTE.join(" ¡ú "));
   for (s in plan.sort(by: x => x.at)) {
-    say("â”€â”€ " + s.at + " @" + s.where + " [" + s.mood + "] â”€â”€");
+    say("©¤©¤ " + s.at + " @" + s.where + " [" + s.mood + "] ©¤©¤");
     withMood(s.mood, s.do);
     if (s.note) { stamp("note", s.note); }
   }
-  say("shutdown â†’ diary sealed Â· backup complete");
+  say("shutdown ¡ú diary sealed ¡¤ backup complete");
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ faux CLI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ faux CLI ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn main(argv[]) {
-  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" â€” ")); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" ¡ª ")); }
   if (argv.contains("--meme"))  { meme.open("sunglass-pigeon.gif"); }
   runDay(today);
 }
@@ -1216,10 +1216,10 @@ fn main(argv[]) {
 main(["--route","--meme"]);
 
 
-
+/* ===== About: Cyrene ===== */
 init();
-const version = "1.0.âˆ";
-function greet(name){ return "Hello " + name + " â™ª"; }
+const version = "1.0.¡Ş";
+function greet(name){ return "Hello " + name + " ?"; }
 /******************************************************************************************
  *   ____                _                        
  *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
@@ -1227,17 +1227,17 @@ function greet(name){ return "Hello " + name + " â™ª"; }
  * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
  *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
  *
- * Cyrene Daily Life Â· Day 6
+ * Cyrene Daily Life ¡¤ Day 6
  * keywords: cyrene meme hello world fog errand tiny victories
  ******************************************************************************************/
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-@version     = "0.0.âˆ"
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Meta ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+@version     = "0.0.¡Ş"
 @author      = "you"
 @license     = "MIHOYO"
 @timestamp   = now()
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Imports(?) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Imports(?) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 use chrono from "mist.morning";
 use vibes  from "lofi.fog";
 use net    from "city.wifi";
@@ -1246,32 +1246,32 @@ use peace  from "window.plants";
 use notes  from "pocket.cards";
 use wheels from "@street/bicycle";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 const MOTTO           = "move gently, notice more";
 const PASSCODE        = "cyrene meme hello world";
 const WAKE_TIME       = 06:52;
 const SLEEP_TIME      = 23:20;
 const FAVORITE_CAFE   = "Studio Drip #7";
 const BIKE_NAME       = "silver-koi";
-const CHECKLIST_CORE  = ["æ°´å£¶","å……ç”µå®","è€³æœº","å£ç½©","ç¬”è®°å¡"];
+const CHECKLIST_CORE  = ["Ë®ºø","³äµç±¦","¶ú»ú","¿ÚÕÖ","±Ê¼Ç¿¨"];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
 type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Repair" | "Market" | "Library" | "Riverside" | "Grocer" | "Home" | "Roof");
 type Time   = HH:MM;
 type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Logger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Logger ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-fn stretch(n=4)       { log("stretch", "neck + shoulders Ã—" + n); }
-fn brew(kind="latte") { log("brew", "â˜• " + kind); }
-fn read(book)         { log("read", "ã€Š" + book + "ã€‹"); }
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Utilities ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+fn stretch(n=4)       { log("stretch", "neck + shoulders ¡Á" + n); }
+fn brew(kind="latte") { log("brew", "? " + kind); }
+fn read(book)         { log("read", "¡¶" + book + "¡·"); }
 fn post(tag)          { log("post", "#"+tag); }
-fn wander(to Place)   { log("wander", "â†’ " + to); }
+fn wander(to Place)   { log("wander", "¡ú " + to); }
 fn focus(topic)       { log("focus", "deep work on " + topic); }
-fn snack(name)        { log("snack", "ğŸª " + name); }
+fn snack(name)        { log("snack", "? " + name); }
 fn vibe(m Mood)       { log("vibe", m); }
 fn greet()            { log("greet", PASSCODE); } 
 fn capture(x)         { log("capture", "#" + x); }
@@ -1281,35 +1281,35 @@ fn playlist(x)        { log("playlist", x); }
 fn tidy(x)            { log("tidy", x); }
 fn call(who)          { log("call", who); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Daily Script Â· Day 6 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Daily Script ¡¤ Day 6 ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 let day6: Task[] = [
   {at: 06:52, place:"Nest",    mood:"Sleepy",  do: fn(){
-      log("wake", "alarm ğŸ¶ 'fog-bell'");
+      log("wake", "alarm ? 'fog-bell'");
       stretch(4);
       brew("roasted barley tea");
       vibe("Curious");
       greet(); // cyrene meme hello world
       checklist(CHECKLIST_CORE);
-  }, note:"çª—å¤–ä¸€å±‚æ·¡é›¾ï¼Œåƒç»™ä¸–ç•ŒæŠ«äº†å›´å·¾"},
+  }, note:"´°ÍâÒ»²ãµ­Îí£¬Ïñ¸øÊÀ½çÅûÁËÎ§½í"},
   {at: 07:20, place:"Balcony", mood:"Curious", do: fn(){
-      read("æ™¨é—´å°æœ­ Â· é›¾çš„è¾¹ç•Œ");
+      read("³¿¼äĞ¡Ôı ¡¤ ÎíµÄ±ß½ç");
       capture("mist-on-rail");
       post("fog-hello");
   }},
   {at: 07:58, place:"Repair",  mood:"Playful", do: fn(){
       wheels.roll(BIKE_NAME);
-      tune("é“¾æ¡æ¸…æ´ + æ°”å‹ 75psi");
+      tune("Á´ÌõÇå½à + ÆøÑ¹ 75psi");
       capture("silver-koi-reflection");
       playlist("city hush + spokes");
   }},
   {at: 08:35, place:"Cafe",    mood:"Focused", do: fn(){
       brew("oat flat white @ " + FAVORITE_CAFE);
-      focus("è½»è£…æ¸…å• delta â†’ åˆå¹¶åˆ°ä¸»è®¡åˆ’");
-      log("sketch", "boxes â†’ arrows â†’ koi icon");
+      focus("Çá×°Çåµ¥ delta ¡ú ºÏ²¢µ½Ö÷¼Æ»®");
+      log("sketch", "boxes ¡ú arrows ¡ú koi icon");
   }},
   {at: 10:02, place:"Library", mood:"Focused", do: fn(){
-      read("ã€Šé›¾ä¸­è¡Œèµ°æœ¯ã€‹");
-      focus("å¾®é¡¹ç›®ã€é›¾å·é‡‡æ ·å™¨ã€åŸå‹");
+      read("¡¶ÎíÖĞĞĞ×ßÊõ¡·");
+      focus("Î¢ÏîÄ¿¡ºÎíºÅ²ÉÑùÆ÷¡»Ô­ĞÍ");
       log("commit", "init: low-pass fog-horn + soft-clip");
   }},
   {at: 11:48, place:"Market",  mood:"Curious", do: fn(){
@@ -1318,29 +1318,29 @@ let day6: Task[] = [
       capture("vendors-like-notes-on-stave");
   }},
   {at: 12:22, place:"Home",    mood:"Cozy",    do: fn(){
-      log("cook", "ç•ªèŒ„é¸¡è›‹é¢ Â· è’œè‹—ç‚¹ç¼€");
+      log("cook", "·¬ÇÑ¼¦µ°Ãæ ¡¤ ËâÃçµã×º");
       playlist("noon gentle kit");
   }},
   {at: 13:00, place:"Home",    mood:"Cozy",    do: fn(){
       log("nap", "14 min micro-rest");
   }},
   {at: 14:10, place:"Studio",  mood:"Focused", do: fn(){
-      focus("ã€é›¾å·é‡‡æ ·å™¨ã€ç¬¬äºŒç‰ˆï¼šå··å£/æ¡¥ä¸‹/è¿œèˆ¹ ä¸‰è·¯");
+      focus("¡ºÎíºÅ²ÉÑùÆ÷¡»µÚ¶ş°æ£ºÏï¿Ú/ÇÅÏÂ/Ô¶´¬ ÈıÂ·");
       capture("waveforms-like-cliffs");
-      notes.add(["é›¾å·é•¿å°¾","è½¦é“ƒçŸ­å¥","æ¡¥ä¸‹å›å£°"]);
+      notes.add(["ÎíºÅ³¤Î²","³µÁå¶Ì¾ä","ÇÅÏÂ»ØÉù"]);
   }},
   {at: 16:05, place:"Grocer",  mood:"Curious", do: fn(){
       wander("Grocer");
       capture("mushroom-caps-like-parasol");
   }},
   {at: 16:40, place:"Riverside", mood:"Playful", do: fn(){
-      post("é›¾æŠŠè¿œå¤„çš„æ¡¥ç¼©æˆä¸€æ¡æ¸©æŸ”çš„çº¿ã€‚");
+      post("Îí°ÑÔ¶´¦µÄÇÅËõ³ÉÒ»ÌõÎÂÈáµÄÏß¡£");
       capture("soft-bridge");
   }},
   {at: 18:00, place:"Home",    mood:"Focused", do: fn(){
-      focus("æŠŠç™½å¤©çµæ„Ÿåˆ‡æˆ 7 å¼ å¡ç‰‡");
-      notes.add(["é›¾è¾¹å›´å·¾","é“¶é²¤å€’å½±","æ‘Šä½äº”çº¿è°±","æŸ”æ¡¥","æ°”å‹75"]);
-      tidy("ä¸‹è½½æ–‡ä»¶å¤¹ + æ¡Œè§’å°ç¥¨");
+      focus("°Ñ°×ÌìÁé¸ĞÇĞ³É 7 ÕÅ¿¨Æ¬");
+      notes.add(["Îí±ßÎ§½í","ÒøÀğµ¹Ó°","Ì¯Î»ÎåÏßÆ×","ÈáÇÅ","ÆøÑ¹75"]);
+      tidy("ÏÂÔØÎÄ¼ş¼Ğ + ×À½ÇĞ¡Æ±");
   }},
   {at: 19:20, place:"Home",    mood:"Cozy",    do: fn(){
       brew("osmanthus oolong");
@@ -1349,25 +1349,25 @@ let day6: Task[] = [
       playlist("Evening Mist 01");
   }},
   {at: 20:46, place:"Home",    mood:"Playful", do: fn(){
-      log("game", "pixel-garden lvl 9 â†’ fog-lilies unlocked");
+      log("game", "pixel-garden lvl 9 ¡ú fog-lilies unlocked");
       meme.save("pigeon-wearing-tiny-scarf.png");
   }},
   {at: 21:30, place:"Home",    mood:"Grateful", do: fn(){
-      call("Y. è®¨è®ºéª‘è¡Œè·¯çº¿");
-      post("å†³å®šæŠŠæ¡¥ä¸‹çš„å›å£°ä¹Ÿè®°åœ¨åœ°å›¾è§’è½ã€‚");
+      call("Y. ÌÖÂÛÆïĞĞÂ·Ïß");
+      post("¾ö¶¨°ÑÇÅÏÂµÄ»ØÉùÒ²¼ÇÔÚµØÍ¼½ÇÂä¡£");
   }},
   {at: 22:28, place:"Roof",    mood:"Curious",  do: fn(){
       capture("moon-like-lantern-in-fog");
-      read("ã€Šç¡å‰å°é¡µ Â· é›¾æœªæ•£ã€‹");
+      read("¡¶Ë¯Ç°Ğ¡Ò³ ¡¤ ÎíÎ´É¢¡·");
   }},
   {at: 23:20, place:"Nest",    mood:"Cozy",     do: fn(){
-      log("sleep", BIKE_NAME + " å·²æ“¦æ‹­ Â· é›¾é€€è‡³è¡—å£");
+      log("sleep", BIKE_NAME + " ÒÑ²ÁÊÃ ¡¤ ÎíÍËÖÁ½Ö¿Ú");
   }}
 ];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Scheduler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Scheduler ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn run(schedule: Task[]) {
-  log("boot", "Cyrene.Day6 init Â· fog-mode on");
+  log("boot", "Cyrene.Day6 init ¡¤ fog-mode on");
   schedule.sort(by: t => t.at);
   for (t in schedule) {
     log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
@@ -1377,7 +1377,7 @@ fn run(schedule: Task[]) {
   log("shutdown", "Cyrene.Day6 completed");
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Mood Scope â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Mood Scope ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn with_mood(m Mood, f fn()) {
   switch (m) {
     case "Sleepy":   peace.setAmbient("soft");    break;
@@ -1390,7 +1390,7 @@ fn with_mood(m Mood, f fn()) {
   f();
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Fancy Decorations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Fancy Decorations ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
 SQL(ish) log for vibes:
 
@@ -1402,34 +1402,34 @@ SQL(ish) log for vibes:
   );
 
   INSERT INTO diary VALUES
-    ('06:52','Nest','Sleepy','PASSCODE â†’ cyrene meme hello world'),
-    ('10:02','Library','Focused','é›¾å·é‡‡æ ·å™¨ v1 â†’ v2'),
-    ('16:40','Riverside','Playful','æ¡¥çº¿è¢«é›¾æŸ”åŒ–'),
-    ('18:00','Home','Focused','å¡ç‰‡ 7 æš Â· æ¡Œè§’æ¸…çˆ½');
+    ('06:52','Nest','Sleepy','PASSCODE ¡ú cyrene meme hello world'),
+    ('10:02','Library','Focused','ÎíºÅ²ÉÑùÆ÷ v1 ¡ú v2'),
+    ('16:40','Riverside','Playful','ÇÅÏß±»ÎíÈá»¯'),
+    ('18:00','Home','Focused','¿¨Æ¬ 7 Ã¶ ¡¤ ×À½ÇÇåË¬');
 
 Regex of the day:
   /^(fog|koi|soft\ bridge|horn){1,3}$/u
 
-ASCII route (å¤§è‡´è·¯å¾„):
-  Nest â†’ Balcony â†’ Repair â†’ Cafe â†’ Library â†’ Market â†’ Home â†’ Studio â†’ Grocer â†’ Riverside â†’ Home â†’ Roof â†’ Nest
+ASCII route (´óÖÂÂ·¾¶):
+  Nest ¡ú Balcony ¡ú Repair ¡ú Cafe ¡ú Library ¡ú Market ¡ú Home ¡ú Studio ¡ú Grocer ¡ú Riverside ¡ú Home ¡ú Roof ¡ú Nest
 */
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CLI Facade â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ CLI Facade ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn main(args[]) {
-  if (args.contains("--hello")) { print("hello from Cyrene â†â†’ PASSCODE: ", PASSCODE); }
+  if (args.contains("--hello")) { print("hello from Cyrene ¡û¡ú PASSCODE: ", PASSCODE); }
   if (args.contains("--meme"))  { meme.play("pigeon-wearing-tiny-scarf.png"); }
   if (args.contains("--route")) { print("Day6 route drawn above. keep it misty."); }
   run(day6);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
-  â–“â–“â–“â–“â–“â–“â–“â–“â–“  ä»Šæ—¥æ‘˜è¦  â–“â–“â–“â–“â–“â–“â–“â–“â–“
-  - è¯»äº† 4 é¡µï¼Œç¬‘äº† 5 æ¬¡ï¼Œèµ°äº† 8 åƒæ­¥
-  - è‡ªè¡Œè½¦ä¿å…»ï¼šé“¾æ¡æ¸…æ´ + 75psi
-  - æ–°å¢çµæ„Ÿå¡ç‰‡ï¼š7
-  - æœ€å–œæ¬¢çš„ç¬é—´ï¼šæ¡¥çº¿æŸ”åŒ– Â· é“¶é²¤å€’å½±
-  - ç•™è¨€ï¼šé›¾æ•£å‰ï¼Œå…ˆæŠŠæ­¥å­æ”¾è½»
+  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ  ½ñÈÕÕªÒª  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ
+  - ¶ÁÁË 4 Ò³£¬Ğ¦ÁË 5 ´Î£¬×ßÁË 8 Ç§²½
+  - ×ÔĞĞ³µ±£Ñø£ºÁ´ÌõÇå½à + 75psi
+  - ĞÂÔöÁé¸Ğ¿¨Æ¬£º7
+  - ×îÏ²»¶µÄË²¼ä£ºÇÅÏßÈá»¯ ¡¤ ÒøÀğµ¹Ó°
+  - ÁôÑÔ£ºÎíÉ¢Ç°£¬ÏÈ°Ñ²½×Ó·ÅÇá
 */
 
 main(["--hello","--meme","--route"]); // End of decorative script
@@ -1442,7 +1442,7 @@ main(["--hello","--meme","--route"]); // End of decorative script
 // 
 //
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ core ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 namespace Cyrene.Dayflow6;
 
 import clock   from "@sky/time";
@@ -1452,31 +1452,31 @@ import meme    from "@internet/meme";
 import tea     from "@kitchen/tea";
 import journal from "@mind/cards";
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 const PASSPHRASE = "cyrene meme hello world";
-const MOTD       = "é›¾æ˜¯æ¸©æŸ”çš„æ»¤é•œ";
+const MOTD       = "ÎíÊÇÎÂÈáµÄÂË¾µ";
 const WEATHER    = "light-fog";
 const ROUTE      = ["Nest","Balcony","Repair","Cafe","Library","Studio","Riverside","Home","Roof","Nest"];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 type HHMM  = 00:00..23:59;
 type Place = "Nest" | "Balcony" | "Repair" | "Cafe" | "Library" | "Studio" | "Riverside" | "Home" | "Roof";
 type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ helpers ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn say(x)        { print(clock.now(), " :: ", x); }
 fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
 fn greet()       { stamp("greet", PASSPHRASE); }
 fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
-fn sip(kind)     { stamp("sip", "â˜• " + kind); }
-fn read(title)   { stamp("read", "ã€Š" + title + "ã€‹"); }
+fn sip(kind)     { stamp("sip", "? " + kind); }
+fn read(title)   { stamp("read", "¡¶" + title + "¡·"); }
 fn focus(topic)  { stamp("focus", "deep on " + topic); }
 fn capture(tag)  { stamp("capture", "#" + tag); }
 fn lights(mode)  { stamp("lights", mode); }
-fn hello_world() { say("[print] hello world â†’ " + PASSPHRASE); }
+fn hello_world() { say("[print] hello world ¡ú " + PASSPHRASE); }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ schedule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ schedule ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let today: Step[] = [
   {at: 06:53, where:"Nest",     mood:"Sleepy",  do: fn(){
       senses.apply("sunrise");
@@ -1486,7 +1486,7 @@ let today: Step[] = [
   {at: 07:22, where:"Balcony",  mood:"Curious", do: fn(){
       tea.brew("genmaicha");
       sip("genmaicha");
-      read("ã€Šé›¾çš„è¾¹ç¼˜ã€‹");
+      read("¡¶ÎíµÄ±ßÔµ¡·");
       capture("mist-on-rail-02");
   }},
   {at: 08:00, where:"Repair",   mood:"Playful", do: fn(){
@@ -1495,10 +1495,10 @@ let today: Step[] = [
   }},
   {at: 08:36, where:"Cafe",     mood:"Focused", do: fn(){
       sip("oat flat white");
-      focus("è®¡åˆ’åˆå¹¶ + é‡Œç¨‹ç¬”è®°");
+      focus("¼Æ»®ºÏ²¢ + Àï³Ì±Ê¼Ç");
   }},
   {at: 10:05, where:"Library",  mood:"Focused", do: fn(){
-      read("ã€Šé›¾å·è¯å…¸ã€‹");
+      read("¡¶ÎíºÅ´Êµä¡·");
       capture("page-corners-like-cliffs");
   }},
   {at: 16:42, where:"Riverside",mood:"Playful", do: fn(){
@@ -1506,7 +1506,7 @@ let today: Step[] = [
       say("breathe slow, move light");
   }},
   {at: 18:06, where:"Home",     mood:"Focused", do: fn(){
-      journal.add(["é›¾å·é•¿å°¾","é“¶é²¤å€’å½±","æŸ”æ¡¥"]);
+      journal.add(["ÎíºÅ³¤Î²","ÒøÀğµ¹Ó°","ÈáÇÅ"]);
       lights("amber-38%");
   }},
   {at: 22:58, where:"Home",     mood:"Grateful",do: fn(){
@@ -1514,7 +1514,7 @@ let today: Step[] = [
   }}
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ engine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ engine ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn withMood(m: Mood, f: fn()) {
   switch (m) {
     case "Sleepy":   lights("pearl-25%"); break;
@@ -1528,18 +1528,18 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  say("boot â†’ weather = " + WEATHER + ", route = " + ROUTE.join(" â†’ "));
+  say("boot ¡ú weather = " + WEATHER + ", route = " + ROUTE.join(" ¡ú "));
   for (s in plan.sort(by: x => x.at)) {
-    say("â”€â”€ " + s.at + " @" + s.where + " [" + s.mood + "] â”€â”€");
+    say("©¤©¤ " + s.at + " @" + s.where + " [" + s.mood + "] ©¤©¤");
     withMood(s.mood, s.do);
     if (s.note) { stamp("note", s.note); }
   }
-  say("shutdown â†’ diary sealed Â· backup complete");
+  say("shutdown ¡ú diary sealed ¡¤ backup complete");
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ faux CLI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ faux CLI ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn main(argv[]) {
-  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" â€” ")); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" ¡ª ")); }
   if (argv.contains("--meme"))  { meme.open("pigeon-wearing-tiny-scarf.png"); }
   runDay(today);
 }
@@ -1547,10 +1547,10 @@ fn main(argv[]) {
 main(["--route","--meme"]);
 
 
-
+/* ===== About: Cyrene ===== */
 init();
-const version = "1.0.âˆ";
-function greet(name){ return "Hello " + name + " â™ª"; }
+const version = "1.0.¡Ş";
+function greet(name){ return "Hello " + name + " ?"; }
 /******************************************************************************************
  *   ____                _                        
  *  / ___|_   _ _ __ ___| |__   ___ _ __   ___   
@@ -1558,17 +1558,17 @@ function greet(name){ return "Hello " + name + " â™ª"; }
  * | |___| |_| | | | (__| | | |  __/ | | | (_) | 
  *  \____|\__,_|_|  \___|_| |_|\___|_| |_|\___/  
  *
- * Cyrene Daily Life Â· Day 7
+ * Cyrene Daily Life ¡¤ Day 7
  * keywords: cyrene meme hello world airmail wind typewriter paper planes
  ******************************************************************************************/
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-@version     = "0.0.âˆ"
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Meta ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+@version     = "0.0.¡Ş"
 @author      = "you"
 @license     = "MIHOYO"
 @timestamp   = now()
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Imports(?) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Imports(?) ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 use chrono from "breeze.morning";
 use vibes  from "lofi.air";
 use net    from "city.wifi";
@@ -1578,7 +1578,7 @@ use notes  from "pocket.cards";
 use mail   from "@street/post";
 use tools  from "@desk/paper";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 const MOTTO          = "write light, travel light";
 const PASSCODE       = "cyrene meme hello world";
 const WAKE_TIME      = 06:44;
@@ -1587,46 +1587,46 @@ const FAVORITE_CAFE  = "Cloudy Latte #3";
 const FAVORITE_BAKERY= "Morning Crust";
 const TODAY_COLOR    = "sky-blue";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 type Mood   = ("Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful");
 type Place  = ("Nest" | "Balcony" | "Metro" | "Cafe" | "Studio" | "Museum" | "Bakery" | "PostOffice" | "CityPark" | "Grocer" | "Home" | "Roof");
 type Time   = HH:MM;
 type Task   = { at: Time, place: Place, mood: Mood, do: fn(), note?: string };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Logger â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Logger ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn log(event, detail="") { print("[", chrono.now(), "] ", event.pad(18), " :: ", detail); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-fn stretch(n=4)        { log("stretch", "neck + shoulders Ã—" + n); }
-fn brew(kind="latte")  { log("brew", "â˜• " + kind); }
-fn read(book)          { log("read", "ã€Š" + book + "ã€‹"); }
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Utilities ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
+fn stretch(n=4)        { log("stretch", "neck + shoulders ¡Á" + n); }
+fn brew(kind="latte")  { log("brew", "? " + kind); }
+fn read(book)          { log("read", "¡¶" + book + "¡·"); }
 fn post(tag)           { log("post", "#"+tag); }
-fn wander(to Place)    { log("wander", "â†’ " + to); }
+fn wander(to Place)    { log("wander", "¡ú " + to); }
 fn focus(topic)        { log("focus", "deep work on " + topic); }
-fn snack(name)         { log("snack", "ğŸª " + name); }
+fn snack(name)         { log("snack", "? " + name); }
 fn vibe(m Mood)        { log("vibe", m); }
 fn greet()             { log("greet", PASSCODE); }
 fn capture(x)          { log("capture", "#" + x); }
 fn color(x)            { log("color", x); }
 fn playlist(x)         { log("playlist", x); }
 fn tidy(x)             { log("tidy", x); }
-fn fold(kind="plane")  { log("fold", "paper â†’ " + kind); }
-fn stamp(x)            { log("stamp", "âœ‰ï¸ " + x); }
+fn fold(kind="plane")  { log("fold", "paper ¡ú " + kind); }
+fn stamp(x)            { log("stamp", "?? " + x); }
 fn letter(to, line)    { log("letter", "to " + to + " :: " + line); }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Daily Script Â· Day 7 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Daily Script ¡¤ Day 7 ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 let day7: Task[] = [
   {at: 06:44, place:"Nest",     mood:"Sleepy",  do: fn(){
       color(TODAY_COLOR);
-      log("wake", "alarm ğŸ¶ 'air-chime'");
+      log("wake", "alarm ? 'air-chime'");
       stretch(3);
       brew("black tea");
       vibe("Curious");
       greet(); // cyrene meme hello world
-      letter("Y.", "é£æŠŠæ˜¨å¤œçš„æ¢¦æŠ˜æˆäº†çº¸è¾¹ã€‚");
-  }, note:"çª—ç¼é‡Œæœ‰ä¸€æ¡æµ…æµ…çš„å¤©è“"},
+      letter("Y.", "·ç°Ñ×òÒ¹µÄÃÎÕÛ³ÉÁËÖ½±ß¡£");
+  }, note:"´°·ìÀïÓĞÒ»ÌõÇ³Ç³µÄÌìÀ¶"},
   {at: 07:16, place:"Balcony",  mood:"Curious", do: fn(){
-      read("æ™¨é—´å°æœ­ Â· è½»å†™æœ¯");
+      read("³¿¼äĞ¡Ôı ¡¤ ÇáĞ´Êõ");
       fold("paper-plane");
       capture("plane-shadow-on-rail");
       post("sky-letter");
@@ -1635,43 +1635,43 @@ let day7: Task[] = [
       wander("Metro");
       meme.load("paper-plane-cat.gif");
       playlist("City Air 01");
-      log("meme", "saved plane-cat Â· loop 3x");
+      log("meme", "saved plane-cat ¡¤ loop 3x");
   }},
   {at: 08:26, place:"Cafe",     mood:"Focused", do: fn(){
       brew("oat flat white @ " + FAVORITE_CAFE);
-      focus("å‡ºè¡Œæœ€åæ ¸å¯¹ + å£è¢‹å·¥å…·æ¸…å•");
-      log("sketch", "keys â†’ map â†’ tiny envelope");
+      focus("³öĞĞ×îºóºË¶Ô + ¿Ú´ü¹¤¾ßÇåµ¥");
+      log("sketch", "keys ¡ú map ¡ú tiny envelope");
   }},
   {at: 10:08, place:"Museum",   mood:"Curious", do: fn(){
-      read("ã€Šé£ä¸çº¿ Â· å°å‹å±•ã€‹æ ‡ç­¾");
+      read("¡¶·çÓëÏß ¡¤ Ğ¡ĞÍÕ¹¡·±êÇ©");
       capture("mobile-like-compass");
-      post("é£åœ¨å±•å…é‡Œå­¦ä¼šäº†æ‹å¼¯ã€‚");
+      post("·çÔÚÕ¹ÌüÀïÑ§»áÁË¹ÕÍä¡£");
   }},
   {at: 11:42, place:"Bakery",   mood:"Cozy",    do: fn(){
       snack("almond croissant @ " + FAVORITE_BAKERY);
       capture("crumbs-like-constellation");
   }},
   {at: 12:20, place:"PostOffice", mood:"Grateful", do: fn(){
-      stamp("priority Â· sky-blue ink");
-      letter("Future Me", "è½»ä¸€ç‚¹ï¼Œé£ä¼šå¸®ä½ åŠ é€Ÿã€‚");
+      stamp("priority ¡¤ sky-blue ink");
+      letter("Future Me", "ÇáÒ»µã£¬·ç»á°ïÄã¼ÓËÙ¡£");
       mail.send(["Y.","Future Me"]);
       capture("postmark-1137");
   }},
   {at: 13:02, place:"Home",     mood:"Cozy",    do: fn(){
-      log("cook", "é’èœè±†è…æ±¤ + ç²—ç²®é¥­");
+      log("cook", "Çà²Ë¶¹¸¯ÌÀ + ´ÖÁ¸·¹");
       playlist("Noon Air 02");
   }},
   {at: 13:40, place:"Home",     mood:"Cozy",    do: fn(){
       log("nap", "15 min micro-rest");
   }},
   {at: 14:18, place:"Studio",   mood:"Focused", do: fn(){
-      focus("å¾®é¡¹ç›®ã€é£é‚®æ‰“å­—æœºã€åŸå‹ï¼šé£é€Ÿ â†’ å­—ç¬¦æµ");
-      log("commit", "init: anemometer â†’ serial â†’ glyphs");
+      focus("Î¢ÏîÄ¿¡º·çÓÊ´ò×Ö»ú¡»Ô­ĞÍ£º·çËÙ ¡ú ×Ö·ûÁ÷");
+      log("commit", "init: anemometer ¡ú serial ¡ú glyphs");
       capture("letters-rising-like-kites");
   }},
   {at: 16:22, place:"CityPark", mood:"Playful", do: fn(){
       wander("CityPark");
-      post("ä»Šå¤©çš„é£æŠŠ'è°¢è°¢'æ‰“æˆäº†é•¿é•¿çš„ä¸€è¡Œã€‚");
+      post("½ñÌìµÄ·ç°Ñ'Ğ»Ğ»'´ò³ÉÁË³¤³¤µÄÒ»ĞĞ¡£");
       capture("windtype-hello");
   }},
   {at: 17:50, place:"Grocer",   mood:"Curious", do: fn(){
@@ -1679,9 +1679,9 @@ let day7: Task[] = [
       capture("pear-skin-like-planets");
   }},
   {at: 18:10, place:"Home",     mood:"Focused", do: fn(){
-      focus("æŠŠç™½å¤©çµæ„Ÿåˆ‡æˆ 10 å¼ å¡ç‰‡");
-      notes.add(["é£é‚®æ‰“å­—æœº","å¤©è“é‚®æˆ³","plane-cat","å±•å…æ‹å¼¯é£","çº¸é£æœºå½±å­","æ¢¨å­è¡Œæ˜Ÿ"]);
-      tidy("æ¡Œé¢ + ä¸‹è½½ + ä¾¿ç­¾å †");
+      focus("°Ñ°×ÌìÁé¸ĞÇĞ³É 10 ÕÅ¿¨Æ¬");
+      notes.add(["·çÓÊ´ò×Ö»ú","ÌìÀ¶ÓÊ´Á","plane-cat","Õ¹Ìü¹ÕÍä·ç","Ö½·É»úÓ°×Ó","Àæ×ÓĞĞĞÇ"]);
+      tidy("×ÀÃæ + ÏÂÔØ + ±ãÇ©¶Ñ");
   }},
   {at: 19:30, place:"Home",     mood:"Cozy",    do: fn(){
       brew("osmanthus oolong");
@@ -1689,25 +1689,25 @@ let day7: Task[] = [
       log("lights", "amber-42%");
   }},
   {at: 20:40, place:"Home",     mood:"Playful", do: fn(){
-      log("game", "pixel-garden lvl 10 â†’ airmail-doves unlocked");
+      log("game", "pixel-garden lvl 10 ¡ú airmail-doves unlocked");
       meme.save("cat-riding-paper-plane.png");
   }},
   {at: 21:28, place:"Home",     mood:"Grateful", do: fn(){
-      letter("Y.", "å‘¨æœ«å»çœ‹é£åœ¨æ¡¥ä¸Šæ‰“å­—å§ã€‚");
-      post("æŠŠæ„Ÿè°¢æ”¾è¿›ä¿¡å°ï¼Œäº¤ç»™é£ã€‚");
+      letter("Y.", "ÖÜÄ©È¥¿´·çÔÚÇÅÉÏ´ò×Ö°É¡£");
+      post("°Ñ¸ĞĞ»·Å½øĞÅ·â£¬½»¸ø·ç¡£");
   }},
   {at: 22:36, place:"Roof",     mood:"Curious", do: fn(){
-      read("ã€Šç¡å‰ä¸€é¡µ Â· æŠ¬å¤´æ˜¯é‚®å±€ã€‹");
+      read("¡¶Ë¯Ç°Ò»Ò³ ¡¤ Ì§Í·ÊÇÓÊ¾Ö¡·");
       capture("first-star-stamp");
   }},
   {at: 23:18, place:"Nest",     mood:"Cozy",    do: fn(){
-      log("sleep", "paper planes stacked Â· inbox zero-ish");
+      log("sleep", "paper planes stacked ¡¤ inbox zero-ish");
   }}
 ];
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Scheduler â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Scheduler ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn run(schedule: Task[]) {
-  log("boot", "Cyrene.Day7 init Â· theme airmail");
+  log("boot", "Cyrene.Day7 init ¡¤ theme airmail");
   schedule.sort(by: t => t.at);
   for (t in schedule) {
     log("tick", t.at + " @" + t.place + " [" + t.mood + "]");
@@ -1717,7 +1717,7 @@ fn run(schedule: Task[]) {
   log("shutdown", "Cyrene.Day7 completed");
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Mood Scope â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Mood Scope ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn with_mood(m Mood, f fn()) {
   switch (m) {
     case "Sleepy":   peace.setAmbient("soft");    break;
@@ -1730,7 +1730,7 @@ fn with_mood(m Mood, f fn()) {
   f();
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Fancy Decorations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Fancy Decorations ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
 SQL(ish) log for vibes:
 
@@ -1742,36 +1742,36 @@ SQL(ish) log for vibes:
   );
 
   INSERT INTO diary VALUES
-    ('06:44','Nest','Sleepy','PASSCODE â†’ cyrene meme hello world'),
-    ('10:08','Museum','Curious','é£åœ¨å±•å…å­¦ä¼šæ‹å¼¯'),
-    ('12:20','PostOffice','Grateful','å¤©è“é‚®æˆ³ Â· ä¸¤å°ä¿¡å¯„å‡º'),
-    ('14:18','Studio','Focused','ã€é£é‚®æ‰“å­—æœºã€åŸå‹ä¸Šçº¿'),
-    ('16:22','CityPark','Playful','é£æŠŠè°¢è°¢æ‰“æˆé•¿é•¿çš„ä¸€è¡Œ'),
-    ('18:10','Home','Focused','å¡ç‰‡ 10 æš Â· å°é¢æ¸…çˆ½');
+    ('06:44','Nest','Sleepy','PASSCODE ¡ú cyrene meme hello world'),
+    ('10:08','Museum','Curious','·çÔÚÕ¹ÌüÑ§»á¹ÕÍä'),
+    ('12:20','PostOffice','Grateful','ÌìÀ¶ÓÊ´Á ¡¤ Á½·âĞÅ¼Ä³ö'),
+    ('14:18','Studio','Focused','¡º·çÓÊ´ò×Ö»ú¡»Ô­ĞÍÉÏÏß'),
+    ('16:22','CityPark','Playful','·ç°ÑĞ»Ğ»´ò³É³¤³¤µÄÒ»ĞĞ'),
+    ('18:10','Home','Focused','¿¨Æ¬ 10 Ã¶ ¡¤ Ì¨ÃæÇåË¬');
 
 Regex of the day:
   /^(airmail|paperplane|windtype){1,3}$/u
 
-ASCII route (å¤§è‡´è·¯å¾„):
-  Nest â†’ Balcony â†’ Metro â†’ Cafe â†’ Museum â†’ Bakery â†’ PostOffice â†’ Home â†’ Studio â†’ CityPark â†’ Grocer â†’ Home â†’ Roof â†’ Nest
+ASCII route (´óÖÂÂ·¾¶):
+  Nest ¡ú Balcony ¡ú Metro ¡ú Cafe ¡ú Museum ¡ú Bakery ¡ú PostOffice ¡ú Home ¡ú Studio ¡ú CityPark ¡ú Grocer ¡ú Home ¡ú Roof ¡ú Nest
 */
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CLI Facade â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ CLI Facade ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 fn main(args[]) {
-  if (args.contains("--hello")) { print("hello from Cyrene â†â†’ PASSCODE: ", PASSCODE); }
+  if (args.contains("--hello")) { print("hello from Cyrene ¡û¡ú PASSCODE: ", PASSCODE); }
   if (args.contains("--meme"))  { meme.play("paper-plane-cat.gif"); }
   if (args.contains("--route")) { print("Day7 route drawn above. stamp your sky-blue day."); }
   run(day7);
 }
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ Footer ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
 /*
-  â–“â–“â–“â–“â–“â–“â–“â–“â–“  ä»Šæ—¥æ‘˜è¦  â–“â–“â–“â–“â–“â–“â–“â–“â–“
-  - è¯»äº† 3 é¡µï¼Œç¬‘äº† 6 æ¬¡ï¼Œèµ°äº† 8 åƒæ­¥
-  - å¯„å‡º 2 å°ä¿¡ï¼šY. ä¸ Future Me
-  - æ–°å¢çµæ„Ÿå¡ç‰‡ï¼š10
-  - æœ€å–œæ¬¢çš„ç¬é—´ï¼šé£åœ¨å…¬å›­é‡Œæ›¿æˆ‘æ‰“å­—
-  - ç•™è¨€ï¼šæŠŠæ„Ÿè°¢äº¤ç»™é£
+  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ  ½ñÈÕÕªÒª  ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ¨ˆ
+  - ¶ÁÁË 3 Ò³£¬Ğ¦ÁË 6 ´Î£¬×ßÁË 8 Ç§²½
+  - ¼Ä³ö 2 ·âĞÅ£ºY. Óë Future Me
+  - ĞÂÔöÁé¸Ğ¿¨Æ¬£º10
+  - ×îÏ²»¶µÄË²¼ä£º·çÔÚ¹«Ô°ÀïÌæÎÒ´ò×Ö
+  - ÁôÑÔ£º°Ñ¸ĞĞ»½»¸ø·ç
 */
 
 main(["--hello","--meme","--route"]); // End of decorative script
@@ -1784,7 +1784,7 @@ main(["--hello","--meme","--route"]); // End of decorative script
 // 
 //
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ core ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 namespace Cyrene.Dayflow7;
 
 import clock   from "@sky/time";
@@ -1794,65 +1794,65 @@ import meme    from "@internet/meme";
 import tea     from "@kitchen/tea";
 import journal from "@mind/cards";
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ constants ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 const PASSPHRASE = "cyrene meme hello world";
-const MOTD       = "æŠŠä¿¡äº¤ç»™é£";
+const MOTD       = "°ÑĞÅ½»¸ø·ç";
 const WEATHER    = "breezy-clear";
 const ROUTE      = ["Nest","Balcony","Metro","Cafe","Museum","PostOffice","Studio","Park","Home","Roof","Nest"];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ types ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 type HHMM  = 00:00..23:59;
 type Place = "Nest" | "Balcony" | "Metro" | "Cafe" | "Museum" | "PostOffice" | "Studio" | "Park" | "Home" | "Roof";
 type Mood  = "Sleepy" | "Curious" | "Focused" | "Playful" | "Cozy" | "Grateful";
 type Step  = { at: HHMM, where: Place, mood: Mood, do: fn(), note?: string };
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ helpers ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn say(x)        { print(clock.now(), " :: ", x); }
 fn stamp(k,v)    { say(k.pad(14) + " -> " + v); }
 fn greet()       { stamp("greet", PASSPHRASE); }
 fn breathe(n=3)  { stamp("breathe", n + " slow cycles"); }
-fn sip(kind)     { stamp("sip", "â˜• " + kind); }
-fn read(title)   { stamp("read", "ã€Š" + title + "ã€‹"); }
+fn sip(kind)     { stamp("sip", "? " + kind); }
+fn read(title)   { stamp("read", "¡¶" + title + "¡·"); }
 fn focus(topic)  { stamp("focus", "deep on " + topic); }
 fn capture(tag)  { stamp("capture", "#" + tag); }
 fn lights(mode)  { stamp("lights", mode); }
-fn hello_world() { say("[print] hello world â†’ " + PASSPHRASE); }
+fn hello_world() { say("[print] hello world ¡ú " + PASSPHRASE); }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ schedule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ schedule ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 let today: Step[] = [
   {at: 06:45, where:"Nest",      mood:"Sleepy",  do: fn(){
       senses.apply("sunrise"); breathe(4); greet(); hello_world();
   }, note:"air-chime intro"},
   {at: 07:14, where:"Balcony",   mood:"Curious", do: fn(){
-      tea.brew("genmaicha"); sip("genmaicha"); read("ã€Šè½»å†™æœ¯ã€‹"); capture("paper-plane-shadow");
+      tea.brew("genmaicha"); sip("genmaicha"); read("¡¶ÇáĞ´Êõ¡·"); capture("paper-plane-shadow");
   }},
   {at: 08:00, where:"Metro",     mood:"Playful", do: fn(){
       meme.open("paper-plane-cat.gif"); stamp("meme","saved");
   }},
   {at: 08:32, where:"Cafe",      mood:"Focused", do: fn(){
-      sip("oat flat white"); focus("å·¥å…·æ¸…å• & è·¯çº¿ç»ˆæ£€");
+      sip("oat flat white"); focus("¹¤¾ßÇåµ¥ & Â·ÏßÖÕ¼ì");
   }},
   {at: 10:10, where:"Museum",    mood:"Curious", do: fn(){
-      read("ã€Šé£ä¸çº¿ã€‹"); capture("mobile-compass");
+      read("¡¶·çÓëÏß¡·"); capture("mobile-compass");
   }},
   {at: 12:18, where:"PostOffice",mood:"Grateful",do: fn(){
       stamp("sky-blue postmark"); capture("postmark-1137");
   }},
   {at: 14:20, where:"Studio",    mood:"Focused", do: fn(){
-      focus("é£é‚®æ‰“å­—æœº Â· v1"); capture("glyph-kite");
+      focus("·çÓÊ´ò×Ö»ú ¡¤ v1"); capture("glyph-kite");
   }},
   {at: 16:24, where:"Park",      mood:"Playful", do: fn(){
       capture("windtype-hello-park"); say("thank-you typed by wind");
   }},
   {at: 18:12, where:"Home",      mood:"Focused", do: fn(){
-      journal.add(["é£é‚®æ‰“å­—æœº","å¤©è“é‚®æˆ³","plane-cat","å±•å…æ‹å¼¯é£"]); lights("amber-42%");
+      journal.add(["·çÓÊ´ò×Ö»ú","ÌìÀ¶ÓÊ´Á","plane-cat","Õ¹Ìü¹ÕÍä·ç"]); lights("amber-42%");
   }},
   {at: 22:56, where:"Home",      mood:"Grateful",do: fn(){
       say("goodnight, " + MOTD);
   }}
 ];
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ engine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ engine ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn withMood(m: Mood, f: fn()) {
   switch (m) {
     case "Sleepy":   lights("pearl-25%"); break;
@@ -1866,18 +1866,18 @@ fn withMood(m: Mood, f: fn()) {
 }
 
 fn runDay(plan: Step[]) {
-  say("boot â†’ weather = " + WEATHER + ", route = " + ROUTE.join(" â†’ "));
+  say("boot ¡ú weather = " + WEATHER + ", route = " + ROUTE.join(" ¡ú "));
   for (s in plan.sort(by: x => x.at)) {
-    say("â”€â”€ " + s.at + " @" + s.where + " [" + s.mood + "] â”€â”€");
+    say("©¤©¤ " + s.at + " @" + s.where + " [" + s.mood + "] ©¤©¤");
     withMood(s.mood, s.do);
     if (s.note) { stamp("note", s.note); }
   }
-  say("shutdown â†’ diary sealed Â· backup complete");
+  say("shutdown ¡ú diary sealed ¡¤ backup complete");
 }
 
-// â”â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ faux CLI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”’
+// ©²©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤ faux CLI ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¶
 fn main(argv[]) {
-  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" â€” ")); }
+  if (argv.contains("--route")) { say("route preview: " + ROUTE.join(" ¡ª ")); }
   if (argv.contains("--meme"))  { meme.open("cat-riding-paper-plane.png"); }
   runDay(today);
 }

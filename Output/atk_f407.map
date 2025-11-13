@@ -79,9 +79,7 @@ Section Cross References
     videoplayer.o(i.load_text_file_stream) refers to noretval__2printf.o(.text) for __2printf
     videoplayer.o(i.load_text_file_stream) refers to ff.o(i.f_read) for f_read
     videoplayer.o(i.load_text_file_stream) refers to ff.o(i.f_lseek) for f_lseek
-    videoplayer.o(i.load_text_file_stream) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
     videoplayer.o(i.load_text_file_stream) refers to videoplayer.o(.bss) for .bss
-    videoplayer.o(i.load_text_file_stream) refers to videoplayer.o(.data) for .data
     videoplayer.o(i.video_get_tnum) refers to malloc.o(i.mymalloc) for mymalloc
     videoplayer.o(i.video_get_tnum) refers to ff.o(i.f_opendir) for f_opendir
     videoplayer.o(i.video_get_tnum) refers to ff.o(i.f_readdir) for f_readdir
@@ -3348,91 +3346,91 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/dczerorl2.s                0x00000000   Number         0  __dczerorl2.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_ctype_table.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi_2.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  getenv.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/ctype.c                          0x00000000   Number         0  isspace.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/locale.c                         0x00000000   Number         0  _wcrtomb.o ABSOLUTE
     ../clib/locale.s                         0x00000000   Number         0  lc_ctype_c.o ABSOLUTE
-    ../clib/longlong.s                       0x00000000   Number         0  llsdiv.o ABSOLUTE
-    ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludiv10.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  llsdiv.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  strncpy.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7m.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7m.o ABSOLUTE
     ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_longlong_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_pad.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_truncate.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_wchar.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_wctomb.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_charcount.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_wctomb.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_longlong_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_wchar.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_truncate.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_pad.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_i.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_o.o ABSOLUTE
@@ -3441,45 +3439,45 @@ Image Symbol Table
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_n.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_c.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lc.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_l.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_ll.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_u.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lc.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lld.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_u.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  _scanf_int.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
-    ../clib/scanf.c                          0x00000000   Number         0  __0sscanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  _scanf.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  _chval.o ABSOLUTE
     ../clib/scanf.c                          0x00000000   Number         0  scanf_char.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  __0sscanf.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdio.c                          0x00000000   Number         0  ferror.o ABSOLUTE
     ../clib/stdio.c                          0x00000000   Number         0  ferror_locked.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
-    ../clib/string.c                         0x00000000   Number         0  strcat.o ABSOLUTE
-    ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
-    ../clib/string.c                         0x00000000   Number         0  strcpy.o ABSOLUTE
-    ../clib/string.c                         0x00000000   Number         0  memcmp.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  strchr.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  memcmp.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strcpy.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strcat.o ABSOLUTE
     ../fplib/d2f.s                           0x00000000   Number         0  d2f.o ABSOLUTE
     ../fplib/dfixu.s                         0x00000000   Number         0  dfixu.o ABSOLUTE
     ../fplib/dflt.s                          0x00000000   Number         0  dflt_clz.o ABSOLUTE
@@ -4298,335 +4296,335 @@ Image Symbol Table
     i.load_obj_xdir                          0x080161e4   Section        0  ff.o(i.load_obj_xdir)
     load_obj_xdir                            0x080161e5   Thumb Code    58  ff.o(i.load_obj_xdir)
     i.load_text_file_stream                  0x08016220   Section        0  videoplayer.o(i.load_text_file_stream)
-    i.load_xdir                              0x080162fc   Section        0  ff.o(i.load_xdir)
-    load_xdir                                0x080162fd   Thumb Code   208  ff.o(i.load_xdir)
-    i.main                                   0x080163cc   Section        0  main.o(i.main)
-    i.make_funny_pointers                    0x080164b4   Section        0  jdmainct.o(i.make_funny_pointers)
-    make_funny_pointers                      0x080164b5   Thumb Code   170  jdmainct.o(i.make_funny_pointers)
-    i.master_selection                       0x0801655e   Section        0  jdmaster.o(i.master_selection)
-    master_selection                         0x0801655f   Thumb Code   492  jdmaster.o(i.master_selection)
-    i.median_cut                             0x0801674a   Section        0  jquant2.o(i.median_cut)
-    median_cut                               0x0801674b   Thumb Code   264  jquant2.o(i.median_cut)
-    i.merged_1v_upsample                     0x08016852   Section        0  jdmerge.o(i.merged_1v_upsample)
-    merged_1v_upsample                       0x08016853   Thumb Code    38  jdmerge.o(i.merged_1v_upsample)
-    i.merged_2v_upsample                     0x08016878   Section        0  jdmerge.o(i.merged_2v_upsample)
-    merged_2v_upsample                       0x08016879   Thumb Code   100  jdmerge.o(i.merged_2v_upsample)
-    i.mf_free                                0x080168dc   Section        0  fattester.o(i.mf_free)
-    i.mf_init                                0x080168fc   Section        0  fattester.o(i.mf_init)
-    i.mf_scan_files                          0x08016930   Section        0  fattester.o(i.mf_scan_files)
-    i.mjpeg_malloc                           0x08016998   Section        0  mjpeg.o(i.mjpeg_malloc)
-    i.mjpegdec_decode                        0x080169cc   Section        0  mjpeg.o(i.mjpegdec_decode)
-    i.mjpegdec_free                          0x08016a90   Section        0  mjpeg.o(i.mjpegdec_free)
-    i.mjpegdec_init                          0x08016ab4   Section        0  mjpeg.o(i.mjpegdec_init)
-    i.mount_volume                           0x08016b00   Section        0  ff.o(i.mount_volume)
-    mount_volume                             0x08016b01   Thumb Code   918  ff.o(i.mount_volume)
-    i.move_window                            0x08016eac   Section        0  ff.o(i.move_window)
-    move_window                              0x08016ead   Thumb Code    50  ff.o(i.move_window)
-    i.my_emit_message                        0x08016ee0   Section        0  mjpeg.o(i.my_emit_message)
-    my_emit_message                          0x08016ee1   Thumb Code    26  mjpeg.o(i.my_emit_message)
-    i.my_error_exit                          0x08016f0c   Section        0  mjpeg.o(i.my_error_exit)
-    my_error_exit                            0x08016f0d   Thumb Code    16  mjpeg.o(i.my_error_exit)
-    i.my_mem_init                            0x08016f1c   Section        0  malloc.o(i.my_mem_init)
-    i.my_mem_malloc                          0x08016f48   Section        0  malloc.o(i.my_mem_malloc)
-    my_mem_malloc                            0x08016f49   Thumb Code   132  malloc.o(i.my_mem_malloc)
-    i.my_mem_perused                         0x08016fd4   Section        0  malloc.o(i.my_mem_perused)
-    i.my_mem_set                             0x08017010   Section        0  malloc.o(i.my_mem_set)
-    i.myfree                                 0x0801701c   Section        0  malloc.o(i.myfree)
-    i.mymalloc                               0x08017078   Section        0  malloc.o(i.mymalloc)
-    i.new_color_map_1_quant                  0x08017098   Section        0  jquant1.o(i.new_color_map_1_quant)
-    new_color_map_1_quant                    0x08017099   Thumb Code    12  jquant1.o(i.new_color_map_1_quant)
-    i.new_color_map_2_quant                  0x080170a4   Section        0  jquant2.o(i.new_color_map_2_quant)
-    new_color_map_2_quant                    0x080170a5   Thumb Code    10  jquant2.o(i.new_color_map_2_quant)
-    i.next_marker                            0x080170ae   Section        0  jdmarker.o(i.next_marker)
-    next_marker                              0x080170af   Thumb Code   168  jdmarker.o(i.next_marker)
-    i.norflash_erase_sector                  0x08017158   Section        0  norflash.o(i.norflash_erase_sector)
-    i.norflash_init                          0x08017198   Section        0  norflash.o(i.norflash_init)
-    i.norflash_read                          0x08017230   Section        0  norflash.o(i.norflash_read)
-    i.norflash_read_id                       0x08017280   Section        0  norflash.o(i.norflash_read_id)
-    i.norflash_read_sr                       0x080172d4   Section        0  norflash.o(i.norflash_read_sr)
-    i.norflash_send_address                  0x0801731c   Section        0  norflash.o(i.norflash_send_address)
-    norflash_send_address                    0x0801731d   Thumb Code    48  norflash.o(i.norflash_send_address)
-    i.norflash_wait_busy                     0x08017350   Section        0  norflash.o(i.norflash_wait_busy)
-    norflash_wait_busy                       0x08017351   Thumb Code    14  norflash.o(i.norflash_wait_busy)
-    i.norflash_write                         0x08017360   Section        0  norflash.o(i.norflash_write)
-    i.norflash_write_enable                  0x080173fc   Section        0  norflash.o(i.norflash_write_enable)
-    i.norflash_write_nocheck                 0x08017428   Section        0  norflash.o(i.norflash_write_nocheck)
-    norflash_write_nocheck                   0x08017429   Thumb Code   120  norflash.o(i.norflash_write_nocheck)
-    i.norflash_write_sr                      0x080174a4   Section        0  norflash.o(i.norflash_write_sr)
-    i.null_convert                           0x080174f0   Section        0  jdcolor.o(i.null_convert)
-    null_convert                             0x080174f1   Thumb Code    96  jdcolor.o(i.null_convert)
-    i.out_of_memory                          0x08017550   Section        0  jmemmgr.o(i.out_of_memory)
-    out_of_memory                            0x08017551   Thumb Code    16  jmemmgr.o(i.out_of_memory)
-    i.output_message                         0x08017560   Section        0  jerror.o(i.output_message)
-    output_message                           0x08017561   Thumb Code    24  jerror.o(i.output_message)
-    i.output_pass_setup                      0x0801757c   Section        0  jdapistd.o(i.output_pass_setup)
-    output_pass_setup                        0x0801757d   Thumb Code   142  jdapistd.o(i.output_pass_setup)
-    i.pass2_fs_dither                        0x0801760a   Section        0  jquant2.o(i.pass2_fs_dither)
-    pass2_fs_dither                          0x0801760b   Thumb Code   474  jquant2.o(i.pass2_fs_dither)
-    i.pass2_no_dither                        0x080177e4   Section        0  jquant2.o(i.pass2_no_dither)
-    pass2_no_dither                          0x080177e5   Thumb Code   110  jquant2.o(i.pass2_no_dither)
-    i.per_scan_setup                         0x08017852   Section        0  jdinput.o(i.per_scan_setup)
-    per_scan_setup                           0x08017853   Thumb Code   266  jdinput.o(i.per_scan_setup)
-    i.pick_lfn                               0x0801795c   Section        0  ff.o(i.pick_lfn)
-    pick_lfn                                 0x0801795d   Thumb Code   110  ff.o(i.pick_lfn)
-    i.post_process_1pass                     0x080179d0   Section        0  jdpostct.o(i.post_process_1pass)
-    post_process_1pass                       0x080179d1   Thumb Code    88  jdpostct.o(i.post_process_1pass)
-    i.post_process_2pass                     0x08017a28   Section        0  jdpostct.o(i.post_process_2pass)
-    post_process_2pass                       0x08017a29   Thumb Code   130  jdpostct.o(i.post_process_2pass)
-    i.post_process_prepass                   0x08017aaa   Section        0  jdpostct.o(i.post_process_prepass)
-    post_process_prepass                     0x08017aab   Thumb Code   136  jdpostct.o(i.post_process_prepass)
-    i.prepare_for_output_pass                0x08017b32   Section        0  jdmaster.o(i.prepare_for_output_pass)
-    prepare_for_output_pass                  0x08017b33   Thumb Code   278  jdmaster.o(i.prepare_for_output_pass)
-    i.prescan_quantize                       0x08017c48   Section        0  jquant2.o(i.prescan_quantize)
-    prescan_quantize                         0x08017c49   Thumb Code    84  jquant2.o(i.prescan_quantize)
-    i.process_data_context_main              0x08017c9c   Section        0  jdmainct.o(i.process_data_context_main)
-    process_data_context_main                0x08017c9d   Thumb Code   472  jdmainct.o(i.process_data_context_main)
-    i.process_data_crank_post                0x08017e74   Section        0  jdmainct.o(i.process_data_crank_post)
-    process_data_crank_post                  0x08017e75   Thumb Code    22  jdmainct.o(i.process_data_crank_post)
-    i.process_data_simple_main               0x08017e8a   Section        0  jdmainct.o(i.process_data_simple_main)
-    process_data_simple_main                 0x08017e8b   Thumb Code    78  jdmainct.o(i.process_data_simple_main)
-    i.process_restart                        0x08017ed8   Section        0  jdarith.o(i.process_restart)
-    process_restart                          0x08017ed9   Thumb Code   156  jdarith.o(i.process_restart)
-    i.process_restart                        0x08017f74   Section        0  jdhuff.o(i.process_restart)
-    process_restart                          0x08017f75   Thumb Code    70  jdhuff.o(i.process_restart)
-    i.put_fat                                0x08017fba   Section        0  ff.o(i.put_fat)
-    put_fat                                  0x08017fbb   Thumb Code   246  ff.o(i.put_fat)
-    i.put_utf                                0x080180b0   Section        0  ff.o(i.put_utf)
-    put_utf                                  0x080180b1   Thumb Code    46  ff.o(i.put_utf)
-    i.quantize3_ord_dither                   0x080180de   Section        0  jquant1.o(i.quantize3_ord_dither)
-    quantize3_ord_dither                     0x080180df   Thumb Code   158  jquant1.o(i.quantize3_ord_dither)
-    i.quantize_fs_dither                     0x0801817c   Section        0  jquant1.o(i.quantize_fs_dither)
-    quantize_fs_dither                       0x0801817d   Thumb Code   292  jquant1.o(i.quantize_fs_dither)
-    i.quantize_ord_dither                    0x080182a0   Section        0  jquant1.o(i.quantize_ord_dither)
-    quantize_ord_dither                      0x080182a1   Thumb Code   142  jquant1.o(i.quantize_ord_dither)
-    i.read_addr                              0x0801832e   Section        0  usmart.o(i.read_addr)
-    i.read_markers                           0x08018334   Section        0  jdmarker.o(i.read_markers)
-    read_markers                             0x08018335   Thumb Code   408  jdmarker.o(i.read_markers)
-    i.read_restart_marker                    0x080184d0   Section        0  jdmarker.o(i.read_restart_marker)
-    read_restart_marker                      0x080184d1   Thumb Code   102  jdmarker.o(i.read_restart_marker)
-    i.realize_virt_arrays                    0x08018538   Section        0  jmemmgr.o(i.realize_virt_arrays)
-    realize_virt_arrays                      0x08018539   Thumb Code   280  jmemmgr.o(i.realize_virt_arrays)
-    i.remove_chain                           0x08018654   Section        0  ff.o(i.remove_chain)
-    remove_chain                             0x08018655   Thumb Code   268  ff.o(i.remove_chain)
-    i.request_virt_barray                    0x08018760   Section        0  jmemmgr.o(i.request_virt_barray)
-    request_virt_barray                      0x08018761   Thumb Code    78  jmemmgr.o(i.request_virt_barray)
-    i.request_virt_sarray                    0x080187ae   Section        0  jmemmgr.o(i.request_virt_sarray)
-    request_virt_sarray                      0x080187af   Thumb Code    78  jmemmgr.o(i.request_virt_sarray)
-    i.reset_error_mgr                        0x080187fc   Section        0  jerror.o(i.reset_error_mgr)
-    reset_error_mgr                          0x080187fd   Thumb Code    12  jerror.o(i.reset_error_mgr)
-    i.reset_input_controller                 0x08018808   Section        0  jdinput.o(i.reset_input_controller)
-    reset_input_controller                   0x08018809   Thumb Code    46  jdinput.o(i.reset_input_controller)
-    i.reset_marker_reader                    0x0801883c   Section        0  jdmarker.o(i.reset_marker_reader)
-    reset_marker_reader                      0x0801883d   Thumb Code    28  jdmarker.o(i.reset_marker_reader)
-    i.rgb1_gray_convert                      0x08018858   Section        0  jdcolor.o(i.rgb1_gray_convert)
-    rgb1_gray_convert                        0x08018859   Thumb Code   122  jdcolor.o(i.rgb1_gray_convert)
-    i.rgb1_rgb_convert                       0x080188d2   Section        0  jdcolor.o(i.rgb1_rgb_convert)
-    rgb1_rgb_convert                         0x080188d3   Thumb Code    92  jdcolor.o(i.rgb1_rgb_convert)
-    i.rgb_convert                            0x0801892e   Section        0  jdcolor.o(i.rgb_convert)
-    rgb_convert                              0x0801892f   Thumb Code    84  jdcolor.o(i.rgb_convert)
-    i.rgb_gray_convert                       0x08018982   Section        0  jdcolor.o(i.rgb_gray_convert)
-    rgb_gray_convert                         0x08018983   Thumb Code   110  jdcolor.o(i.rgb_gray_convert)
-    i.sd_init                                0x080189f0   Section        0  sdio_sdcard.o(i.sd_init)
-    i.sd_read_disk                           0x08018a38   Section        0  sdio_sdcard.o(i.sd_read_disk)
-    i.sd_write_disk                          0x08018a6c   Section        0  sdio_sdcard.o(i.sd_write_disk)
-    i.select_colors                          0x08018aa0   Section        0  jquant2.o(i.select_colors)
-    select_colors                            0x08018aa1   Thumb Code   112  jquant2.o(i.select_colors)
-    i.select_ncolors                         0x08018b10   Section        0  jquant1.o(i.select_ncolors)
-    select_ncolors                           0x08018b11   Thumb Code   146  jquant1.o(i.select_ncolors)
-    i.self_destruct                          0x08018ba8   Section        0  jmemmgr.o(i.self_destruct)
-    self_destruct                            0x08018ba9   Thumb Code    42  jmemmgr.o(i.self_destruct)
-    i.sep_upsample                           0x08018bd2   Section        0  jdsample.o(i.sep_upsample)
-    sep_upsample                             0x08018bd3   Thumb Code   186  jdsample.o(i.sep_upsample)
-    i.skip_input_data                        0x08018c8c   Section        0  mjpeg.o(i.skip_input_data)
-    skip_input_data                          0x08018c8d   Thumb Code    42  mjpeg.o(i.skip_input_data)
-    i.skip_variable                          0x08018cb6   Section        0  jdmarker.o(i.skip_variable)
-    skip_variable                            0x08018cb7   Thumb Code   116  jdmarker.o(i.skip_variable)
-    i.smoothing_ok                           0x08018d2a   Section        0  jdcoefct.o(i.smoothing_ok)
-    smoothing_ok                             0x08018d2b   Thumb Code   146  jdcoefct.o(i.smoothing_ok)
-    i.spi1_init                              0x08018dbc   Section        0  spi.o(i.spi1_init)
-    i.spi1_read_write_byte                   0x08018e24   Section        0  spi.o(i.spi1_read_write_byte)
-    i.spi1_set_speed                         0x08018e44   Section        0  spi.o(i.spi1_set_speed)
-    i.sram_init                              0x08018e78   Section        0  sram.o(i.sram_init)
-    i.st_clust                               0x08018fdc   Section        0  ff.o(i.st_clust)
-    st_clust                                 0x08018fdd   Thumb Code    40  ff.o(i.st_clust)
-    i.st_dword                               0x08019004   Section        0  ff.o(i.st_dword)
-    st_dword                                 0x08019005   Thumb Code    16  ff.o(i.st_dword)
-    i.st_qword                               0x08019014   Section        0  ff.o(i.st_qword)
-    st_qword                                 0x08019015   Thumb Code    74  ff.o(i.st_qword)
-    i.st_word                                0x0801905e   Section        0  ff.o(i.st_word)
-    st_word                                  0x0801905f   Thumb Code     8  ff.o(i.st_word)
-    i.start_iMCU_row                         0x08019066   Section        0  jdcoefct.o(i.start_iMCU_row)
-    start_iMCU_row                           0x08019067   Thumb Code    48  jdcoefct.o(i.start_iMCU_row)
-    i.start_input_pass                       0x08019096   Section        0  jdinput.o(i.start_input_pass)
-    start_input_pass                         0x08019097   Thumb Code   140  jdinput.o(i.start_input_pass)
-    i.start_input_pass                       0x08019122   Section        0  jdcoefct.o(i.start_input_pass)
-    start_input_pass                         0x08019123   Thumb Code     8  jdcoefct.o(i.start_input_pass)
-    i.start_output_pass                      0x0801912c   Section        0  jdcoefct.o(i.start_output_pass)
-    start_output_pass                        0x0801912d   Thumb Code    40  jdcoefct.o(i.start_output_pass)
-    i.start_pass                             0x0801915c   Section        0  jdarith.o(i.start_pass)
-    start_pass                               0x0801915d   Thumb Code   584  jdarith.o(i.start_pass)
-    i.start_pass                             0x080193b8   Section        0  jddctmgr.o(i.start_pass)
-    start_pass                               0x080193b9   Thumb Code   772  jddctmgr.o(i.start_pass)
-    i.start_pass_1_quant                     0x08019750   Section        0  jquant1.o(i.start_pass_1_quant)
-    start_pass_1_quant                       0x08019751   Thumb Code   164  jquant1.o(i.start_pass_1_quant)
-    i.start_pass_2_quant                     0x08019808   Section        0  jquant2.o(i.start_pass_2_quant)
-    start_pass_2_quant                       0x08019809   Thumb Code   208  jquant2.o(i.start_pass_2_quant)
-    i.start_pass_dcolor                      0x080198ec   Section        0  jdcolor.o(i.start_pass_dcolor)
-    start_pass_dcolor                        0x080198ed   Thumb Code     2  jdcolor.o(i.start_pass_dcolor)
-    i.start_pass_dpost                       0x080198f0   Section        0  jdpostct.o(i.start_pass_dpost)
-    start_pass_dpost                         0x080198f1   Thumb Code   118  jdpostct.o(i.start_pass_dpost)
-    i.start_pass_huff_decoder                0x08019974   Section        0  jdhuff.o(i.start_pass_huff_decoder)
-    start_pass_huff_decoder                  0x08019975   Thumb Code   976  jdhuff.o(i.start_pass_huff_decoder)
-    i.start_pass_main                        0x08019d68   Section        0  jdmainct.o(i.start_pass_main)
-    start_pass_main                          0x08019d69   Thumb Code    74  jdmainct.o(i.start_pass_main)
-    i.start_pass_merged_upsample             0x08019dc0   Section        0  jdmerge.o(i.start_pass_merged_upsample)
-    start_pass_merged_upsample               0x08019dc1   Thumb Code    16  jdmerge.o(i.start_pass_merged_upsample)
-    i.start_pass_upsample                    0x08019dd0   Section        0  jdsample.o(i.start_pass_upsample)
-    start_pass_upsample                      0x08019dd1   Thumb Code    16  jdsample.o(i.start_pass_upsample)
-    i.store_xdir                             0x08019de0   Section        0  ff.o(i.store_xdir)
-    store_xdir                               0x08019de1   Thumb Code   106  ff.o(i.store_xdir)
-    i.sum_sfn                                0x08019e4a   Section        0  ff.o(i.sum_sfn)
-    sum_sfn                                  0x08019e4b   Thumb Code    26  ff.o(i.sum_sfn)
-    i.sync_fs                                0x08019e64   Section        0  ff.o(i.sync_fs)
-    sync_fs                                  0x08019e65   Thumb Code   124  ff.o(i.sync_fs)
-    i.sync_window                            0x08019ee8   Section        0  ff.o(i.sync_window)
-    sync_window                              0x08019ee9   Thumb Code    70  ff.o(i.sync_window)
-    i.sys_stm32_clock_init                   0x08019f30   Section        0  sys.o(i.sys_stm32_clock_init)
-    i.tchar2uni                              0x08019fe0   Section        0  ff.o(i.tchar2uni)
-    tchar2uni                                0x08019fe1   Thumb Code    78  ff.o(i.tchar2uni)
-    i.term_source                            0x0801a02e   Section        0  mjpeg.o(i.term_source)
-    term_source                              0x0801a02f   Thumb Code     2  mjpeg.o(i.term_source)
-    i.text_get_hz_mat                        0x0801a030   Section        0  text.o(i.text_get_hz_mat)
-    text_get_hz_mat                          0x0801a031   Thumb Code   136  text.o(i.text_get_hz_mat)
-    i.text_show_font                         0x0801a0bc   Section        0  text.o(i.text_show_font)
-    i.text_show_string                       0x0801a170   Section        0  text.o(i.text_show_string)
-    i.update_box                             0x0801a226   Section        0  jquant2.o(i.update_box)
-    update_box                               0x0801a227   Thumb Code   572  jquant2.o(i.update_box)
-    i.usart_init                             0x0801a464   Section        0  usart.o(i.usart_init)
-    i.use_merged_upsample                    0x0801a49c   Section        0  jdmaster.o(i.use_merged_upsample)
-    use_merged_upsample                      0x0801a49d   Thumb Code   150  jdmaster.o(i.use_merged_upsample)
-    i.usmart_cmd_rec                         0x0801a534   Section        0  usmart.o(i.usmart_cmd_rec)
-    i.usmart_exe                             0x0801a5c8   Section        0  usmart.o(i.usmart_exe)
-    i.usmart_get_aparm                       0x0801a828   Section        0  usmart_str.o(i.usmart_get_aparm)
-    i.usmart_get_cmdname                     0x0801a8cc   Section        0  usmart_str.o(i.usmart_get_cmdname)
-    i.usmart_get_fname                       0x0801a8fc   Section        0  usmart_str.o(i.usmart_get_fname)
-    i.usmart_get_fparam                      0x0801aa64   Section        0  usmart_str.o(i.usmart_get_fparam)
-    i.usmart_get_input_string                0x0801ab34   Section        0  usmart_port.o(i.usmart_get_input_string)
-    i.usmart_get_parmpos                     0x0801ab54   Section        0  usmart_str.o(i.usmart_get_parmpos)
-    i.usmart_init                            0x0801ab78   Section        0  usmart.o(i.usmart_init)
-    i.usmart_pow                             0x0801aba0   Section        0  usmart_str.o(i.usmart_pow)
-    i.usmart_scan                            0x0801abb0   Section        0  usmart.o(i.usmart_scan)
-    i.usmart_search_nextc                    0x0801ac40   Section        0  usmart_str.o(i.usmart_search_nextc)
-    i.usmart_str2num                         0x0801ac50   Section        0  usmart_str.o(i.usmart_str2num)
-    i.usmart_strcmp                          0x0801ad26   Section        0  usmart_str.o(i.usmart_strcmp)
-    i.usmart_strcopy                         0x0801ad3e   Section        0  usmart_str.o(i.usmart_strcopy)
-    i.usmart_strlen                          0x0801ad50   Section        0  usmart_str.o(i.usmart_strlen)
-    i.usmart_sys_cmd_exe                     0x0801ad64   Section        0  usmart.o(i.usmart_sys_cmd_exe)
-    i.usmart_timx_get_time                   0x0801b3e4   Section        0  usmart_port.o(i.usmart_timx_get_time)
-    i.usmart_timx_init                       0x0801b414   Section        0  usmart_port.o(i.usmart_timx_init)
-    i.usmart_timx_reset_time                 0x0801b464   Section        0  usmart_port.o(i.usmart_timx_reset_time)
-    i.validate                               0x0801b48c   Section        0  ff.o(i.validate)
-    validate                                 0x0801b48d   Thumb Code    52  ff.o(i.validate)
-    i.video_get_tnum                         0x0801b4c0   Section        0  videoplayer.o(i.video_get_tnum)
-    i.video_play                             0x0801b514   Section        0  videoplayer.o(i.video_play)
-    i.video_play_mjpeg                       0x0801b708   Section        0  videoplayer.o(i.video_play_mjpeg)
-    i.write_addr                             0x0801ba48   Section        0  usmart.o(i.write_addr)
-    i.xdir_sum                               0x0801ba4c   Section        0  ff.o(i.xdir_sum)
-    xdir_sum                                 0x0801ba4d   Thumb Code    52  ff.o(i.xdir_sum)
-    i.xname_sum                              0x0801ba80   Section        0  ff.o(i.xname_sum)
-    xname_sum                                0x0801ba81   Thumb Code    62  ff.o(i.xname_sum)
-    i.ycc_rgb_convert                        0x0801babe   Section        0  jdcolor.o(i.ycc_rgb_convert)
-    ycc_rgb_convert                          0x0801babf   Thumb Code   160  jdcolor.o(i.ycc_rgb_convert)
-    i.ycck_cmyk_convert                      0x0801bb5e   Section        0  jdcolor.o(i.ycck_cmyk_convert)
-    ycck_cmyk_convert                        0x0801bb5f   Thumb Code   182  jdcolor.o(i.ycck_cmyk_convert)
-    locale$$code                             0x0801bc14   Section       44  lc_ctype_c.o(locale$$code)
-    x$fpl$d2f                                0x0801bc40   Section       98  d2f.o(x$fpl$d2f)
-    $v0                                      0x0801bc40   Number         0  d2f.o(x$fpl$d2f)
-    x$fpl$dfixu                              0x0801bca4   Section       90  dfixu.o(x$fpl$dfixu)
-    $v0                                      0x0801bca4   Number         0  dfixu.o(x$fpl$dfixu)
-    x$fpl$dfltu                              0x0801bcfe   Section       38  dflt_clz.o(x$fpl$dfltu)
-    $v0                                      0x0801bcfe   Number         0  dflt_clz.o(x$fpl$dfltu)
-    x$fpl$dmul                               0x0801bd24   Section      340  dmul.o(x$fpl$dmul)
-    $v0                                      0x0801bd24   Number         0  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x0801be78   Section      156  dnaninf.o(x$fpl$dnaninf)
-    $v0                                      0x0801be78   Number         0  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x0801bf14   Section       12  dretinf.o(x$fpl$dretinf)
-    $v0                                      0x0801bf14   Number         0  dretinf.o(x$fpl$dretinf)
-    x$fpl$fpinit                             0x0801bf20   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x0801bf20   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fretinf                            0x0801bf2a   Section       10  fretinf.o(x$fpl$fretinf)
-    $v0                                      0x0801bf2a   Number         0  fretinf.o(x$fpl$fretinf)
-    .constdata                               0x0801bf34   Section       16  system_stm32f4xx.o(.constdata)
-    x$fpl$usenofp                            0x0801bf34   Section        0  usenofp.o(x$fpl$usenofp)
-    .constdata                               0x0801bf44   Section        8  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0801bf4c   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x0801bf4c   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x0801bf54   Section    12160  lcd.o(.constdata)
-    .constdata                               0x0801eed4   Section      110  i2s.o(.constdata)
-    .constdata                               0x0801ef44   Section       36  malloc.o(.constdata)
-    .constdata                               0x0801ef68   Section      196  exfuns.o(.constdata)
-    .constdata                               0x0801f02c   Section       76  ff.o(.constdata)
-    LfnOfs                                   0x0801f02c   Data          13  ff.o(.constdata)
-    badchr                                   0x0801f039   Data          18  ff.o(.constdata)
-    cst                                      0x0801f04c   Data          14  ff.o(.constdata)
-    cst32                                    0x0801f05a   Data          14  ff.o(.constdata)
-    defopt                                   0x0801f068   Data          16  ff.o(.constdata)
-    .constdata                               0x0801f078   Section      686  myffunicode.o(.constdata)
-    cvt1                                     0x0801f078   Data         498  myffunicode.o(.constdata)
-    cvt2                                     0x0801f26a   Data         188  myffunicode.o(.constdata)
-    .constdata                               0x0801f328   Section       16  avi.o(.constdata)
-    .constdata                               0x0801f338   Section      456  jaricom.o(.constdata)
-    .constdata                               0x0801f500   Section      416  jcomapi.o(.constdata)
-    bits_dc_luminance                        0x0801f500   Data          17  jcomapi.o(.constdata)
-    val_dc_luminance                         0x0801f511   Data          12  jcomapi.o(.constdata)
-    bits_dc_chrominance                      0x0801f51d   Data          17  jcomapi.o(.constdata)
-    val_dc_chrominance                       0x0801f52e   Data          12  jcomapi.o(.constdata)
-    bits_ac_luminance                        0x0801f53a   Data          17  jcomapi.o(.constdata)
-    val_ac_luminance                         0x0801f54b   Data         162  jcomapi.o(.constdata)
-    bits_ac_chrominance                      0x0801f5ed   Data          17  jcomapi.o(.constdata)
-    val_ac_chrominance                       0x0801f5fe   Data         162  jcomapi.o(.constdata)
-    .constdata                               0x0801f6a0   Section      320  jutils.o(.constdata)
-    .constdata                               0x0801f7e0   Section      260  jutils.o(.constdata)
-    .constdata                               0x0801f8e4   Section      208  jutils.o(.constdata)
-    .constdata                               0x0801f9b4   Section      164  jutils.o(.constdata)
-    .constdata                               0x0801fa58   Section      128  jutils.o(.constdata)
-    .constdata                               0x0801fad8   Section      100  jutils.o(.constdata)
-    .constdata                               0x0801fb3c   Section       80  jutils.o(.constdata)
-    .constdata                               0x0801fb8c   Section      512  jerror.o(.constdata)
-    .constdata                               0x0801fd8c   Section       16  jmemmgr.o(.constdata)
-    first_pool_slop                          0x0801fd8c   Data           8  jmemmgr.o(.constdata)
-    extra_pool_slop                          0x0801fd94   Data           8  jmemmgr.o(.constdata)
-    .constdata                               0x0801fd9c   Section      876  jdhuff.o(.constdata)
-    jpeg_zigzag_order                        0x0801fd9c   Data         256  jdhuff.o(.constdata)
-    jpeg_zigzag_order7                       0x0801fe9c   Data         196  jdhuff.o(.constdata)
-    jpeg_zigzag_order6                       0x0801ff60   Data         144  jdhuff.o(.constdata)
-    jpeg_zigzag_order5                       0x0801fff0   Data         100  jdhuff.o(.constdata)
-    jpeg_zigzag_order4                       0x08020054   Data          64  jdhuff.o(.constdata)
-    jpeg_zigzag_order3                       0x08020094   Data          36  jdhuff.o(.constdata)
-    jpeg_zigzag_order2                       0x080200b8   Data          16  jdhuff.o(.constdata)
-    bmask                                    0x080200c8   Data          64  jdhuff.o(.constdata)
-    .constdata                               0x08020108   Section      192  jddctmgr.o(.constdata)
-    aanscales                                0x08020108   Data         128  jddctmgr.o(.constdata)
-    aanscalefactor                           0x08020188   Data          64  jddctmgr.o(.constdata)
-    .constdata                               0x080201c8   Section      268  jquant1.o(.constdata)
-    base_dither_matrix                       0x080201c8   Data         256  jquant1.o(.constdata)
-    RGB_order                                0x080202c8   Data          12  jquant1.o(.constdata)
-    .constdata                               0x080202d4   Section        8  _printf_wctomb.o(.constdata)
-    initial_mbstate                          0x080202d4   Data           8  _printf_wctomb.o(.constdata)
-    .constdata                               0x080202dc   Section       40  _printf_hex_int_ptr.o(.constdata)
-    uc_hextab                                0x080202dc   Data          20  _printf_hex_int_ptr.o(.constdata)
-    lc_hextab                                0x080202f0   Data          20  _printf_hex_int_ptr.o(.constdata)
-    .constdata                               0x08020304   Section       17  __printf_flags_ss_wp.o(.constdata)
-    maptable                                 0x08020304   Data          17  __printf_flags_ss_wp.o(.constdata)
-    .conststring                             0x08020318   Section       40  usmart.o(.conststring)
-    .conststring                             0x08020340   Section      668  usmart_config.o(.conststring)
-    .conststring                             0x080205dc   Section       84  exfuns.o(.conststring)
-    .conststring                             0x08020630   Section       29  avi.o(.conststring)
-    .conststring                             0x08020650   Section     4881  jerror.o(.conststring)
-    locale$$data                             0x08021984   Section      272  lc_ctype_c.o(locale$$data)
-    __lcctype_c_name                         0x08021988   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x08021990   Data           0  lc_ctype_c.o(locale$$data)
-    __lcctype_c_end                          0x08021a94   Data           0  lc_ctype_c.o(locale$$data)
+    i.load_xdir                              0x080162ec   Section        0  ff.o(i.load_xdir)
+    load_xdir                                0x080162ed   Thumb Code   208  ff.o(i.load_xdir)
+    i.main                                   0x080163bc   Section        0  main.o(i.main)
+    i.make_funny_pointers                    0x080164a4   Section        0  jdmainct.o(i.make_funny_pointers)
+    make_funny_pointers                      0x080164a5   Thumb Code   170  jdmainct.o(i.make_funny_pointers)
+    i.master_selection                       0x0801654e   Section        0  jdmaster.o(i.master_selection)
+    master_selection                         0x0801654f   Thumb Code   492  jdmaster.o(i.master_selection)
+    i.median_cut                             0x0801673a   Section        0  jquant2.o(i.median_cut)
+    median_cut                               0x0801673b   Thumb Code   264  jquant2.o(i.median_cut)
+    i.merged_1v_upsample                     0x08016842   Section        0  jdmerge.o(i.merged_1v_upsample)
+    merged_1v_upsample                       0x08016843   Thumb Code    38  jdmerge.o(i.merged_1v_upsample)
+    i.merged_2v_upsample                     0x08016868   Section        0  jdmerge.o(i.merged_2v_upsample)
+    merged_2v_upsample                       0x08016869   Thumb Code   100  jdmerge.o(i.merged_2v_upsample)
+    i.mf_free                                0x080168cc   Section        0  fattester.o(i.mf_free)
+    i.mf_init                                0x080168ec   Section        0  fattester.o(i.mf_init)
+    i.mf_scan_files                          0x08016920   Section        0  fattester.o(i.mf_scan_files)
+    i.mjpeg_malloc                           0x08016988   Section        0  mjpeg.o(i.mjpeg_malloc)
+    i.mjpegdec_decode                        0x080169bc   Section        0  mjpeg.o(i.mjpegdec_decode)
+    i.mjpegdec_free                          0x08016a80   Section        0  mjpeg.o(i.mjpegdec_free)
+    i.mjpegdec_init                          0x08016aa4   Section        0  mjpeg.o(i.mjpegdec_init)
+    i.mount_volume                           0x08016af0   Section        0  ff.o(i.mount_volume)
+    mount_volume                             0x08016af1   Thumb Code   918  ff.o(i.mount_volume)
+    i.move_window                            0x08016e9c   Section        0  ff.o(i.move_window)
+    move_window                              0x08016e9d   Thumb Code    50  ff.o(i.move_window)
+    i.my_emit_message                        0x08016ed0   Section        0  mjpeg.o(i.my_emit_message)
+    my_emit_message                          0x08016ed1   Thumb Code    26  mjpeg.o(i.my_emit_message)
+    i.my_error_exit                          0x08016efc   Section        0  mjpeg.o(i.my_error_exit)
+    my_error_exit                            0x08016efd   Thumb Code    16  mjpeg.o(i.my_error_exit)
+    i.my_mem_init                            0x08016f0c   Section        0  malloc.o(i.my_mem_init)
+    i.my_mem_malloc                          0x08016f38   Section        0  malloc.o(i.my_mem_malloc)
+    my_mem_malloc                            0x08016f39   Thumb Code   132  malloc.o(i.my_mem_malloc)
+    i.my_mem_perused                         0x08016fc4   Section        0  malloc.o(i.my_mem_perused)
+    i.my_mem_set                             0x08017000   Section        0  malloc.o(i.my_mem_set)
+    i.myfree                                 0x0801700c   Section        0  malloc.o(i.myfree)
+    i.mymalloc                               0x08017068   Section        0  malloc.o(i.mymalloc)
+    i.new_color_map_1_quant                  0x08017088   Section        0  jquant1.o(i.new_color_map_1_quant)
+    new_color_map_1_quant                    0x08017089   Thumb Code    12  jquant1.o(i.new_color_map_1_quant)
+    i.new_color_map_2_quant                  0x08017094   Section        0  jquant2.o(i.new_color_map_2_quant)
+    new_color_map_2_quant                    0x08017095   Thumb Code    10  jquant2.o(i.new_color_map_2_quant)
+    i.next_marker                            0x0801709e   Section        0  jdmarker.o(i.next_marker)
+    next_marker                              0x0801709f   Thumb Code   168  jdmarker.o(i.next_marker)
+    i.norflash_erase_sector                  0x08017148   Section        0  norflash.o(i.norflash_erase_sector)
+    i.norflash_init                          0x08017188   Section        0  norflash.o(i.norflash_init)
+    i.norflash_read                          0x08017220   Section        0  norflash.o(i.norflash_read)
+    i.norflash_read_id                       0x08017270   Section        0  norflash.o(i.norflash_read_id)
+    i.norflash_read_sr                       0x080172c4   Section        0  norflash.o(i.norflash_read_sr)
+    i.norflash_send_address                  0x0801730c   Section        0  norflash.o(i.norflash_send_address)
+    norflash_send_address                    0x0801730d   Thumb Code    48  norflash.o(i.norflash_send_address)
+    i.norflash_wait_busy                     0x08017340   Section        0  norflash.o(i.norflash_wait_busy)
+    norflash_wait_busy                       0x08017341   Thumb Code    14  norflash.o(i.norflash_wait_busy)
+    i.norflash_write                         0x08017350   Section        0  norflash.o(i.norflash_write)
+    i.norflash_write_enable                  0x080173ec   Section        0  norflash.o(i.norflash_write_enable)
+    i.norflash_write_nocheck                 0x08017418   Section        0  norflash.o(i.norflash_write_nocheck)
+    norflash_write_nocheck                   0x08017419   Thumb Code   120  norflash.o(i.norflash_write_nocheck)
+    i.norflash_write_sr                      0x08017494   Section        0  norflash.o(i.norflash_write_sr)
+    i.null_convert                           0x080174e0   Section        0  jdcolor.o(i.null_convert)
+    null_convert                             0x080174e1   Thumb Code    96  jdcolor.o(i.null_convert)
+    i.out_of_memory                          0x08017540   Section        0  jmemmgr.o(i.out_of_memory)
+    out_of_memory                            0x08017541   Thumb Code    16  jmemmgr.o(i.out_of_memory)
+    i.output_message                         0x08017550   Section        0  jerror.o(i.output_message)
+    output_message                           0x08017551   Thumb Code    24  jerror.o(i.output_message)
+    i.output_pass_setup                      0x0801756c   Section        0  jdapistd.o(i.output_pass_setup)
+    output_pass_setup                        0x0801756d   Thumb Code   142  jdapistd.o(i.output_pass_setup)
+    i.pass2_fs_dither                        0x080175fa   Section        0  jquant2.o(i.pass2_fs_dither)
+    pass2_fs_dither                          0x080175fb   Thumb Code   474  jquant2.o(i.pass2_fs_dither)
+    i.pass2_no_dither                        0x080177d4   Section        0  jquant2.o(i.pass2_no_dither)
+    pass2_no_dither                          0x080177d5   Thumb Code   110  jquant2.o(i.pass2_no_dither)
+    i.per_scan_setup                         0x08017842   Section        0  jdinput.o(i.per_scan_setup)
+    per_scan_setup                           0x08017843   Thumb Code   266  jdinput.o(i.per_scan_setup)
+    i.pick_lfn                               0x0801794c   Section        0  ff.o(i.pick_lfn)
+    pick_lfn                                 0x0801794d   Thumb Code   110  ff.o(i.pick_lfn)
+    i.post_process_1pass                     0x080179c0   Section        0  jdpostct.o(i.post_process_1pass)
+    post_process_1pass                       0x080179c1   Thumb Code    88  jdpostct.o(i.post_process_1pass)
+    i.post_process_2pass                     0x08017a18   Section        0  jdpostct.o(i.post_process_2pass)
+    post_process_2pass                       0x08017a19   Thumb Code   130  jdpostct.o(i.post_process_2pass)
+    i.post_process_prepass                   0x08017a9a   Section        0  jdpostct.o(i.post_process_prepass)
+    post_process_prepass                     0x08017a9b   Thumb Code   136  jdpostct.o(i.post_process_prepass)
+    i.prepare_for_output_pass                0x08017b22   Section        0  jdmaster.o(i.prepare_for_output_pass)
+    prepare_for_output_pass                  0x08017b23   Thumb Code   278  jdmaster.o(i.prepare_for_output_pass)
+    i.prescan_quantize                       0x08017c38   Section        0  jquant2.o(i.prescan_quantize)
+    prescan_quantize                         0x08017c39   Thumb Code    84  jquant2.o(i.prescan_quantize)
+    i.process_data_context_main              0x08017c8c   Section        0  jdmainct.o(i.process_data_context_main)
+    process_data_context_main                0x08017c8d   Thumb Code   472  jdmainct.o(i.process_data_context_main)
+    i.process_data_crank_post                0x08017e64   Section        0  jdmainct.o(i.process_data_crank_post)
+    process_data_crank_post                  0x08017e65   Thumb Code    22  jdmainct.o(i.process_data_crank_post)
+    i.process_data_simple_main               0x08017e7a   Section        0  jdmainct.o(i.process_data_simple_main)
+    process_data_simple_main                 0x08017e7b   Thumb Code    78  jdmainct.o(i.process_data_simple_main)
+    i.process_restart                        0x08017ec8   Section        0  jdarith.o(i.process_restart)
+    process_restart                          0x08017ec9   Thumb Code   156  jdarith.o(i.process_restart)
+    i.process_restart                        0x08017f64   Section        0  jdhuff.o(i.process_restart)
+    process_restart                          0x08017f65   Thumb Code    70  jdhuff.o(i.process_restart)
+    i.put_fat                                0x08017faa   Section        0  ff.o(i.put_fat)
+    put_fat                                  0x08017fab   Thumb Code   246  ff.o(i.put_fat)
+    i.put_utf                                0x080180a0   Section        0  ff.o(i.put_utf)
+    put_utf                                  0x080180a1   Thumb Code    46  ff.o(i.put_utf)
+    i.quantize3_ord_dither                   0x080180ce   Section        0  jquant1.o(i.quantize3_ord_dither)
+    quantize3_ord_dither                     0x080180cf   Thumb Code   158  jquant1.o(i.quantize3_ord_dither)
+    i.quantize_fs_dither                     0x0801816c   Section        0  jquant1.o(i.quantize_fs_dither)
+    quantize_fs_dither                       0x0801816d   Thumb Code   292  jquant1.o(i.quantize_fs_dither)
+    i.quantize_ord_dither                    0x08018290   Section        0  jquant1.o(i.quantize_ord_dither)
+    quantize_ord_dither                      0x08018291   Thumb Code   142  jquant1.o(i.quantize_ord_dither)
+    i.read_addr                              0x0801831e   Section        0  usmart.o(i.read_addr)
+    i.read_markers                           0x08018324   Section        0  jdmarker.o(i.read_markers)
+    read_markers                             0x08018325   Thumb Code   408  jdmarker.o(i.read_markers)
+    i.read_restart_marker                    0x080184c0   Section        0  jdmarker.o(i.read_restart_marker)
+    read_restart_marker                      0x080184c1   Thumb Code   102  jdmarker.o(i.read_restart_marker)
+    i.realize_virt_arrays                    0x08018528   Section        0  jmemmgr.o(i.realize_virt_arrays)
+    realize_virt_arrays                      0x08018529   Thumb Code   280  jmemmgr.o(i.realize_virt_arrays)
+    i.remove_chain                           0x08018644   Section        0  ff.o(i.remove_chain)
+    remove_chain                             0x08018645   Thumb Code   268  ff.o(i.remove_chain)
+    i.request_virt_barray                    0x08018750   Section        0  jmemmgr.o(i.request_virt_barray)
+    request_virt_barray                      0x08018751   Thumb Code    78  jmemmgr.o(i.request_virt_barray)
+    i.request_virt_sarray                    0x0801879e   Section        0  jmemmgr.o(i.request_virt_sarray)
+    request_virt_sarray                      0x0801879f   Thumb Code    78  jmemmgr.o(i.request_virt_sarray)
+    i.reset_error_mgr                        0x080187ec   Section        0  jerror.o(i.reset_error_mgr)
+    reset_error_mgr                          0x080187ed   Thumb Code    12  jerror.o(i.reset_error_mgr)
+    i.reset_input_controller                 0x080187f8   Section        0  jdinput.o(i.reset_input_controller)
+    reset_input_controller                   0x080187f9   Thumb Code    46  jdinput.o(i.reset_input_controller)
+    i.reset_marker_reader                    0x0801882c   Section        0  jdmarker.o(i.reset_marker_reader)
+    reset_marker_reader                      0x0801882d   Thumb Code    28  jdmarker.o(i.reset_marker_reader)
+    i.rgb1_gray_convert                      0x08018848   Section        0  jdcolor.o(i.rgb1_gray_convert)
+    rgb1_gray_convert                        0x08018849   Thumb Code   122  jdcolor.o(i.rgb1_gray_convert)
+    i.rgb1_rgb_convert                       0x080188c2   Section        0  jdcolor.o(i.rgb1_rgb_convert)
+    rgb1_rgb_convert                         0x080188c3   Thumb Code    92  jdcolor.o(i.rgb1_rgb_convert)
+    i.rgb_convert                            0x0801891e   Section        0  jdcolor.o(i.rgb_convert)
+    rgb_convert                              0x0801891f   Thumb Code    84  jdcolor.o(i.rgb_convert)
+    i.rgb_gray_convert                       0x08018972   Section        0  jdcolor.o(i.rgb_gray_convert)
+    rgb_gray_convert                         0x08018973   Thumb Code   110  jdcolor.o(i.rgb_gray_convert)
+    i.sd_init                                0x080189e0   Section        0  sdio_sdcard.o(i.sd_init)
+    i.sd_read_disk                           0x08018a28   Section        0  sdio_sdcard.o(i.sd_read_disk)
+    i.sd_write_disk                          0x08018a5c   Section        0  sdio_sdcard.o(i.sd_write_disk)
+    i.select_colors                          0x08018a90   Section        0  jquant2.o(i.select_colors)
+    select_colors                            0x08018a91   Thumb Code   112  jquant2.o(i.select_colors)
+    i.select_ncolors                         0x08018b00   Section        0  jquant1.o(i.select_ncolors)
+    select_ncolors                           0x08018b01   Thumb Code   146  jquant1.o(i.select_ncolors)
+    i.self_destruct                          0x08018b98   Section        0  jmemmgr.o(i.self_destruct)
+    self_destruct                            0x08018b99   Thumb Code    42  jmemmgr.o(i.self_destruct)
+    i.sep_upsample                           0x08018bc2   Section        0  jdsample.o(i.sep_upsample)
+    sep_upsample                             0x08018bc3   Thumb Code   186  jdsample.o(i.sep_upsample)
+    i.skip_input_data                        0x08018c7c   Section        0  mjpeg.o(i.skip_input_data)
+    skip_input_data                          0x08018c7d   Thumb Code    42  mjpeg.o(i.skip_input_data)
+    i.skip_variable                          0x08018ca6   Section        0  jdmarker.o(i.skip_variable)
+    skip_variable                            0x08018ca7   Thumb Code   116  jdmarker.o(i.skip_variable)
+    i.smoothing_ok                           0x08018d1a   Section        0  jdcoefct.o(i.smoothing_ok)
+    smoothing_ok                             0x08018d1b   Thumb Code   146  jdcoefct.o(i.smoothing_ok)
+    i.spi1_init                              0x08018dac   Section        0  spi.o(i.spi1_init)
+    i.spi1_read_write_byte                   0x08018e14   Section        0  spi.o(i.spi1_read_write_byte)
+    i.spi1_set_speed                         0x08018e34   Section        0  spi.o(i.spi1_set_speed)
+    i.sram_init                              0x08018e68   Section        0  sram.o(i.sram_init)
+    i.st_clust                               0x08018fcc   Section        0  ff.o(i.st_clust)
+    st_clust                                 0x08018fcd   Thumb Code    40  ff.o(i.st_clust)
+    i.st_dword                               0x08018ff4   Section        0  ff.o(i.st_dword)
+    st_dword                                 0x08018ff5   Thumb Code    16  ff.o(i.st_dword)
+    i.st_qword                               0x08019004   Section        0  ff.o(i.st_qword)
+    st_qword                                 0x08019005   Thumb Code    74  ff.o(i.st_qword)
+    i.st_word                                0x0801904e   Section        0  ff.o(i.st_word)
+    st_word                                  0x0801904f   Thumb Code     8  ff.o(i.st_word)
+    i.start_iMCU_row                         0x08019056   Section        0  jdcoefct.o(i.start_iMCU_row)
+    start_iMCU_row                           0x08019057   Thumb Code    48  jdcoefct.o(i.start_iMCU_row)
+    i.start_input_pass                       0x08019086   Section        0  jdinput.o(i.start_input_pass)
+    start_input_pass                         0x08019087   Thumb Code   140  jdinput.o(i.start_input_pass)
+    i.start_input_pass                       0x08019112   Section        0  jdcoefct.o(i.start_input_pass)
+    start_input_pass                         0x08019113   Thumb Code     8  jdcoefct.o(i.start_input_pass)
+    i.start_output_pass                      0x0801911c   Section        0  jdcoefct.o(i.start_output_pass)
+    start_output_pass                        0x0801911d   Thumb Code    40  jdcoefct.o(i.start_output_pass)
+    i.start_pass                             0x0801914c   Section        0  jdarith.o(i.start_pass)
+    start_pass                               0x0801914d   Thumb Code   584  jdarith.o(i.start_pass)
+    i.start_pass                             0x080193a8   Section        0  jddctmgr.o(i.start_pass)
+    start_pass                               0x080193a9   Thumb Code   772  jddctmgr.o(i.start_pass)
+    i.start_pass_1_quant                     0x08019740   Section        0  jquant1.o(i.start_pass_1_quant)
+    start_pass_1_quant                       0x08019741   Thumb Code   164  jquant1.o(i.start_pass_1_quant)
+    i.start_pass_2_quant                     0x080197f8   Section        0  jquant2.o(i.start_pass_2_quant)
+    start_pass_2_quant                       0x080197f9   Thumb Code   208  jquant2.o(i.start_pass_2_quant)
+    i.start_pass_dcolor                      0x080198dc   Section        0  jdcolor.o(i.start_pass_dcolor)
+    start_pass_dcolor                        0x080198dd   Thumb Code     2  jdcolor.o(i.start_pass_dcolor)
+    i.start_pass_dpost                       0x080198e0   Section        0  jdpostct.o(i.start_pass_dpost)
+    start_pass_dpost                         0x080198e1   Thumb Code   118  jdpostct.o(i.start_pass_dpost)
+    i.start_pass_huff_decoder                0x08019964   Section        0  jdhuff.o(i.start_pass_huff_decoder)
+    start_pass_huff_decoder                  0x08019965   Thumb Code   976  jdhuff.o(i.start_pass_huff_decoder)
+    i.start_pass_main                        0x08019d58   Section        0  jdmainct.o(i.start_pass_main)
+    start_pass_main                          0x08019d59   Thumb Code    74  jdmainct.o(i.start_pass_main)
+    i.start_pass_merged_upsample             0x08019db0   Section        0  jdmerge.o(i.start_pass_merged_upsample)
+    start_pass_merged_upsample               0x08019db1   Thumb Code    16  jdmerge.o(i.start_pass_merged_upsample)
+    i.start_pass_upsample                    0x08019dc0   Section        0  jdsample.o(i.start_pass_upsample)
+    start_pass_upsample                      0x08019dc1   Thumb Code    16  jdsample.o(i.start_pass_upsample)
+    i.store_xdir                             0x08019dd0   Section        0  ff.o(i.store_xdir)
+    store_xdir                               0x08019dd1   Thumb Code   106  ff.o(i.store_xdir)
+    i.sum_sfn                                0x08019e3a   Section        0  ff.o(i.sum_sfn)
+    sum_sfn                                  0x08019e3b   Thumb Code    26  ff.o(i.sum_sfn)
+    i.sync_fs                                0x08019e54   Section        0  ff.o(i.sync_fs)
+    sync_fs                                  0x08019e55   Thumb Code   124  ff.o(i.sync_fs)
+    i.sync_window                            0x08019ed8   Section        0  ff.o(i.sync_window)
+    sync_window                              0x08019ed9   Thumb Code    70  ff.o(i.sync_window)
+    i.sys_stm32_clock_init                   0x08019f20   Section        0  sys.o(i.sys_stm32_clock_init)
+    i.tchar2uni                              0x08019fd0   Section        0  ff.o(i.tchar2uni)
+    tchar2uni                                0x08019fd1   Thumb Code    78  ff.o(i.tchar2uni)
+    i.term_source                            0x0801a01e   Section        0  mjpeg.o(i.term_source)
+    term_source                              0x0801a01f   Thumb Code     2  mjpeg.o(i.term_source)
+    i.text_get_hz_mat                        0x0801a020   Section        0  text.o(i.text_get_hz_mat)
+    text_get_hz_mat                          0x0801a021   Thumb Code   136  text.o(i.text_get_hz_mat)
+    i.text_show_font                         0x0801a0ac   Section        0  text.o(i.text_show_font)
+    i.text_show_string                       0x0801a160   Section        0  text.o(i.text_show_string)
+    i.update_box                             0x0801a216   Section        0  jquant2.o(i.update_box)
+    update_box                               0x0801a217   Thumb Code   572  jquant2.o(i.update_box)
+    i.usart_init                             0x0801a454   Section        0  usart.o(i.usart_init)
+    i.use_merged_upsample                    0x0801a48c   Section        0  jdmaster.o(i.use_merged_upsample)
+    use_merged_upsample                      0x0801a48d   Thumb Code   150  jdmaster.o(i.use_merged_upsample)
+    i.usmart_cmd_rec                         0x0801a524   Section        0  usmart.o(i.usmart_cmd_rec)
+    i.usmart_exe                             0x0801a5b8   Section        0  usmart.o(i.usmart_exe)
+    i.usmart_get_aparm                       0x0801a818   Section        0  usmart_str.o(i.usmart_get_aparm)
+    i.usmart_get_cmdname                     0x0801a8bc   Section        0  usmart_str.o(i.usmart_get_cmdname)
+    i.usmart_get_fname                       0x0801a8ec   Section        0  usmart_str.o(i.usmart_get_fname)
+    i.usmart_get_fparam                      0x0801aa54   Section        0  usmart_str.o(i.usmart_get_fparam)
+    i.usmart_get_input_string                0x0801ab24   Section        0  usmart_port.o(i.usmart_get_input_string)
+    i.usmart_get_parmpos                     0x0801ab44   Section        0  usmart_str.o(i.usmart_get_parmpos)
+    i.usmart_init                            0x0801ab68   Section        0  usmart.o(i.usmart_init)
+    i.usmart_pow                             0x0801ab90   Section        0  usmart_str.o(i.usmart_pow)
+    i.usmart_scan                            0x0801aba0   Section        0  usmart.o(i.usmart_scan)
+    i.usmart_search_nextc                    0x0801ac30   Section        0  usmart_str.o(i.usmart_search_nextc)
+    i.usmart_str2num                         0x0801ac40   Section        0  usmart_str.o(i.usmart_str2num)
+    i.usmart_strcmp                          0x0801ad16   Section        0  usmart_str.o(i.usmart_strcmp)
+    i.usmart_strcopy                         0x0801ad2e   Section        0  usmart_str.o(i.usmart_strcopy)
+    i.usmart_strlen                          0x0801ad40   Section        0  usmart_str.o(i.usmart_strlen)
+    i.usmart_sys_cmd_exe                     0x0801ad54   Section        0  usmart.o(i.usmart_sys_cmd_exe)
+    i.usmart_timx_get_time                   0x0801b3d4   Section        0  usmart_port.o(i.usmart_timx_get_time)
+    i.usmart_timx_init                       0x0801b404   Section        0  usmart_port.o(i.usmart_timx_init)
+    i.usmart_timx_reset_time                 0x0801b454   Section        0  usmart_port.o(i.usmart_timx_reset_time)
+    i.validate                               0x0801b47c   Section        0  ff.o(i.validate)
+    validate                                 0x0801b47d   Thumb Code    52  ff.o(i.validate)
+    i.video_get_tnum                         0x0801b4b0   Section        0  videoplayer.o(i.video_get_tnum)
+    i.video_play                             0x0801b504   Section        0  videoplayer.o(i.video_play)
+    i.video_play_mjpeg                       0x0801b6f8   Section        0  videoplayer.o(i.video_play_mjpeg)
+    i.write_addr                             0x0801ba38   Section        0  usmart.o(i.write_addr)
+    i.xdir_sum                               0x0801ba3c   Section        0  ff.o(i.xdir_sum)
+    xdir_sum                                 0x0801ba3d   Thumb Code    52  ff.o(i.xdir_sum)
+    i.xname_sum                              0x0801ba70   Section        0  ff.o(i.xname_sum)
+    xname_sum                                0x0801ba71   Thumb Code    62  ff.o(i.xname_sum)
+    i.ycc_rgb_convert                        0x0801baae   Section        0  jdcolor.o(i.ycc_rgb_convert)
+    ycc_rgb_convert                          0x0801baaf   Thumb Code   160  jdcolor.o(i.ycc_rgb_convert)
+    i.ycck_cmyk_convert                      0x0801bb4e   Section        0  jdcolor.o(i.ycck_cmyk_convert)
+    ycck_cmyk_convert                        0x0801bb4f   Thumb Code   182  jdcolor.o(i.ycck_cmyk_convert)
+    locale$$code                             0x0801bc04   Section       44  lc_ctype_c.o(locale$$code)
+    x$fpl$d2f                                0x0801bc30   Section       98  d2f.o(x$fpl$d2f)
+    $v0                                      0x0801bc30   Number         0  d2f.o(x$fpl$d2f)
+    x$fpl$dfixu                              0x0801bc94   Section       90  dfixu.o(x$fpl$dfixu)
+    $v0                                      0x0801bc94   Number         0  dfixu.o(x$fpl$dfixu)
+    x$fpl$dfltu                              0x0801bcee   Section       38  dflt_clz.o(x$fpl$dfltu)
+    $v0                                      0x0801bcee   Number         0  dflt_clz.o(x$fpl$dfltu)
+    x$fpl$dmul                               0x0801bd14   Section      340  dmul.o(x$fpl$dmul)
+    $v0                                      0x0801bd14   Number         0  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x0801be68   Section      156  dnaninf.o(x$fpl$dnaninf)
+    $v0                                      0x0801be68   Number         0  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x0801bf04   Section       12  dretinf.o(x$fpl$dretinf)
+    $v0                                      0x0801bf04   Number         0  dretinf.o(x$fpl$dretinf)
+    x$fpl$fpinit                             0x0801bf10   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x0801bf10   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fretinf                            0x0801bf1a   Section       10  fretinf.o(x$fpl$fretinf)
+    $v0                                      0x0801bf1a   Number         0  fretinf.o(x$fpl$fretinf)
+    .constdata                               0x0801bf24   Section       16  system_stm32f4xx.o(.constdata)
+    x$fpl$usenofp                            0x0801bf24   Section        0  usenofp.o(x$fpl$usenofp)
+    .constdata                               0x0801bf34   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x0801bf3c   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x0801bf3c   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x0801bf44   Section    12160  lcd.o(.constdata)
+    .constdata                               0x0801eec4   Section      110  i2s.o(.constdata)
+    .constdata                               0x0801ef34   Section       36  malloc.o(.constdata)
+    .constdata                               0x0801ef58   Section      196  exfuns.o(.constdata)
+    .constdata                               0x0801f01c   Section       76  ff.o(.constdata)
+    LfnOfs                                   0x0801f01c   Data          13  ff.o(.constdata)
+    badchr                                   0x0801f029   Data          18  ff.o(.constdata)
+    cst                                      0x0801f03c   Data          14  ff.o(.constdata)
+    cst32                                    0x0801f04a   Data          14  ff.o(.constdata)
+    defopt                                   0x0801f058   Data          16  ff.o(.constdata)
+    .constdata                               0x0801f068   Section      686  myffunicode.o(.constdata)
+    cvt1                                     0x0801f068   Data         498  myffunicode.o(.constdata)
+    cvt2                                     0x0801f25a   Data         188  myffunicode.o(.constdata)
+    .constdata                               0x0801f318   Section       16  avi.o(.constdata)
+    .constdata                               0x0801f328   Section      456  jaricom.o(.constdata)
+    .constdata                               0x0801f4f0   Section      416  jcomapi.o(.constdata)
+    bits_dc_luminance                        0x0801f4f0   Data          17  jcomapi.o(.constdata)
+    val_dc_luminance                         0x0801f501   Data          12  jcomapi.o(.constdata)
+    bits_dc_chrominance                      0x0801f50d   Data          17  jcomapi.o(.constdata)
+    val_dc_chrominance                       0x0801f51e   Data          12  jcomapi.o(.constdata)
+    bits_ac_luminance                        0x0801f52a   Data          17  jcomapi.o(.constdata)
+    val_ac_luminance                         0x0801f53b   Data         162  jcomapi.o(.constdata)
+    bits_ac_chrominance                      0x0801f5dd   Data          17  jcomapi.o(.constdata)
+    val_ac_chrominance                       0x0801f5ee   Data         162  jcomapi.o(.constdata)
+    .constdata                               0x0801f690   Section      320  jutils.o(.constdata)
+    .constdata                               0x0801f7d0   Section      260  jutils.o(.constdata)
+    .constdata                               0x0801f8d4   Section      208  jutils.o(.constdata)
+    .constdata                               0x0801f9a4   Section      164  jutils.o(.constdata)
+    .constdata                               0x0801fa48   Section      128  jutils.o(.constdata)
+    .constdata                               0x0801fac8   Section      100  jutils.o(.constdata)
+    .constdata                               0x0801fb2c   Section       80  jutils.o(.constdata)
+    .constdata                               0x0801fb7c   Section      512  jerror.o(.constdata)
+    .constdata                               0x0801fd7c   Section       16  jmemmgr.o(.constdata)
+    first_pool_slop                          0x0801fd7c   Data           8  jmemmgr.o(.constdata)
+    extra_pool_slop                          0x0801fd84   Data           8  jmemmgr.o(.constdata)
+    .constdata                               0x0801fd8c   Section      876  jdhuff.o(.constdata)
+    jpeg_zigzag_order                        0x0801fd8c   Data         256  jdhuff.o(.constdata)
+    jpeg_zigzag_order7                       0x0801fe8c   Data         196  jdhuff.o(.constdata)
+    jpeg_zigzag_order6                       0x0801ff50   Data         144  jdhuff.o(.constdata)
+    jpeg_zigzag_order5                       0x0801ffe0   Data         100  jdhuff.o(.constdata)
+    jpeg_zigzag_order4                       0x08020044   Data          64  jdhuff.o(.constdata)
+    jpeg_zigzag_order3                       0x08020084   Data          36  jdhuff.o(.constdata)
+    jpeg_zigzag_order2                       0x080200a8   Data          16  jdhuff.o(.constdata)
+    bmask                                    0x080200b8   Data          64  jdhuff.o(.constdata)
+    .constdata                               0x080200f8   Section      192  jddctmgr.o(.constdata)
+    aanscales                                0x080200f8   Data         128  jddctmgr.o(.constdata)
+    aanscalefactor                           0x08020178   Data          64  jddctmgr.o(.constdata)
+    .constdata                               0x080201b8   Section      268  jquant1.o(.constdata)
+    base_dither_matrix                       0x080201b8   Data         256  jquant1.o(.constdata)
+    RGB_order                                0x080202b8   Data          12  jquant1.o(.constdata)
+    .constdata                               0x080202c4   Section        8  _printf_wctomb.o(.constdata)
+    initial_mbstate                          0x080202c4   Data           8  _printf_wctomb.o(.constdata)
+    .constdata                               0x080202cc   Section       40  _printf_hex_int_ptr.o(.constdata)
+    uc_hextab                                0x080202cc   Data          20  _printf_hex_int_ptr.o(.constdata)
+    lc_hextab                                0x080202e0   Data          20  _printf_hex_int_ptr.o(.constdata)
+    .constdata                               0x080202f4   Section       17  __printf_flags_ss_wp.o(.constdata)
+    maptable                                 0x080202f4   Data          17  __printf_flags_ss_wp.o(.constdata)
+    .conststring                             0x08020308   Section       40  usmart.o(.conststring)
+    .conststring                             0x08020330   Section      668  usmart_config.o(.conststring)
+    .conststring                             0x080205cc   Section       84  exfuns.o(.conststring)
+    .conststring                             0x08020620   Section       29  avi.o(.conststring)
+    .conststring                             0x08020640   Section     4881  jerror.o(.conststring)
+    locale$$data                             0x08021974   Section      272  lc_ctype_c.o(locale$$data)
+    __lcctype_c_name                         0x08021978   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x08021980   Data           0  lc_ctype_c.o(locale$$data)
+    __lcctype_c_end                          0x08021a84   Data           0  lc_ctype_c.o(locale$$data)
     .ARM.__AT_0x10000000                     0x10000000   Section    61440  malloc.o(.ARM.__AT_0x10000000)
     mem2base                                 0x10000000   Data       61440  malloc.o(.ARM.__AT_0x10000000)
     .ARM.__AT_0x1000F000                     0x1000f000   Section     3840  malloc.o(.ARM.__AT_0x1000F000)
@@ -4634,6 +4632,7 @@ Image Symbol Table
     .data                                    0x20000000   Section        4  system_stm32f4xx.o(.data)
     .data                                    0x20000004   Section        8  videoplayer.o(.data)
     g_text_stream_ready                      0x20000004   Data           1  videoplayer.o(.data)
+    last_scroll_time                         0x20000008   Data           4  videoplayer.o(.data)
     .data                                    0x2000000c   Section        4  delay.o(.data)
     g_fac_us                                 0x2000000c   Data           4  delay.o(.data)
     .data                                    0x20000010   Section        4  usart.o(.data)
@@ -5227,108 +5226,107 @@ Image Symbol Table
     lcd_write_ram_prepare                    0x080160bd   Thumb Code    14  lcd.o(i.lcd_write_ram_prepare)
     lcd_write_reg                            0x080160d1   Thumb Code    12  lcd.o(i.lcd_write_reg)
     led_init                                 0x08016179   Thumb Code   100  led.o(i.led_init)
-    load_text_file_stream                    0x08016221   Thumb Code   148  videoplayer.o(i.load_text_file_stream)
-    main                                     0x080163cd   Thumb Code   204  main.o(i.main)
-    mf_free                                  0x080168dd   Thumb Code    26  fattester.o(i.mf_free)
-    mf_init                                  0x080168fd   Thumb Code    48  fattester.o(i.mf_init)
-    mf_scan_files                            0x08016931   Thumb Code    78  fattester.o(i.mf_scan_files)
-    mjpeg_malloc                             0x08016999   Thumb Code    32  mjpeg.o(i.mjpeg_malloc)
-    mjpegdec_decode                          0x080169cd   Thumb Code   180  mjpeg.o(i.mjpegdec_decode)
-    mjpegdec_free                            0x08016a91   Thumb Code    32  mjpeg.o(i.mjpegdec_free)
-    mjpegdec_init                            0x08016ab5   Thumb Code    70  mjpeg.o(i.mjpegdec_init)
-    my_mem_init                              0x08016f1d   Thumb Code    36  malloc.o(i.my_mem_init)
-    my_mem_perused                           0x08016fd5   Thumb Code    50  malloc.o(i.my_mem_perused)
-    my_mem_set                               0x08017011   Thumb Code    12  malloc.o(i.my_mem_set)
-    myfree                                   0x0801701d   Thumb Code    82  malloc.o(i.myfree)
-    mymalloc                                 0x08017079   Thumb Code    28  malloc.o(i.mymalloc)
-    norflash_erase_sector                    0x08017159   Thumb Code    58  norflash.o(i.norflash_erase_sector)
-    norflash_init                            0x08017199   Thumb Code   140  norflash.o(i.norflash_init)
-    norflash_read                            0x08017231   Thumb Code    74  norflash.o(i.norflash_read)
-    norflash_read_id                         0x08017281   Thumb Code    78  norflash.o(i.norflash_read_id)
-    norflash_read_sr                         0x080172d5   Thumb Code    68  norflash.o(i.norflash_read_sr)
-    norflash_write                           0x08017361   Thumb Code   150  norflash.o(i.norflash_write)
-    norflash_write_enable                    0x080173fd   Thumb Code    38  norflash.o(i.norflash_write_enable)
-    norflash_write_sr                        0x080174a5   Thumb Code    70  norflash.o(i.norflash_write_sr)
-    read_addr                                0x0801832f   Thumb Code     4  usmart.o(i.read_addr)
-    sd_init                                  0x080189f1   Thumb Code    62  sdio_sdcard.o(i.sd_init)
-    sd_read_disk                             0x08018a39   Thumb Code    44  sdio_sdcard.o(i.sd_read_disk)
-    sd_write_disk                            0x08018a6d   Thumb Code    44  sdio_sdcard.o(i.sd_write_disk)
-    spi1_init                                0x08018dbd   Thumb Code    90  spi.o(i.spi1_init)
-    spi1_read_write_byte                     0x08018e25   Thumb Code    28  spi.o(i.spi1_read_write_byte)
-    spi1_set_speed                           0x08018e45   Thumb Code    48  spi.o(i.spi1_set_speed)
-    sram_init                                0x08018e79   Thumb Code   326  sram.o(i.sram_init)
-    sys_stm32_clock_init                     0x08019f31   Thumb Code   162  sys.o(i.sys_stm32_clock_init)
-    text_show_font                           0x0801a0bd   Thumb Code   176  text.o(i.text_show_font)
-    text_show_string                         0x0801a171   Thumb Code   182  text.o(i.text_show_string)
-    usart_init                               0x0801a465   Thumb Code    44  usart.o(i.usart_init)
-    usmart_cmd_rec                           0x0801a535   Thumb Code   144  usmart.o(i.usmart_cmd_rec)
-    usmart_exe                               0x0801a5c9   Thumb Code   510  usmart.o(i.usmart_exe)
-    usmart_get_aparm                         0x0801a829   Thumb Code   164  usmart_str.o(i.usmart_get_aparm)
-    usmart_get_cmdname                       0x0801a8cd   Thumb Code    46  usmart_str.o(i.usmart_get_cmdname)
-    usmart_get_fname                         0x0801a8fd   Thumb Code   352  usmart_str.o(i.usmart_get_fname)
-    usmart_get_fparam                        0x0801aa65   Thumb Code   202  usmart_str.o(i.usmart_get_fparam)
-    usmart_get_input_string                  0x0801ab35   Thumb Code    24  usmart_port.o(i.usmart_get_input_string)
-    usmart_get_parmpos                       0x0801ab55   Thumb Code    30  usmart_str.o(i.usmart_get_parmpos)
-    usmart_init                              0x0801ab79   Thumb Code    36  usmart.o(i.usmart_init)
-    usmart_pow                               0x0801aba1   Thumb Code    16  usmart_str.o(i.usmart_pow)
-    usmart_scan                              0x0801abb1   Thumb Code    82  usmart.o(i.usmart_scan)
-    usmart_search_nextc                      0x0801ac41   Thumb Code    16  usmart_str.o(i.usmart_search_nextc)
-    usmart_str2num                           0x0801ac51   Thumb Code   214  usmart_str.o(i.usmart_str2num)
-    usmart_strcmp                            0x0801ad27   Thumb Code    24  usmart_str.o(i.usmart_strcmp)
-    usmart_strcopy                           0x0801ad3f   Thumb Code    18  usmart_str.o(i.usmart_strcopy)
-    usmart_strlen                            0x0801ad51   Thumb Code    18  usmart_str.o(i.usmart_strlen)
-    usmart_sys_cmd_exe                       0x0801ad65   Thumb Code  1458  usmart.o(i.usmart_sys_cmd_exe)
-    usmart_timx_get_time                     0x0801b3e5   Thumb Code    38  usmart_port.o(i.usmart_timx_get_time)
-    usmart_timx_init                         0x0801b415   Thumb Code    68  usmart_port.o(i.usmart_timx_init)
-    usmart_timx_reset_time                   0x0801b465   Thumb Code    32  usmart_port.o(i.usmart_timx_reset_time)
-    video_get_tnum                           0x0801b4c1   Thumb Code    84  videoplayer.o(i.video_get_tnum)
-    video_play                               0x0801b515   Thumb Code   418  videoplayer.o(i.video_play)
-    video_play_mjpeg                         0x0801b709   Thumb Code   736  videoplayer.o(i.video_play_mjpeg)
-    write_addr                               0x0801ba49   Thumb Code     4  usmart.o(i.write_addr)
-    _get_lc_ctype                            0x0801bc15   Thumb Code    44  lc_ctype_c.o(locale$$code)
-    __aeabi_d2f                              0x0801bc41   Thumb Code     0  d2f.o(x$fpl$d2f)
-    _d2f                                     0x0801bc41   Thumb Code    98  d2f.o(x$fpl$d2f)
-    __aeabi_d2uiz                            0x0801bca5   Thumb Code     0  dfixu.o(x$fpl$dfixu)
-    _dfixu                                   0x0801bca5   Thumb Code    90  dfixu.o(x$fpl$dfixu)
-    __aeabi_ui2d                             0x0801bcff   Thumb Code     0  dflt_clz.o(x$fpl$dfltu)
-    _dfltu                                   0x0801bcff   Thumb Code    38  dflt_clz.o(x$fpl$dfltu)
-    __aeabi_dmul                             0x0801bd25   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x0801bd25   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x0801be79   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x0801bf15   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    _fp_init                                 0x0801bf21   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x0801bf29   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x0801bf29   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fpl_fretinf                            0x0801bf2b   Thumb Code    10  fretinf.o(x$fpl$fretinf)
-    AHBPrescTable                            0x0801bf34   Data          16  system_stm32f4xx.o(.constdata)
-    __I$use$fp                               0x0801bf34   Number         0  usenofp.o(x$fpl$usenofp)
-    APBPrescTable                            0x0801bf44   Data           8  system_stm32f4xx.o(.constdata)
-    asc2_1206                                0x0801bf54   Data        1140  lcd.o(.constdata)
-    asc2_1608                                0x0801c3c8   Data        1520  lcd.o(.constdata)
-    asc2_2412                                0x0801c9b8   Data        3420  lcd.o(.constdata)
-    asc2_3216                                0x0801d714   Data        6080  lcd.o(.constdata)
-    I2S_PSC_TBL                              0x0801eed4   Data         110  i2s.o(.constdata)
-    memtblsize                               0x0801ef44   Data          12  malloc.o(.constdata)
-    memblksize                               0x0801ef50   Data          12  malloc.o(.constdata)
-    memsize                                  0x0801ef5c   Data          12  malloc.o(.constdata)
-    FILE_TYPE_TBL                            0x0801ef68   Data         196  exfuns.o(.constdata)
-    AVI_VIDS_FLAG_TBL                        0x0801f328   Data           8  avi.o(.constdata)
-    AVI_AUDS_FLAG_TBL                        0x0801f330   Data           8  avi.o(.constdata)
-    jpeg_aritab                              0x0801f338   Data         456  jaricom.o(.constdata)
-    jpeg_natural_order                       0x0801f6a0   Data         320  jutils.o(.constdata)
-    jpeg_natural_order7                      0x0801f7e0   Data         260  jutils.o(.constdata)
-    jpeg_natural_order6                      0x0801f8e4   Data         208  jutils.o(.constdata)
-    jpeg_natural_order5                      0x0801f9b4   Data         164  jutils.o(.constdata)
-    jpeg_natural_order4                      0x0801fa58   Data         128  jutils.o(.constdata)
-    jpeg_natural_order3                      0x0801fad8   Data         100  jutils.o(.constdata)
-    jpeg_natural_order2                      0x0801fb3c   Data          80  jutils.o(.constdata)
-    jpeg_std_message_table                   0x0801fb8c   Data         512  jerror.o(.constdata)
-    Region$$Table$$Base                      0x08021964   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08021984   Number         0  anon$$obj.o(Region$$Table)
-    __ctype                                  0x08021991   Data           0  lc_ctype_c.o(locale$$data)
+    load_text_file_stream                    0x08016221   Thumb Code   136  videoplayer.o(i.load_text_file_stream)
+    main                                     0x080163bd   Thumb Code   204  main.o(i.main)
+    mf_free                                  0x080168cd   Thumb Code    26  fattester.o(i.mf_free)
+    mf_init                                  0x080168ed   Thumb Code    48  fattester.o(i.mf_init)
+    mf_scan_files                            0x08016921   Thumb Code    78  fattester.o(i.mf_scan_files)
+    mjpeg_malloc                             0x08016989   Thumb Code    32  mjpeg.o(i.mjpeg_malloc)
+    mjpegdec_decode                          0x080169bd   Thumb Code   180  mjpeg.o(i.mjpegdec_decode)
+    mjpegdec_free                            0x08016a81   Thumb Code    32  mjpeg.o(i.mjpegdec_free)
+    mjpegdec_init                            0x08016aa5   Thumb Code    70  mjpeg.o(i.mjpegdec_init)
+    my_mem_init                              0x08016f0d   Thumb Code    36  malloc.o(i.my_mem_init)
+    my_mem_perused                           0x08016fc5   Thumb Code    50  malloc.o(i.my_mem_perused)
+    my_mem_set                               0x08017001   Thumb Code    12  malloc.o(i.my_mem_set)
+    myfree                                   0x0801700d   Thumb Code    82  malloc.o(i.myfree)
+    mymalloc                                 0x08017069   Thumb Code    28  malloc.o(i.mymalloc)
+    norflash_erase_sector                    0x08017149   Thumb Code    58  norflash.o(i.norflash_erase_sector)
+    norflash_init                            0x08017189   Thumb Code   140  norflash.o(i.norflash_init)
+    norflash_read                            0x08017221   Thumb Code    74  norflash.o(i.norflash_read)
+    norflash_read_id                         0x08017271   Thumb Code    78  norflash.o(i.norflash_read_id)
+    norflash_read_sr                         0x080172c5   Thumb Code    68  norflash.o(i.norflash_read_sr)
+    norflash_write                           0x08017351   Thumb Code   150  norflash.o(i.norflash_write)
+    norflash_write_enable                    0x080173ed   Thumb Code    38  norflash.o(i.norflash_write_enable)
+    norflash_write_sr                        0x08017495   Thumb Code    70  norflash.o(i.norflash_write_sr)
+    read_addr                                0x0801831f   Thumb Code     4  usmart.o(i.read_addr)
+    sd_init                                  0x080189e1   Thumb Code    62  sdio_sdcard.o(i.sd_init)
+    sd_read_disk                             0x08018a29   Thumb Code    44  sdio_sdcard.o(i.sd_read_disk)
+    sd_write_disk                            0x08018a5d   Thumb Code    44  sdio_sdcard.o(i.sd_write_disk)
+    spi1_init                                0x08018dad   Thumb Code    90  spi.o(i.spi1_init)
+    spi1_read_write_byte                     0x08018e15   Thumb Code    28  spi.o(i.spi1_read_write_byte)
+    spi1_set_speed                           0x08018e35   Thumb Code    48  spi.o(i.spi1_set_speed)
+    sram_init                                0x08018e69   Thumb Code   326  sram.o(i.sram_init)
+    sys_stm32_clock_init                     0x08019f21   Thumb Code   162  sys.o(i.sys_stm32_clock_init)
+    text_show_font                           0x0801a0ad   Thumb Code   176  text.o(i.text_show_font)
+    text_show_string                         0x0801a161   Thumb Code   182  text.o(i.text_show_string)
+    usart_init                               0x0801a455   Thumb Code    44  usart.o(i.usart_init)
+    usmart_cmd_rec                           0x0801a525   Thumb Code   144  usmart.o(i.usmart_cmd_rec)
+    usmart_exe                               0x0801a5b9   Thumb Code   510  usmart.o(i.usmart_exe)
+    usmart_get_aparm                         0x0801a819   Thumb Code   164  usmart_str.o(i.usmart_get_aparm)
+    usmart_get_cmdname                       0x0801a8bd   Thumb Code    46  usmart_str.o(i.usmart_get_cmdname)
+    usmart_get_fname                         0x0801a8ed   Thumb Code   352  usmart_str.o(i.usmart_get_fname)
+    usmart_get_fparam                        0x0801aa55   Thumb Code   202  usmart_str.o(i.usmart_get_fparam)
+    usmart_get_input_string                  0x0801ab25   Thumb Code    24  usmart_port.o(i.usmart_get_input_string)
+    usmart_get_parmpos                       0x0801ab45   Thumb Code    30  usmart_str.o(i.usmart_get_parmpos)
+    usmart_init                              0x0801ab69   Thumb Code    36  usmart.o(i.usmart_init)
+    usmart_pow                               0x0801ab91   Thumb Code    16  usmart_str.o(i.usmart_pow)
+    usmart_scan                              0x0801aba1   Thumb Code    82  usmart.o(i.usmart_scan)
+    usmart_search_nextc                      0x0801ac31   Thumb Code    16  usmart_str.o(i.usmart_search_nextc)
+    usmart_str2num                           0x0801ac41   Thumb Code   214  usmart_str.o(i.usmart_str2num)
+    usmart_strcmp                            0x0801ad17   Thumb Code    24  usmart_str.o(i.usmart_strcmp)
+    usmart_strcopy                           0x0801ad2f   Thumb Code    18  usmart_str.o(i.usmart_strcopy)
+    usmart_strlen                            0x0801ad41   Thumb Code    18  usmart_str.o(i.usmart_strlen)
+    usmart_sys_cmd_exe                       0x0801ad55   Thumb Code  1458  usmart.o(i.usmart_sys_cmd_exe)
+    usmart_timx_get_time                     0x0801b3d5   Thumb Code    38  usmart_port.o(i.usmart_timx_get_time)
+    usmart_timx_init                         0x0801b405   Thumb Code    68  usmart_port.o(i.usmart_timx_init)
+    usmart_timx_reset_time                   0x0801b455   Thumb Code    32  usmart_port.o(i.usmart_timx_reset_time)
+    video_get_tnum                           0x0801b4b1   Thumb Code    84  videoplayer.o(i.video_get_tnum)
+    video_play                               0x0801b505   Thumb Code   418  videoplayer.o(i.video_play)
+    video_play_mjpeg                         0x0801b6f9   Thumb Code   736  videoplayer.o(i.video_play_mjpeg)
+    write_addr                               0x0801ba39   Thumb Code     4  usmart.o(i.write_addr)
+    _get_lc_ctype                            0x0801bc05   Thumb Code    44  lc_ctype_c.o(locale$$code)
+    __aeabi_d2f                              0x0801bc31   Thumb Code     0  d2f.o(x$fpl$d2f)
+    _d2f                                     0x0801bc31   Thumb Code    98  d2f.o(x$fpl$d2f)
+    __aeabi_d2uiz                            0x0801bc95   Thumb Code     0  dfixu.o(x$fpl$dfixu)
+    _dfixu                                   0x0801bc95   Thumb Code    90  dfixu.o(x$fpl$dfixu)
+    __aeabi_ui2d                             0x0801bcef   Thumb Code     0  dflt_clz.o(x$fpl$dfltu)
+    _dfltu                                   0x0801bcef   Thumb Code    38  dflt_clz.o(x$fpl$dfltu)
+    __aeabi_dmul                             0x0801bd15   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x0801bd15   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x0801be69   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x0801bf05   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    _fp_init                                 0x0801bf11   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0801bf19   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0801bf19   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fpl_fretinf                            0x0801bf1b   Thumb Code    10  fretinf.o(x$fpl$fretinf)
+    AHBPrescTable                            0x0801bf24   Data          16  system_stm32f4xx.o(.constdata)
+    __I$use$fp                               0x0801bf24   Number         0  usenofp.o(x$fpl$usenofp)
+    APBPrescTable                            0x0801bf34   Data           8  system_stm32f4xx.o(.constdata)
+    asc2_1206                                0x0801bf44   Data        1140  lcd.o(.constdata)
+    asc2_1608                                0x0801c3b8   Data        1520  lcd.o(.constdata)
+    asc2_2412                                0x0801c9a8   Data        3420  lcd.o(.constdata)
+    asc2_3216                                0x0801d704   Data        6080  lcd.o(.constdata)
+    I2S_PSC_TBL                              0x0801eec4   Data         110  i2s.o(.constdata)
+    memtblsize                               0x0801ef34   Data          12  malloc.o(.constdata)
+    memblksize                               0x0801ef40   Data          12  malloc.o(.constdata)
+    memsize                                  0x0801ef4c   Data          12  malloc.o(.constdata)
+    FILE_TYPE_TBL                            0x0801ef58   Data         196  exfuns.o(.constdata)
+    AVI_VIDS_FLAG_TBL                        0x0801f318   Data           8  avi.o(.constdata)
+    AVI_AUDS_FLAG_TBL                        0x0801f320   Data           8  avi.o(.constdata)
+    jpeg_aritab                              0x0801f328   Data         456  jaricom.o(.constdata)
+    jpeg_natural_order                       0x0801f690   Data         320  jutils.o(.constdata)
+    jpeg_natural_order7                      0x0801f7d0   Data         260  jutils.o(.constdata)
+    jpeg_natural_order6                      0x0801f8d4   Data         208  jutils.o(.constdata)
+    jpeg_natural_order5                      0x0801f9a4   Data         164  jutils.o(.constdata)
+    jpeg_natural_order4                      0x0801fa48   Data         128  jutils.o(.constdata)
+    jpeg_natural_order3                      0x0801fac8   Data         100  jutils.o(.constdata)
+    jpeg_natural_order2                      0x0801fb2c   Data          80  jutils.o(.constdata)
+    jpeg_std_message_table                   0x0801fb7c   Data         512  jerror.o(.constdata)
+    Region$$Table$$Base                      0x08021954   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08021974   Number         0  anon$$obj.o(Region$$Table)
+    __ctype                                  0x08021981   Data           0  lc_ctype_c.o(locale$$data)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f4xx.o(.data)
     i2splaybuf                               0x20000005   Data           1  videoplayer.o(.data)
-    g_last_scroll_time                       0x20000008   Data           4  videoplayer.o(.data)
     g_rx_buffer                              0x20000010   Data           1  usart.o(.data)
     g_usart_rx_sta                           0x20000012   Data           2  usart.o(.data)
     __stdout                                 0x20000014   Data           4  usart.o(.data)
@@ -5383,9 +5381,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00021cb0, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00021b58])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00021ca0, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00021b48])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00021a94, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00021a84, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5958,221 +5956,221 @@ Memory Map of the image
     0x08016178   0x08016178   0x0000006c   Code   RO         4967    i.led_init          led.o
     0x080161e4   0x080161e4   0x0000003a   Code   RO         6476    i.load_obj_xdir     ff.o
     0x0801621e   0x0801621e   0x00000002   PAD
-    0x08016220   0x08016220   0x000000dc   Code   RO          472    i.load_text_file_stream  videoplayer.o
-    0x080162fc   0x080162fc   0x000000d0   Code   RO         6477    i.load_xdir         ff.o
-    0x080163cc   0x080163cc   0x000000e8   Code   RO           13    i.main              main.o
-    0x080164b4   0x080164b4   0x000000aa   Code   RO         7956    i.make_funny_pointers  jdmainct.o
-    0x0801655e   0x0801655e   0x000001ec   Code   RO         7672    i.master_selection  jdmaster.o
-    0x0801674a   0x0801674a   0x00000108   Code   RO         8460    i.median_cut        jquant2.o
-    0x08016852   0x08016852   0x00000026   Code   RO         8547    i.merged_1v_upsample  jdmerge.o
-    0x08016878   0x08016878   0x00000064   Code   RO         8548    i.merged_2v_upsample  jdmerge.o
-    0x080168dc   0x080168dc   0x00000020   Code   RO         6208    i.mf_free           fattester.o
-    0x080168fc   0x080168fc   0x00000034   Code   RO         6211    i.mf_init           fattester.o
-    0x08016930   0x08016930   0x00000068   Code   RO         6222    i.mf_scan_files     fattester.o
-    0x08016998   0x08016998   0x00000034   Code   RO         7136    i.mjpeg_malloc      mjpeg.o
-    0x080169cc   0x080169cc   0x000000c4   Code   RO         7137    i.mjpegdec_decode   mjpeg.o
-    0x08016a90   0x08016a90   0x00000024   Code   RO         7139    i.mjpegdec_free     mjpeg.o
-    0x08016ab4   0x08016ab4   0x0000004c   Code   RO         7140    i.mjpegdec_init     mjpeg.o
-    0x08016b00   0x08016b00   0x000003ac   Code   RO         6478    i.mount_volume      ff.o
-    0x08016eac   0x08016eac   0x00000032   Code   RO         6479    i.move_window       ff.o
-    0x08016ede   0x08016ede   0x00000002   PAD
-    0x08016ee0   0x08016ee0   0x0000002c   Code   RO         7141    i.my_emit_message   mjpeg.o
-    0x08016f0c   0x08016f0c   0x00000010   Code   RO         7142    i.my_error_exit     mjpeg.o
-    0x08016f1c   0x08016f1c   0x0000002c   Code   RO         6054    i.my_mem_init       malloc.o
-    0x08016f48   0x08016f48   0x0000008c   Code   RO         6055    i.my_mem_malloc     malloc.o
-    0x08016fd4   0x08016fd4   0x0000003c   Code   RO         6056    i.my_mem_perused    malloc.o
-    0x08017010   0x08017010   0x0000000c   Code   RO         6057    i.my_mem_set        malloc.o
-    0x0801701c   0x0801701c   0x0000005c   Code   RO         6058    i.myfree            malloc.o
-    0x08017078   0x08017078   0x00000020   Code   RO         6059    i.mymalloc          malloc.o
-    0x08017098   0x08017098   0x0000000c   Code   RO         8749    i.new_color_map_1_quant  jquant1.o
-    0x080170a4   0x080170a4   0x0000000a   Code   RO         8461    i.new_color_map_2_quant  jquant2.o
-    0x080170ae   0x080170ae   0x000000a8   Code   RO         7776    i.next_marker       jdmarker.o
-    0x08017156   0x08017156   0x00000002   PAD
-    0x08017158   0x08017158   0x00000040   Code   RO         5345    i.norflash_erase_sector  norflash.o
-    0x08017198   0x08017198   0x00000098   Code   RO         5346    i.norflash_init     norflash.o
-    0x08017230   0x08017230   0x00000050   Code   RO         5347    i.norflash_read     norflash.o
-    0x08017280   0x08017280   0x00000054   Code   RO         5348    i.norflash_read_id  norflash.o
-    0x080172d4   0x080172d4   0x00000048   Code   RO         5349    i.norflash_read_sr  norflash.o
-    0x0801731c   0x0801731c   0x00000034   Code   RO         5350    i.norflash_send_address  norflash.o
-    0x08017350   0x08017350   0x0000000e   Code   RO         5351    i.norflash_wait_busy  norflash.o
-    0x0801735e   0x0801735e   0x00000002   PAD
-    0x08017360   0x08017360   0x0000009c   Code   RO         5352    i.norflash_write    norflash.o
-    0x080173fc   0x080173fc   0x0000002c   Code   RO         5353    i.norflash_write_enable  norflash.o
-    0x08017428   0x08017428   0x0000007c   Code   RO         5354    i.norflash_write_nocheck  norflash.o
-    0x080174a4   0x080174a4   0x0000004c   Code   RO         5355    i.norflash_write_sr  norflash.o
-    0x080174f0   0x080174f0   0x00000060   Code   RO         8377    i.null_convert      jdcolor.o
-    0x08017550   0x08017550   0x00000010   Code   RO         7422    i.out_of_memory     jmemmgr.o
-    0x08017560   0x08017560   0x0000001c   Code   RO         7360    i.output_message    jerror.o
-    0x0801757c   0x0801757c   0x0000008e   Code   RO         7570    i.output_pass_setup  jdapistd.o
-    0x0801760a   0x0801760a   0x000001da   Code   RO         8462    i.pass2_fs_dither   jquant2.o
-    0x080177e4   0x080177e4   0x0000006e   Code   RO         8463    i.pass2_no_dither   jquant2.o
-    0x08017852   0x08017852   0x0000010a   Code   RO         7717    i.per_scan_setup    jdinput.o
-    0x0801795c   0x0801795c   0x00000074   Code   RO         6480    i.pick_lfn          ff.o
-    0x080179d0   0x080179d0   0x00000058   Code   RO         8054    i.post_process_1pass  jdpostct.o
-    0x08017a28   0x08017a28   0x00000082   Code   RO         8055    i.post_process_2pass  jdpostct.o
-    0x08017aaa   0x08017aaa   0x00000088   Code   RO         8056    i.post_process_prepass  jdpostct.o
-    0x08017b32   0x08017b32   0x00000116   Code   RO         7673    i.prepare_for_output_pass  jdmaster.o
-    0x08017c48   0x08017c48   0x00000054   Code   RO         8464    i.prescan_quantize  jquant2.o
-    0x08017c9c   0x08017c9c   0x000001d8   Code   RO         7957    i.process_data_context_main  jdmainct.o
-    0x08017e74   0x08017e74   0x00000016   Code   RO         7958    i.process_data_crank_post  jdmainct.o
-    0x08017e8a   0x08017e8a   0x0000004e   Code   RO         7959    i.process_data_simple_main  jdmainct.o
-    0x08017ed8   0x08017ed8   0x0000009c   Code   RO         7615    i.process_restart   jdarith.o
-    0x08017f74   0x08017f74   0x00000046   Code   RO         7891    i.process_restart   jdhuff.o
-    0x08017fba   0x08017fba   0x000000f6   Code   RO         6481    i.put_fat           ff.o
-    0x080180b0   0x080180b0   0x0000002e   Code   RO         6482    i.put_utf           ff.o
-    0x080180de   0x080180de   0x0000009e   Code   RO         8750    i.quantize3_ord_dither  jquant1.o
-    0x0801817c   0x0801817c   0x00000124   Code   RO         8751    i.quantize_fs_dither  jquant1.o
-    0x080182a0   0x080182a0   0x0000008e   Code   RO         8752    i.quantize_ord_dither  jquant1.o
-    0x0801832e   0x0801832e   0x00000004   Code   RO         5827    i.read_addr         usmart.o
-    0x08018332   0x08018332   0x00000002   PAD
-    0x08018334   0x08018334   0x0000019c   Code   RO         7777    i.read_markers      jdmarker.o
-    0x080184d0   0x080184d0   0x00000066   Code   RO         7778    i.read_restart_marker  jdmarker.o
-    0x08018536   0x08018536   0x00000002   PAD
-    0x08018538   0x08018538   0x0000011c   Code   RO         7423    i.realize_virt_arrays  jmemmgr.o
-    0x08018654   0x08018654   0x0000010c   Code   RO         6486    i.remove_chain      ff.o
-    0x08018760   0x08018760   0x0000004e   Code   RO         7424    i.request_virt_barray  jmemmgr.o
-    0x080187ae   0x080187ae   0x0000004e   Code   RO         7425    i.request_virt_sarray  jmemmgr.o
-    0x080187fc   0x080187fc   0x0000000c   Code   RO         7361    i.reset_error_mgr   jerror.o
-    0x08018808   0x08018808   0x00000034   Code   RO         7718    i.reset_input_controller  jdinput.o
-    0x0801883c   0x0801883c   0x0000001c   Code   RO         7779    i.reset_marker_reader  jdmarker.o
-    0x08018858   0x08018858   0x0000007a   Code   RO         8378    i.rgb1_gray_convert  jdcolor.o
-    0x080188d2   0x080188d2   0x0000005c   Code   RO         8379    i.rgb1_rgb_convert  jdcolor.o
-    0x0801892e   0x0801892e   0x00000054   Code   RO         8380    i.rgb_convert       jdcolor.o
-    0x08018982   0x08018982   0x0000006e   Code   RO         8381    i.rgb_gray_convert  jdcolor.o
-    0x080189f0   0x080189f0   0x00000048   Code   RO         5277    i.sd_init           sdio_sdcard.o
-    0x08018a38   0x08018a38   0x00000034   Code   RO         5278    i.sd_read_disk      sdio_sdcard.o
-    0x08018a6c   0x08018a6c   0x00000034   Code   RO         5279    i.sd_write_disk     sdio_sdcard.o
-    0x08018aa0   0x08018aa0   0x00000070   Code   RO         8465    i.select_colors     jquant2.o
-    0x08018b10   0x08018b10   0x00000098   Code   RO         8753    i.select_ncolors    jquant1.o
-    0x08018ba8   0x08018ba8   0x0000002a   Code   RO         7426    i.self_destruct     jmemmgr.o
-    0x08018bd2   0x08018bd2   0x000000ba   Code   RO         8333    i.sep_upsample      jdsample.o
-    0x08018c8c   0x08018c8c   0x0000002a   Code   RO         7143    i.skip_input_data   mjpeg.o
-    0x08018cb6   0x08018cb6   0x00000074   Code   RO         7781    i.skip_variable     jdmarker.o
-    0x08018d2a   0x08018d2a   0x00000092   Code   RO         8002    i.smoothing_ok      jdcoefct.o
-    0x08018dbc   0x08018dbc   0x00000068   Code   RO         5439    i.spi1_init         spi.o
-    0x08018e24   0x08018e24   0x00000020   Code   RO         5440    i.spi1_read_write_byte  spi.o
-    0x08018e44   0x08018e44   0x00000034   Code   RO         5441    i.spi1_set_speed    spi.o
-    0x08018e78   0x08018e78   0x00000164   Code   RO         5483    i.sram_init         sram.o
-    0x08018fdc   0x08018fdc   0x00000028   Code   RO         6487    i.st_clust          ff.o
-    0x08019004   0x08019004   0x00000010   Code   RO         6488    i.st_dword          ff.o
-    0x08019014   0x08019014   0x0000004a   Code   RO         6489    i.st_qword          ff.o
-    0x0801905e   0x0801905e   0x00000008   Code   RO         6490    i.st_word           ff.o
-    0x08019066   0x08019066   0x00000030   Code   RO         8003    i.start_iMCU_row    jdcoefct.o
-    0x08019096   0x08019096   0x0000008c   Code   RO         7719    i.start_input_pass  jdinput.o
-    0x08019122   0x08019122   0x00000008   Code   RO         8004    i.start_input_pass  jdcoefct.o
-    0x0801912a   0x0801912a   0x00000002   PAD
-    0x0801912c   0x0801912c   0x00000030   Code   RO         8005    i.start_output_pass  jdcoefct.o
-    0x0801915c   0x0801915c   0x0000025c   Code   RO         7616    i.start_pass        jdarith.o
-    0x080193b8   0x080193b8   0x00000398   Code   RO         8086    i.start_pass        jddctmgr.o
-    0x08019750   0x08019750   0x000000b8   Code   RO         8754    i.start_pass_1_quant  jquant1.o
-    0x08019808   0x08019808   0x000000e4   Code   RO         8466    i.start_pass_2_quant  jquant2.o
-    0x080198ec   0x080198ec   0x00000002   Code   RO         8382    i.start_pass_dcolor  jdcolor.o
-    0x080198ee   0x080198ee   0x00000002   PAD
-    0x080198f0   0x080198f0   0x00000084   Code   RO         8057    i.start_pass_dpost  jdpostct.o
-    0x08019974   0x08019974   0x000003f4   Code   RO         7892    i.start_pass_huff_decoder  jdhuff.o
-    0x08019d68   0x08019d68   0x00000058   Code   RO         7960    i.start_pass_main   jdmainct.o
-    0x08019dc0   0x08019dc0   0x00000010   Code   RO         8549    i.start_pass_merged_upsample  jdmerge.o
-    0x08019dd0   0x08019dd0   0x00000010   Code   RO         8334    i.start_pass_upsample  jdsample.o
-    0x08019de0   0x08019de0   0x0000006a   Code   RO         6491    i.store_xdir        ff.o
-    0x08019e4a   0x08019e4a   0x0000001a   Code   RO         6492    i.sum_sfn           ff.o
-    0x08019e64   0x08019e64   0x00000084   Code   RO         6493    i.sync_fs           ff.o
-    0x08019ee8   0x08019ee8   0x00000046   Code   RO         6494    i.sync_window       ff.o
-    0x08019f2e   0x08019f2e   0x00000002   PAD
-    0x08019f30   0x08019f30   0x000000b0   Code   RO          845    i.sys_stm32_clock_init  sys.o
-    0x08019fe0   0x08019fe0   0x0000004e   Code   RO         6495    i.tchar2uni         ff.o
-    0x0801a02e   0x0801a02e   0x00000002   Code   RO         7144    i.term_source       mjpeg.o
-    0x0801a030   0x0801a030   0x0000008c   Code   RO         6934    i.text_get_hz_mat   text.o
-    0x0801a0bc   0x0801a0bc   0x000000b4   Code   RO         6935    i.text_show_font    text.o
-    0x0801a170   0x0801a170   0x000000b6   Code   RO         6936    i.text_show_string  text.o
-    0x0801a226   0x0801a226   0x0000023c   Code   RO         8467    i.update_box        jquant2.o
-    0x0801a462   0x0801a462   0x00000002   PAD
-    0x0801a464   0x0801a464   0x00000038   Code   RO          919    i.usart_init        usart.o
-    0x0801a49c   0x0801a49c   0x00000096   Code   RO         7674    i.use_merged_upsample  jdmaster.o
-    0x0801a532   0x0801a532   0x00000002   PAD
-    0x0801a534   0x0801a534   0x00000094   Code   RO         5828    i.usmart_cmd_rec    usmart.o
-    0x0801a5c8   0x0801a5c8   0x00000260   Code   RO         5829    i.usmart_exe        usmart.o
-    0x0801a828   0x0801a828   0x000000a4   Code   RO         5974    i.usmart_get_aparm  usmart_str.o
-    0x0801a8cc   0x0801a8cc   0x0000002e   Code   RO         5975    i.usmart_get_cmdname  usmart_str.o
-    0x0801a8fa   0x0801a8fa   0x00000002   PAD
-    0x0801a8fc   0x0801a8fc   0x00000168   Code   RO         5976    i.usmart_get_fname  usmart_str.o
-    0x0801aa64   0x0801aa64   0x000000d0   Code   RO         5977    i.usmart_get_fparam  usmart_str.o
-    0x0801ab34   0x0801ab34   0x00000020   Code   RO         5924    i.usmart_get_input_string  usmart_port.o
-    0x0801ab54   0x0801ab54   0x00000024   Code   RO         5978    i.usmart_get_parmpos  usmart_str.o
-    0x0801ab78   0x0801ab78   0x00000028   Code   RO         5830    i.usmart_init       usmart.o
-    0x0801aba0   0x0801aba0   0x00000010   Code   RO         5979    i.usmart_pow        usmart_str.o
-    0x0801abb0   0x0801abb0   0x00000090   Code   RO         5831    i.usmart_scan       usmart.o
-    0x0801ac40   0x0801ac40   0x00000010   Code   RO         5980    i.usmart_search_nextc  usmart_str.o
-    0x0801ac50   0x0801ac50   0x000000d6   Code   RO         5981    i.usmart_str2num    usmart_str.o
-    0x0801ad26   0x0801ad26   0x00000018   Code   RO         5982    i.usmart_strcmp     usmart_str.o
-    0x0801ad3e   0x0801ad3e   0x00000012   Code   RO         5983    i.usmart_strcopy    usmart_str.o
-    0x0801ad50   0x0801ad50   0x00000012   Code   RO         5984    i.usmart_strlen     usmart_str.o
-    0x0801ad62   0x0801ad62   0x00000002   PAD
-    0x0801ad64   0x0801ad64   0x00000680   Code   RO         5832    i.usmart_sys_cmd_exe  usmart.o
-    0x0801b3e4   0x0801b3e4   0x00000030   Code   RO         5925    i.usmart_timx_get_time  usmart_port.o
-    0x0801b414   0x0801b414   0x00000050   Code   RO         5926    i.usmart_timx_init  usmart_port.o
-    0x0801b464   0x0801b464   0x00000028   Code   RO         5927    i.usmart_timx_reset_time  usmart_port.o
-    0x0801b48c   0x0801b48c   0x00000034   Code   RO         6496    i.validate          ff.o
-    0x0801b4c0   0x0801b4c0   0x00000054   Code   RO          474    i.video_get_tnum    videoplayer.o
-    0x0801b514   0x0801b514   0x000001f4   Code   RO          476    i.video_play        videoplayer.o
-    0x0801b708   0x0801b708   0x00000340   Code   RO          477    i.video_play_mjpeg  videoplayer.o
-    0x0801ba48   0x0801ba48   0x00000004   Code   RO         5833    i.write_addr        usmart.o
-    0x0801ba4c   0x0801ba4c   0x00000034   Code   RO         6497    i.xdir_sum          ff.o
-    0x0801ba80   0x0801ba80   0x0000003e   Code   RO         6498    i.xname_sum         ff.o
-    0x0801babe   0x0801babe   0x000000a0   Code   RO         8383    i.ycc_rgb_convert   jdcolor.o
-    0x0801bb5e   0x0801bb5e   0x000000b6   Code   RO         8384    i.ycck_cmyk_convert  jdcolor.o
-    0x0801bc14   0x0801bc14   0x0000002c   Code   RO         9044    locale$$code        c_w.l(lc_ctype_c.o)
-    0x0801bc40   0x0801bc40   0x00000062   Code   RO         8952    x$fpl$d2f           fz_wm.l(d2f.o)
-    0x0801bca2   0x0801bca2   0x00000002   PAD
-    0x0801bca4   0x0801bca4   0x0000005a   Code   RO         8954    x$fpl$dfixu         fz_wm.l(dfixu.o)
-    0x0801bcfe   0x0801bcfe   0x00000026   Code   RO         8958    x$fpl$dfltu         fz_wm.l(dflt_clz.o)
-    0x0801bd24   0x0801bd24   0x00000154   Code   RO         8964    x$fpl$dmul          fz_wm.l(dmul.o)
-    0x0801be78   0x0801be78   0x0000009c   Code   RO         9000    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
-    0x0801bf14   0x0801bf14   0x0000000c   Code   RO         9002    x$fpl$dretinf       fz_wm.l(dretinf.o)
-    0x0801bf20   0x0801bf20   0x0000000a   Code   RO         9127    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x0801bf2a   0x0801bf2a   0x0000000a   Code   RO         9004    x$fpl$fretinf       fz_wm.l(fretinf.o)
-    0x0801bf34   0x0801bf34   0x00000000   Code   RO         9006    x$fpl$usenofp       fz_wm.l(usenofp.o)
-    0x0801bf34   0x0801bf34   0x00000010   Data   RO          433    .constdata          system_stm32f4xx.o
-    0x0801bf44   0x0801bf44   0x00000008   Data   RO          434    .constdata          system_stm32f4xx.o
-    0x0801bf4c   0x0801bf4c   0x00000008   Data   RO         3595    .constdata          stm32f4xx_hal_dma.o
-    0x0801bf54   0x0801bf54   0x00002f80   Data   RO         5028    .constdata          lcd.o
-    0x0801eed4   0x0801eed4   0x0000006e   Data   RO         5704    .constdata          i2s.o
-    0x0801ef42   0x0801ef42   0x00000002   PAD
-    0x0801ef44   0x0801ef44   0x00000024   Data   RO         6067    .constdata          malloc.o
-    0x0801ef68   0x0801ef68   0x000000c4   Data   RO         6138    .constdata          exfuns.o
-    0x0801f02c   0x0801f02c   0x0000004c   Data   RO         6500    .constdata          ff.o
-    0x0801f078   0x0801f078   0x000002ae   Data   RO         6900    .constdata          myffunicode.o
-    0x0801f326   0x0801f326   0x00000002   PAD
-    0x0801f328   0x0801f328   0x00000010   Data   RO         7093    .constdata          avi.o
-    0x0801f338   0x0801f338   0x000001c8   Data   RO         7238    .constdata          jaricom.o
-    0x0801f500   0x0801f500   0x000001a0   Data   RO         7271    .constdata          jcomapi.o
-    0x0801f6a0   0x0801f6a0   0x00000140   Data   RO         7314    .constdata          jutils.o
-    0x0801f7e0   0x0801f7e0   0x00000104   Data   RO         7315    .constdata          jutils.o
-    0x0801f8e4   0x0801f8e4   0x000000d0   Data   RO         7316    .constdata          jutils.o
-    0x0801f9b4   0x0801f9b4   0x000000a4   Data   RO         7317    .constdata          jutils.o
-    0x0801fa58   0x0801fa58   0x00000080   Data   RO         7318    .constdata          jutils.o
-    0x0801fad8   0x0801fad8   0x00000064   Data   RO         7319    .constdata          jutils.o
-    0x0801fb3c   0x0801fb3c   0x00000050   Data   RO         7320    .constdata          jutils.o
-    0x0801fb8c   0x0801fb8c   0x00000200   Data   RO         7362    .constdata          jerror.o
-    0x0801fd8c   0x0801fd8c   0x00000010   Data   RO         7427    .constdata          jmemmgr.o
-    0x0801fd9c   0x0801fd9c   0x0000036c   Data   RO         7893    .constdata          jdhuff.o
-    0x08020108   0x08020108   0x000000c0   Data   RO         8087    .constdata          jddctmgr.o
-    0x080201c8   0x080201c8   0x0000010c   Data   RO         8755    .constdata          jquant1.o
-    0x080202d4   0x080202d4   0x00000008   Data   RO         8855    .constdata          c_w.l(_printf_wctomb.o)
-    0x080202dc   0x080202dc   0x00000028   Data   RO         8878    .constdata          c_w.l(_printf_hex_int_ptr.o)
-    0x08020304   0x08020304   0x00000011   Data   RO         8904    .constdata          c_w.l(__printf_flags_ss_wp.o)
-    0x08020315   0x08020315   0x00000003   PAD
-    0x08020318   0x08020318   0x00000028   Data   RO         5834    .conststring        usmart.o
-    0x08020340   0x08020340   0x0000029c   Data   RO         5894    .conststring        usmart_config.o
-    0x080205dc   0x080205dc   0x00000054   Data   RO         6139    .conststring        exfuns.o
-    0x08020630   0x08020630   0x0000001d   Data   RO         7094    .conststring        avi.o
-    0x0802064d   0x0802064d   0x00000003   PAD
-    0x08020650   0x08020650   0x00001311   Data   RO         7363    .conststring        jerror.o
-    0x08021961   0x08021961   0x00000003   PAD
-    0x08021964   0x08021964   0x00000020   Data   RO         9178    Region$$Table       anon$$obj.o
-    0x08021984   0x08021984   0x00000110   Data   RO         9043    locale$$data        c_w.l(lc_ctype_c.o)
+    0x08016220   0x08016220   0x000000cc   Code   RO          472    i.load_text_file_stream  videoplayer.o
+    0x080162ec   0x080162ec   0x000000d0   Code   RO         6477    i.load_xdir         ff.o
+    0x080163bc   0x080163bc   0x000000e8   Code   RO           13    i.main              main.o
+    0x080164a4   0x080164a4   0x000000aa   Code   RO         7956    i.make_funny_pointers  jdmainct.o
+    0x0801654e   0x0801654e   0x000001ec   Code   RO         7672    i.master_selection  jdmaster.o
+    0x0801673a   0x0801673a   0x00000108   Code   RO         8460    i.median_cut        jquant2.o
+    0x08016842   0x08016842   0x00000026   Code   RO         8547    i.merged_1v_upsample  jdmerge.o
+    0x08016868   0x08016868   0x00000064   Code   RO         8548    i.merged_2v_upsample  jdmerge.o
+    0x080168cc   0x080168cc   0x00000020   Code   RO         6208    i.mf_free           fattester.o
+    0x080168ec   0x080168ec   0x00000034   Code   RO         6211    i.mf_init           fattester.o
+    0x08016920   0x08016920   0x00000068   Code   RO         6222    i.mf_scan_files     fattester.o
+    0x08016988   0x08016988   0x00000034   Code   RO         7136    i.mjpeg_malloc      mjpeg.o
+    0x080169bc   0x080169bc   0x000000c4   Code   RO         7137    i.mjpegdec_decode   mjpeg.o
+    0x08016a80   0x08016a80   0x00000024   Code   RO         7139    i.mjpegdec_free     mjpeg.o
+    0x08016aa4   0x08016aa4   0x0000004c   Code   RO         7140    i.mjpegdec_init     mjpeg.o
+    0x08016af0   0x08016af0   0x000003ac   Code   RO         6478    i.mount_volume      ff.o
+    0x08016e9c   0x08016e9c   0x00000032   Code   RO         6479    i.move_window       ff.o
+    0x08016ece   0x08016ece   0x00000002   PAD
+    0x08016ed0   0x08016ed0   0x0000002c   Code   RO         7141    i.my_emit_message   mjpeg.o
+    0x08016efc   0x08016efc   0x00000010   Code   RO         7142    i.my_error_exit     mjpeg.o
+    0x08016f0c   0x08016f0c   0x0000002c   Code   RO         6054    i.my_mem_init       malloc.o
+    0x08016f38   0x08016f38   0x0000008c   Code   RO         6055    i.my_mem_malloc     malloc.o
+    0x08016fc4   0x08016fc4   0x0000003c   Code   RO         6056    i.my_mem_perused    malloc.o
+    0x08017000   0x08017000   0x0000000c   Code   RO         6057    i.my_mem_set        malloc.o
+    0x0801700c   0x0801700c   0x0000005c   Code   RO         6058    i.myfree            malloc.o
+    0x08017068   0x08017068   0x00000020   Code   RO         6059    i.mymalloc          malloc.o
+    0x08017088   0x08017088   0x0000000c   Code   RO         8749    i.new_color_map_1_quant  jquant1.o
+    0x08017094   0x08017094   0x0000000a   Code   RO         8461    i.new_color_map_2_quant  jquant2.o
+    0x0801709e   0x0801709e   0x000000a8   Code   RO         7776    i.next_marker       jdmarker.o
+    0x08017146   0x08017146   0x00000002   PAD
+    0x08017148   0x08017148   0x00000040   Code   RO         5345    i.norflash_erase_sector  norflash.o
+    0x08017188   0x08017188   0x00000098   Code   RO         5346    i.norflash_init     norflash.o
+    0x08017220   0x08017220   0x00000050   Code   RO         5347    i.norflash_read     norflash.o
+    0x08017270   0x08017270   0x00000054   Code   RO         5348    i.norflash_read_id  norflash.o
+    0x080172c4   0x080172c4   0x00000048   Code   RO         5349    i.norflash_read_sr  norflash.o
+    0x0801730c   0x0801730c   0x00000034   Code   RO         5350    i.norflash_send_address  norflash.o
+    0x08017340   0x08017340   0x0000000e   Code   RO         5351    i.norflash_wait_busy  norflash.o
+    0x0801734e   0x0801734e   0x00000002   PAD
+    0x08017350   0x08017350   0x0000009c   Code   RO         5352    i.norflash_write    norflash.o
+    0x080173ec   0x080173ec   0x0000002c   Code   RO         5353    i.norflash_write_enable  norflash.o
+    0x08017418   0x08017418   0x0000007c   Code   RO         5354    i.norflash_write_nocheck  norflash.o
+    0x08017494   0x08017494   0x0000004c   Code   RO         5355    i.norflash_write_sr  norflash.o
+    0x080174e0   0x080174e0   0x00000060   Code   RO         8377    i.null_convert      jdcolor.o
+    0x08017540   0x08017540   0x00000010   Code   RO         7422    i.out_of_memory     jmemmgr.o
+    0x08017550   0x08017550   0x0000001c   Code   RO         7360    i.output_message    jerror.o
+    0x0801756c   0x0801756c   0x0000008e   Code   RO         7570    i.output_pass_setup  jdapistd.o
+    0x080175fa   0x080175fa   0x000001da   Code   RO         8462    i.pass2_fs_dither   jquant2.o
+    0x080177d4   0x080177d4   0x0000006e   Code   RO         8463    i.pass2_no_dither   jquant2.o
+    0x08017842   0x08017842   0x0000010a   Code   RO         7717    i.per_scan_setup    jdinput.o
+    0x0801794c   0x0801794c   0x00000074   Code   RO         6480    i.pick_lfn          ff.o
+    0x080179c0   0x080179c0   0x00000058   Code   RO         8054    i.post_process_1pass  jdpostct.o
+    0x08017a18   0x08017a18   0x00000082   Code   RO         8055    i.post_process_2pass  jdpostct.o
+    0x08017a9a   0x08017a9a   0x00000088   Code   RO         8056    i.post_process_prepass  jdpostct.o
+    0x08017b22   0x08017b22   0x00000116   Code   RO         7673    i.prepare_for_output_pass  jdmaster.o
+    0x08017c38   0x08017c38   0x00000054   Code   RO         8464    i.prescan_quantize  jquant2.o
+    0x08017c8c   0x08017c8c   0x000001d8   Code   RO         7957    i.process_data_context_main  jdmainct.o
+    0x08017e64   0x08017e64   0x00000016   Code   RO         7958    i.process_data_crank_post  jdmainct.o
+    0x08017e7a   0x08017e7a   0x0000004e   Code   RO         7959    i.process_data_simple_main  jdmainct.o
+    0x08017ec8   0x08017ec8   0x0000009c   Code   RO         7615    i.process_restart   jdarith.o
+    0x08017f64   0x08017f64   0x00000046   Code   RO         7891    i.process_restart   jdhuff.o
+    0x08017faa   0x08017faa   0x000000f6   Code   RO         6481    i.put_fat           ff.o
+    0x080180a0   0x080180a0   0x0000002e   Code   RO         6482    i.put_utf           ff.o
+    0x080180ce   0x080180ce   0x0000009e   Code   RO         8750    i.quantize3_ord_dither  jquant1.o
+    0x0801816c   0x0801816c   0x00000124   Code   RO         8751    i.quantize_fs_dither  jquant1.o
+    0x08018290   0x08018290   0x0000008e   Code   RO         8752    i.quantize_ord_dither  jquant1.o
+    0x0801831e   0x0801831e   0x00000004   Code   RO         5827    i.read_addr         usmart.o
+    0x08018322   0x08018322   0x00000002   PAD
+    0x08018324   0x08018324   0x0000019c   Code   RO         7777    i.read_markers      jdmarker.o
+    0x080184c0   0x080184c0   0x00000066   Code   RO         7778    i.read_restart_marker  jdmarker.o
+    0x08018526   0x08018526   0x00000002   PAD
+    0x08018528   0x08018528   0x0000011c   Code   RO         7423    i.realize_virt_arrays  jmemmgr.o
+    0x08018644   0x08018644   0x0000010c   Code   RO         6486    i.remove_chain      ff.o
+    0x08018750   0x08018750   0x0000004e   Code   RO         7424    i.request_virt_barray  jmemmgr.o
+    0x0801879e   0x0801879e   0x0000004e   Code   RO         7425    i.request_virt_sarray  jmemmgr.o
+    0x080187ec   0x080187ec   0x0000000c   Code   RO         7361    i.reset_error_mgr   jerror.o
+    0x080187f8   0x080187f8   0x00000034   Code   RO         7718    i.reset_input_controller  jdinput.o
+    0x0801882c   0x0801882c   0x0000001c   Code   RO         7779    i.reset_marker_reader  jdmarker.o
+    0x08018848   0x08018848   0x0000007a   Code   RO         8378    i.rgb1_gray_convert  jdcolor.o
+    0x080188c2   0x080188c2   0x0000005c   Code   RO         8379    i.rgb1_rgb_convert  jdcolor.o
+    0x0801891e   0x0801891e   0x00000054   Code   RO         8380    i.rgb_convert       jdcolor.o
+    0x08018972   0x08018972   0x0000006e   Code   RO         8381    i.rgb_gray_convert  jdcolor.o
+    0x080189e0   0x080189e0   0x00000048   Code   RO         5277    i.sd_init           sdio_sdcard.o
+    0x08018a28   0x08018a28   0x00000034   Code   RO         5278    i.sd_read_disk      sdio_sdcard.o
+    0x08018a5c   0x08018a5c   0x00000034   Code   RO         5279    i.sd_write_disk     sdio_sdcard.o
+    0x08018a90   0x08018a90   0x00000070   Code   RO         8465    i.select_colors     jquant2.o
+    0x08018b00   0x08018b00   0x00000098   Code   RO         8753    i.select_ncolors    jquant1.o
+    0x08018b98   0x08018b98   0x0000002a   Code   RO         7426    i.self_destruct     jmemmgr.o
+    0x08018bc2   0x08018bc2   0x000000ba   Code   RO         8333    i.sep_upsample      jdsample.o
+    0x08018c7c   0x08018c7c   0x0000002a   Code   RO         7143    i.skip_input_data   mjpeg.o
+    0x08018ca6   0x08018ca6   0x00000074   Code   RO         7781    i.skip_variable     jdmarker.o
+    0x08018d1a   0x08018d1a   0x00000092   Code   RO         8002    i.smoothing_ok      jdcoefct.o
+    0x08018dac   0x08018dac   0x00000068   Code   RO         5439    i.spi1_init         spi.o
+    0x08018e14   0x08018e14   0x00000020   Code   RO         5440    i.spi1_read_write_byte  spi.o
+    0x08018e34   0x08018e34   0x00000034   Code   RO         5441    i.spi1_set_speed    spi.o
+    0x08018e68   0x08018e68   0x00000164   Code   RO         5483    i.sram_init         sram.o
+    0x08018fcc   0x08018fcc   0x00000028   Code   RO         6487    i.st_clust          ff.o
+    0x08018ff4   0x08018ff4   0x00000010   Code   RO         6488    i.st_dword          ff.o
+    0x08019004   0x08019004   0x0000004a   Code   RO         6489    i.st_qword          ff.o
+    0x0801904e   0x0801904e   0x00000008   Code   RO         6490    i.st_word           ff.o
+    0x08019056   0x08019056   0x00000030   Code   RO         8003    i.start_iMCU_row    jdcoefct.o
+    0x08019086   0x08019086   0x0000008c   Code   RO         7719    i.start_input_pass  jdinput.o
+    0x08019112   0x08019112   0x00000008   Code   RO         8004    i.start_input_pass  jdcoefct.o
+    0x0801911a   0x0801911a   0x00000002   PAD
+    0x0801911c   0x0801911c   0x00000030   Code   RO         8005    i.start_output_pass  jdcoefct.o
+    0x0801914c   0x0801914c   0x0000025c   Code   RO         7616    i.start_pass        jdarith.o
+    0x080193a8   0x080193a8   0x00000398   Code   RO         8086    i.start_pass        jddctmgr.o
+    0x08019740   0x08019740   0x000000b8   Code   RO         8754    i.start_pass_1_quant  jquant1.o
+    0x080197f8   0x080197f8   0x000000e4   Code   RO         8466    i.start_pass_2_quant  jquant2.o
+    0x080198dc   0x080198dc   0x00000002   Code   RO         8382    i.start_pass_dcolor  jdcolor.o
+    0x080198de   0x080198de   0x00000002   PAD
+    0x080198e0   0x080198e0   0x00000084   Code   RO         8057    i.start_pass_dpost  jdpostct.o
+    0x08019964   0x08019964   0x000003f4   Code   RO         7892    i.start_pass_huff_decoder  jdhuff.o
+    0x08019d58   0x08019d58   0x00000058   Code   RO         7960    i.start_pass_main   jdmainct.o
+    0x08019db0   0x08019db0   0x00000010   Code   RO         8549    i.start_pass_merged_upsample  jdmerge.o
+    0x08019dc0   0x08019dc0   0x00000010   Code   RO         8334    i.start_pass_upsample  jdsample.o
+    0x08019dd0   0x08019dd0   0x0000006a   Code   RO         6491    i.store_xdir        ff.o
+    0x08019e3a   0x08019e3a   0x0000001a   Code   RO         6492    i.sum_sfn           ff.o
+    0x08019e54   0x08019e54   0x00000084   Code   RO         6493    i.sync_fs           ff.o
+    0x08019ed8   0x08019ed8   0x00000046   Code   RO         6494    i.sync_window       ff.o
+    0x08019f1e   0x08019f1e   0x00000002   PAD
+    0x08019f20   0x08019f20   0x000000b0   Code   RO          845    i.sys_stm32_clock_init  sys.o
+    0x08019fd0   0x08019fd0   0x0000004e   Code   RO         6495    i.tchar2uni         ff.o
+    0x0801a01e   0x0801a01e   0x00000002   Code   RO         7144    i.term_source       mjpeg.o
+    0x0801a020   0x0801a020   0x0000008c   Code   RO         6934    i.text_get_hz_mat   text.o
+    0x0801a0ac   0x0801a0ac   0x000000b4   Code   RO         6935    i.text_show_font    text.o
+    0x0801a160   0x0801a160   0x000000b6   Code   RO         6936    i.text_show_string  text.o
+    0x0801a216   0x0801a216   0x0000023c   Code   RO         8467    i.update_box        jquant2.o
+    0x0801a452   0x0801a452   0x00000002   PAD
+    0x0801a454   0x0801a454   0x00000038   Code   RO          919    i.usart_init        usart.o
+    0x0801a48c   0x0801a48c   0x00000096   Code   RO         7674    i.use_merged_upsample  jdmaster.o
+    0x0801a522   0x0801a522   0x00000002   PAD
+    0x0801a524   0x0801a524   0x00000094   Code   RO         5828    i.usmart_cmd_rec    usmart.o
+    0x0801a5b8   0x0801a5b8   0x00000260   Code   RO         5829    i.usmart_exe        usmart.o
+    0x0801a818   0x0801a818   0x000000a4   Code   RO         5974    i.usmart_get_aparm  usmart_str.o
+    0x0801a8bc   0x0801a8bc   0x0000002e   Code   RO         5975    i.usmart_get_cmdname  usmart_str.o
+    0x0801a8ea   0x0801a8ea   0x00000002   PAD
+    0x0801a8ec   0x0801a8ec   0x00000168   Code   RO         5976    i.usmart_get_fname  usmart_str.o
+    0x0801aa54   0x0801aa54   0x000000d0   Code   RO         5977    i.usmart_get_fparam  usmart_str.o
+    0x0801ab24   0x0801ab24   0x00000020   Code   RO         5924    i.usmart_get_input_string  usmart_port.o
+    0x0801ab44   0x0801ab44   0x00000024   Code   RO         5978    i.usmart_get_parmpos  usmart_str.o
+    0x0801ab68   0x0801ab68   0x00000028   Code   RO         5830    i.usmart_init       usmart.o
+    0x0801ab90   0x0801ab90   0x00000010   Code   RO         5979    i.usmart_pow        usmart_str.o
+    0x0801aba0   0x0801aba0   0x00000090   Code   RO         5831    i.usmart_scan       usmart.o
+    0x0801ac30   0x0801ac30   0x00000010   Code   RO         5980    i.usmart_search_nextc  usmart_str.o
+    0x0801ac40   0x0801ac40   0x000000d6   Code   RO         5981    i.usmart_str2num    usmart_str.o
+    0x0801ad16   0x0801ad16   0x00000018   Code   RO         5982    i.usmart_strcmp     usmart_str.o
+    0x0801ad2e   0x0801ad2e   0x00000012   Code   RO         5983    i.usmart_strcopy    usmart_str.o
+    0x0801ad40   0x0801ad40   0x00000012   Code   RO         5984    i.usmart_strlen     usmart_str.o
+    0x0801ad52   0x0801ad52   0x00000002   PAD
+    0x0801ad54   0x0801ad54   0x00000680   Code   RO         5832    i.usmart_sys_cmd_exe  usmart.o
+    0x0801b3d4   0x0801b3d4   0x00000030   Code   RO         5925    i.usmart_timx_get_time  usmart_port.o
+    0x0801b404   0x0801b404   0x00000050   Code   RO         5926    i.usmart_timx_init  usmart_port.o
+    0x0801b454   0x0801b454   0x00000028   Code   RO         5927    i.usmart_timx_reset_time  usmart_port.o
+    0x0801b47c   0x0801b47c   0x00000034   Code   RO         6496    i.validate          ff.o
+    0x0801b4b0   0x0801b4b0   0x00000054   Code   RO          474    i.video_get_tnum    videoplayer.o
+    0x0801b504   0x0801b504   0x000001f4   Code   RO          476    i.video_play        videoplayer.o
+    0x0801b6f8   0x0801b6f8   0x00000340   Code   RO          477    i.video_play_mjpeg  videoplayer.o
+    0x0801ba38   0x0801ba38   0x00000004   Code   RO         5833    i.write_addr        usmart.o
+    0x0801ba3c   0x0801ba3c   0x00000034   Code   RO         6497    i.xdir_sum          ff.o
+    0x0801ba70   0x0801ba70   0x0000003e   Code   RO         6498    i.xname_sum         ff.o
+    0x0801baae   0x0801baae   0x000000a0   Code   RO         8383    i.ycc_rgb_convert   jdcolor.o
+    0x0801bb4e   0x0801bb4e   0x000000b6   Code   RO         8384    i.ycck_cmyk_convert  jdcolor.o
+    0x0801bc04   0x0801bc04   0x0000002c   Code   RO         9044    locale$$code        c_w.l(lc_ctype_c.o)
+    0x0801bc30   0x0801bc30   0x00000062   Code   RO         8952    x$fpl$d2f           fz_wm.l(d2f.o)
+    0x0801bc92   0x0801bc92   0x00000002   PAD
+    0x0801bc94   0x0801bc94   0x0000005a   Code   RO         8954    x$fpl$dfixu         fz_wm.l(dfixu.o)
+    0x0801bcee   0x0801bcee   0x00000026   Code   RO         8958    x$fpl$dfltu         fz_wm.l(dflt_clz.o)
+    0x0801bd14   0x0801bd14   0x00000154   Code   RO         8964    x$fpl$dmul          fz_wm.l(dmul.o)
+    0x0801be68   0x0801be68   0x0000009c   Code   RO         9000    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
+    0x0801bf04   0x0801bf04   0x0000000c   Code   RO         9002    x$fpl$dretinf       fz_wm.l(dretinf.o)
+    0x0801bf10   0x0801bf10   0x0000000a   Code   RO         9127    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0801bf1a   0x0801bf1a   0x0000000a   Code   RO         9004    x$fpl$fretinf       fz_wm.l(fretinf.o)
+    0x0801bf24   0x0801bf24   0x00000000   Code   RO         9006    x$fpl$usenofp       fz_wm.l(usenofp.o)
+    0x0801bf24   0x0801bf24   0x00000010   Data   RO          433    .constdata          system_stm32f4xx.o
+    0x0801bf34   0x0801bf34   0x00000008   Data   RO          434    .constdata          system_stm32f4xx.o
+    0x0801bf3c   0x0801bf3c   0x00000008   Data   RO         3595    .constdata          stm32f4xx_hal_dma.o
+    0x0801bf44   0x0801bf44   0x00002f80   Data   RO         5028    .constdata          lcd.o
+    0x0801eec4   0x0801eec4   0x0000006e   Data   RO         5704    .constdata          i2s.o
+    0x0801ef32   0x0801ef32   0x00000002   PAD
+    0x0801ef34   0x0801ef34   0x00000024   Data   RO         6067    .constdata          malloc.o
+    0x0801ef58   0x0801ef58   0x000000c4   Data   RO         6138    .constdata          exfuns.o
+    0x0801f01c   0x0801f01c   0x0000004c   Data   RO         6500    .constdata          ff.o
+    0x0801f068   0x0801f068   0x000002ae   Data   RO         6900    .constdata          myffunicode.o
+    0x0801f316   0x0801f316   0x00000002   PAD
+    0x0801f318   0x0801f318   0x00000010   Data   RO         7093    .constdata          avi.o
+    0x0801f328   0x0801f328   0x000001c8   Data   RO         7238    .constdata          jaricom.o
+    0x0801f4f0   0x0801f4f0   0x000001a0   Data   RO         7271    .constdata          jcomapi.o
+    0x0801f690   0x0801f690   0x00000140   Data   RO         7314    .constdata          jutils.o
+    0x0801f7d0   0x0801f7d0   0x00000104   Data   RO         7315    .constdata          jutils.o
+    0x0801f8d4   0x0801f8d4   0x000000d0   Data   RO         7316    .constdata          jutils.o
+    0x0801f9a4   0x0801f9a4   0x000000a4   Data   RO         7317    .constdata          jutils.o
+    0x0801fa48   0x0801fa48   0x00000080   Data   RO         7318    .constdata          jutils.o
+    0x0801fac8   0x0801fac8   0x00000064   Data   RO         7319    .constdata          jutils.o
+    0x0801fb2c   0x0801fb2c   0x00000050   Data   RO         7320    .constdata          jutils.o
+    0x0801fb7c   0x0801fb7c   0x00000200   Data   RO         7362    .constdata          jerror.o
+    0x0801fd7c   0x0801fd7c   0x00000010   Data   RO         7427    .constdata          jmemmgr.o
+    0x0801fd8c   0x0801fd8c   0x0000036c   Data   RO         7893    .constdata          jdhuff.o
+    0x080200f8   0x080200f8   0x000000c0   Data   RO         8087    .constdata          jddctmgr.o
+    0x080201b8   0x080201b8   0x0000010c   Data   RO         8755    .constdata          jquant1.o
+    0x080202c4   0x080202c4   0x00000008   Data   RO         8855    .constdata          c_w.l(_printf_wctomb.o)
+    0x080202cc   0x080202cc   0x00000028   Data   RO         8878    .constdata          c_w.l(_printf_hex_int_ptr.o)
+    0x080202f4   0x080202f4   0x00000011   Data   RO         8904    .constdata          c_w.l(__printf_flags_ss_wp.o)
+    0x08020305   0x08020305   0x00000003   PAD
+    0x08020308   0x08020308   0x00000028   Data   RO         5834    .conststring        usmart.o
+    0x08020330   0x08020330   0x0000029c   Data   RO         5894    .conststring        usmart_config.o
+    0x080205cc   0x080205cc   0x00000054   Data   RO         6139    .conststring        exfuns.o
+    0x08020620   0x08020620   0x0000001d   Data   RO         7094    .conststring        avi.o
+    0x0802063d   0x0802063d   0x00000003   PAD
+    0x08020640   0x08020640   0x00001311   Data   RO         7363    .conststring        jerror.o
+    0x08021951   0x08021951   0x00000003   PAD
+    0x08021954   0x08021954   0x00000020   Data   RO         9178    Region$$Table       anon$$obj.o
+    0x08021974   0x08021974   0x00000110   Data   RO         9043    locale$$data        c_w.l(lc_ctype_c.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08021a94, Size: 0x0001d630, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x000000c4])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08021a84, Size: 0x0001d630, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x000000c4])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -6341,10 +6339,10 @@ Image component sizes
          0          0        668        372          0       1584   usmart_config.o
        252         46          0          0         72       3562   usmart_port.o
       1120         20          0          0          0      10039   usmart_str.o
-      2032        288          0          8       3192       9214   videoplayer.o
+      2016        284          0          8       3192       9203   videoplayer.o
 
     ----------------------------------------------------------------------
-    108374       4460      23444        540    1232752    1475516   Object Totals
+    108358       4456      23444        540    1232752    1475505   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        102          0         10          2         57          0   (incl. Padding)
 
@@ -6459,15 +6457,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    114092       4592      23784        540    1232852    1422388   Grand Totals
-    114092       4592      23784        196    1232852    1422388   ELF Image Totals (compressed)
-    114092       4592      23784        196          0          0   ROM Totals
+    114076       4588      23784        540    1232852    1422377   Grand Totals
+    114076       4588      23784        196    1232852    1422377   ELF Image Totals (compressed)
+    114076       4588      23784        196          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               137876 ( 134.64kB)
+    Total RO  Size (Code + RO Data)               137860 ( 134.63kB)
     Total RW  Size (RW Data + ZI Data)           1233392 (1204.48kB)
-    Total ROM Size (Code + RO Data + RW Data)     138072 ( 134.84kB)
+    Total ROM Size (Code + RO Data + RW Data)     138056 ( 134.82kB)
 
 ==============================================================================
 
